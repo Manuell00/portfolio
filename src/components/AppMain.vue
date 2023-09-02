@@ -289,6 +289,11 @@ export default {
             justify-content: center;
             margin-bottom: 5rem;
             padding: 0 3rem;
+            transition: 0.7s ease-in;
+
+            &:hover {
+                transform: scale(1.2);
+            }
 
             h2 {
                 font-size: 3.5rem;
@@ -315,6 +320,7 @@ export default {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
+                row-gap: 20px;
 
                 img {
                     width: 100%;
@@ -342,143 +348,132 @@ export default {
 // MEDIA QUERY
 
 @media (max-width: 1700px) {
+    .container-fluid .emoj {
+        .mini-img {
+            width: 120px;
+        }
 
-    .container-fluid {
+        img {
+            width: 350px; // Slightly reduce the image width for large devices
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .container-fluid .home-intro {
+        .content {
+            width: 70%; // Increase width for more space
+        }
+
         .emoj {
             .mini-img {
-                width: 150px;
+                width: 100px;
             }
 
             img {
-                width: 350px; // Slightly reduce the image width for large devices
+                width: 300px; // Slightly reduce the image width for large devices
+            }
+
+            svg.mini-img {
+                // Nascondi SVG con classe .mini-img a partire da 1300px
+                display: none;
             }
         }
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
+    .container-fluid .home-intro {
+        flex-direction: column; // Stack content and emoj sections on top of each other
 
-    // For large devices like laptops
-    .container-fluid {
-        .home-intro {
-            .content {
-                width: 70%; // Increase width for more space
+        .content {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+
+            .content-movement {
+                text-align: center;
+                padding: 0;
+                width: 100%;
             }
 
-
             .emoj {
-                .mini-img {
-                    width: 100px;
+                width: 100%; // Utilize full width
+                padding: 20px 0; // Add some vertical padding
+
+                svg.mini-img {
+                    display: none;
                 }
 
                 img {
-                    width: 300px; // Slightly reduce the image width for large devices
+                    width: 250px; // Reduce the image width for tablets
                 }
             }
-        }
-    }
-}
-
-@media (max-width: 1100px) {
-
-    // For medium devices like tablets
-    .container-fluid {
-        .home-intro {
-            flex-direction: column; // Stack content and emoj sections on top of each other
-
-            .content {
-                display: flex;
-                justify-content: center;
-                text-align: center;
-                flex-direction: column;
-
-                .content-movement {
-                    text-align: center;
-                    padding: 0;
-                    width: 100%;
-                }
-
-                .emoj {
-                    width: 100%; // Utilize full width
-                    padding: 20px 0; // Add some vertical padding
-
-                    .mini-img {
-                        width: 80px;
-                    }
-
-                    img {
-                        width: 250px; // Reduce the image width for tablets
-                    }
-                }
-            }
-
         }
     }
 }
 
 @media (max-width: 768px) {
+    .container-fluid .home-intro {
+        .content {
+            .content-movement {
+                .sticker {
+                    display: block;
+                }
 
-    // For small devices like mobile phones
-    .container-fluid {
-        .home-intro {
-            .content {
-                .content-movement div {
+                div {
                     font-size: 1.5rem; // Reduce font size
-                }
-
-                .content-primary h1 {
-                    font-size: 1.8rem; // Reduce font size
-
-                    span {
-                        font-size: 2.5rem; // Reduce font size
-                    }
-                }
-
-                .content-secondary p {
-                    font-size: 1.2rem; // Reduce font size
                 }
             }
 
-            .emoj {
-                .mini-img {
-                    width: 50px;
-                }
+            .content-primary h1 {
+                font-size: 1.8rem; // Reduce font size
 
-                img {
-                    width: 200px; // Further reduce the image width for mobile phones
+                span {
+                    font-size: 2.5rem; // Reduce font size
                 }
+            }
+
+            .content-secondary p {
+                font-size: 1.2rem; // Reduce font size
+            }
+        }
+
+        .emoj {
+
+
+            img {
+                width: 200px; // Further reduce the image width for mobile phones
             }
         }
     }
 }
 
 @media (max-width: 576px) {
+    .container-fluid .home-intro {
+        .content {
+            .content-movement div {
+                font-size: 1.2rem; // Reduce font size more
+            }
 
-    // For very small devices like mobile phones
-    .container-fluid {
-        .home-intro {
-            .content {
-                .content-movement div {
-                    font-size: 1.2rem; // Reduce font size more
-                }
+            .content-primary h1 {
+                font-size: 1.5rem; // Reduce font size more
 
-                .content-primary h1 {
-                    font-size: 1.5rem; // Reduce font size more
-
-                    span {
-                        font-size: 2.2rem; // Reduce font size more
-                    }
-                }
-
-                .content-secondary p {
-                    font-size: 1rem; // Reduce font size more
+                span {
+                    font-size: 2.2rem; // Reduce font size more
                 }
             }
 
-            .emoj img {
-                width: 150px; // Reduce the image width even more for very small devices
+            .content-secondary p {
+                font-size: 1rem; // Reduce font size more
             }
+        }
+
+        .emoj img {
+            width: 250px; // Reduce the image width even more for very small devices
         }
     }
 }
 </style>
+
