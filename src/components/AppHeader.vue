@@ -57,10 +57,13 @@ nav {
   flex-direction: row;
   background-color: $violet !important;
   height: 10vh;
-  max-width: 100%;
-  padding: 0 2rem; // Aggiunto padding laterale per dare un po' di respiro
-  z-index: 100;
+  width: 100%; // Imposta la larghezza al 100%
+  box-sizing: border-box; // Include padding e bordo nella larghezza totale
+  padding: 0 2rem; // Padding laterale
+  z-index: 1000; // Nota: hai dichiarato 'z-index' due volte, quindi ho tenuto il valore più grande
   text-transform: capitalize;
+  position: fixed;
+  top: 0;
 
   .logo-section {
     height: 100px;
