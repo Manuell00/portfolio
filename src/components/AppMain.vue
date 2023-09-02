@@ -60,6 +60,19 @@ export default {
 
             <!-- Secondo contenuto (Sticker) -->
             <div class="emoj">
+                <img src="../../computers.svg" alt="">
+            </div>
+
+        </div>
+
+
+        <!-- TOOLING -->
+        <div class="tooling">
+            <div class="tooling-title">
+                <h2>Tooling</h2>
+            </div>
+
+            <div class="tooling-box">
                 <div class="row flex-row">
                     <!-- First row of images (HTML, CSS, JavaScript) -->
                     <div class="col-lg-4 col-md-4 col-sm-6 col-12 text-center mb-4">
@@ -97,8 +110,8 @@ export default {
                         <img src="../../public/python-svgrepo-com.svg" alt="Python">
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
 
     </div>
@@ -113,9 +126,9 @@ export default {
 .container-fluid {
     margin: 0;
     max-width: 100%;
-    overflow: hidden;
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
+    max-height: 100%;
     background-image: url(../../public/endless-constellation.svg);
 
     .home-intro {
@@ -209,6 +222,59 @@ export default {
             justify-content: center;
             flex-direction: column;
 
+            img {
+                width: 400px;
+                height: auto;
+            }
+        }
+    }
+
+    // Tooling
+    .tooling {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5rem 0;
+        background: linear-gradient(to bottom, black, $violet );
+        background-size: 200% 200%;
+
+        &:hover {
+            animation: GradientAnimation 5s infinite;
+        }
+
+        .tooling-title {
+            align-items: center;
+            background: #12141d;
+            border-radius: 12px;
+            box-shadow: inset 0 0 4px 1px $violet;
+            -webkit-box-shadow: inset 0 0 4px 1px $violet;
+            -moz-box-shadow: inset 0 0 4px 1px $violet;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 5rem;
+            padding: .8rem 2rem;
+
+            h2 {
+                color: $violet;
+                font-family: 'CYBORG', sans-serif;
+                font-weight: 900;
+                text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                text-transform: uppercase;
+            }
+        }
+
+        .tooling-box {
+            align-items: center;
+            background-image: url(../../public/endless-constellation.svg);
+            border-radius: 15px;
+            border: 5px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 1.5rem;
+            width: 50%;
+
             .flex-row {
                 display: flex;
                 flex-wrap: wrap;
@@ -217,75 +283,126 @@ export default {
                 img {
                     width: 100%;
                     height: 150px;
-                    fill: #007BFF;
+                    transition: all 0.4s ease-in;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
                 }
             }
         }
     }
 }
 
-// Your existing styles...
 
-// Media Queries for Responsiveness
+// MEDIA QUERY
+
 @media (max-width: 1200px) {
-    // For large devices like laptops
 
-    .container-fluid .home-intro .content {
-        width: 70%; // Increase width for more space
+    // For large devices like laptops
+    .container-fluid {
+        .home-intro {
+            .content {
+                width: 70%; // Increase width for more space
+            }
+
+            .emoj img {
+                width: 300px; // Slightly reduce the image width for large devices
+            }
+        }
     }
 }
 
 @media (max-width: 1100px) {
+
     // For medium devices like tablets
+    .container-fluid {
+        .home-intro {
+            flex-direction: column; // Stack content and emoj sections on top of each other
 
-    .container-fluid .home-intro {
-        flex-direction: column; // Stack content and emoj sections on top of each other
-    }
+            .content {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                flex-direction: column;
 
-    .container-fluid .home-intro .content,
-    .container-fluid .home-intro .emoj {
-        width: 100%; // Utilize full width
-        padding: 20px 0; // Add some vertical padding
+                .content-movement {
+                    text-align: center;
+                    padding: 0;
+                    width: 100%;
+                }
+
+                .emoj {
+                    width: 100%; // Utilize full width
+                    padding: 20px 0; // Add some vertical padding
+
+                    img {
+                        width: 250px; // Reduce the image width for tablets
+                    }
+                }
+            }
+
+        }
     }
 }
 
 @media (max-width: 768px) {
+
     // For small devices like mobile phones
+    .container-fluid {
+        .home-intro {
+            .content {
+                .content-movement div {
+                    font-size: 1.5rem; // Reduce font size
+                }
 
-    .container-fluid .home-intro .content .content-movement div {
-        font-size: 1.5rem; // Reduce font size
-    }
+                .content-primary h1 {
+                    font-size: 1.8rem; // Reduce font size
 
-    .container-fluid .home-intro .content .content-primary h1 {
-        font-size: 1.8rem; // Reduce font size
+                    span {
+                        font-size: 2.5rem; // Reduce font size
+                    }
+                }
 
-        span {
-            font-size: 2.5rem; // Reduce font size
+                .content-secondary p {
+                    font-size: 1.2rem; // Reduce font size
+                }
+            }
+
+            .emoj img {
+                width: 200px; // Further reduce the image width for mobile phones
+            }
         }
-    }
-
-    .container-fluid .home-intro .content .content-secondary p {
-        font-size: 1.2rem; // Reduce font size
     }
 }
 
 @media (max-width: 576px) {
+
     // For very small devices like mobile phones
+    .container-fluid {
+        .home-intro {
+            .content {
+                .content-movement div {
+                    font-size: 1.2rem; // Reduce font size more
+                }
 
-    .container-fluid .home-intro .content .content-movement div {
-        font-size: 1.2rem; // Reduce font size more
-    }
+                .content-primary h1 {
+                    font-size: 1.5rem; // Reduce font size more
 
-    .container-fluid .home-intro .content .content-primary h1 {
-        font-size: 1.5rem; // Reduce font size more
+                    span {
+                        font-size: 2.2rem; // Reduce font size more
+                    }
+                }
 
-        span {
-            font-size: 2.2rem; // Reduce font size more
+                .content-secondary p {
+                    font-size: 1rem; // Reduce font size more
+                }
+            }
+
+            .emoj img {
+                width: 150px; // Reduce the image width even more for very small devices
+            }
         }
-    }
-
-    .container-fluid .home-intro .content .content-secondary p {
-        font-size: 1rem; // Reduce font size more
     }
 }
 </style>
