@@ -148,7 +148,7 @@ export default {
                             d="M6.99999 18C6.46955 18 5.96085 17.7893 5.58577 17.4142C5.2107 17.0391 4.99999 16.5304 4.99999 16V13.61C5.00042 12.9513 4.83816 12.3027 4.52764 11.7218C4.21712 11.1408 3.76793 10.6456 3.21999 10.28L2.79999 10L3.21999 9.72C3.76793 9.35442 4.21712 8.85917 4.52764 8.27825C4.83816 7.69733 5.00042 7.04871 4.99999 6.39V4C4.99999 3.46957 5.2107 2.96086 5.58577 2.58579C5.96085 2.21071 6.46955 2 6.99999 2C7.2652 2 7.51956 1.89464 7.70709 1.70711C7.89463 1.51957 7.99999 1.26522 7.99999 1C7.99999 0.734784 7.89463 0.48043 7.70709 0.292893C7.51956 0.105357 7.2652 0 6.99999 0C5.93912 0 4.92171 0.421427 4.17156 1.17157C3.42142 1.92172 2.99999 2.93913 2.99999 4V6.39C3.00103 6.7202 2.92029 7.04552 2.765 7.33692C2.6097 7.62832 2.38467 7.87674 2.10999 8.06L0.449988 9.17C0.313865 9.26148 0.202329 9.38503 0.125209 9.52977C0.0480885 9.67451 0.00775146 9.836 0.00775146 10C0.00775146 10.164 0.0480885 10.3255 0.125209 10.4702C0.202329 10.615 0.313865 10.7385 0.449988 10.83L2.10999 11.94C2.38467 12.1233 2.6097 12.3717 2.765 12.6631C2.92029 12.9545 3.00103 13.2798 2.99999 13.61V16C2.99999 17.0609 3.42142 18.0783 4.17156 18.8284C4.92171 19.5786 5.93912 20 6.99999 20C7.2652 20 7.51956 19.8946 7.70709 19.7071C7.89463 19.5196 7.99999 19.2652 7.99999 19C7.99999 18.7348 7.89463 18.4804 7.70709 18.2929C7.51956 18.1054 7.2652 18 6.99999 18Z"
                             fill="#14E956"></path>
                     </svg>
-                    <h2>All My Works</h2>
+                    <h2>My Works</h2>
 
                     <svg width="16" height="40" viewBox="0 0 8 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -157,7 +157,86 @@ export default {
                     </svg>
 
                 </span>
+            </div>
 
+            <!-- PROJECTS -->
+            <div class="projects">
+
+                <!-- 1 Project -->
+                <div class="single">
+                    <div class="single-img">
+                        <img src="../../public/Screenshot 2023-08-29 alle 14.45.19.png" alt="">
+                    </div>
+
+                    <div class="single-details">
+                        <h4>Spotify Web</h4>
+
+                        <p>This project is a <span class="highlight">meticulous recreation</span> of Spotify's main web
+                            application page. Crafted as one of my <span class="highlight">initial endeavors</span> into web
+                            design, it showcases my foundational skills in <span class="highlight">frontend
+                                development</span>.</p>
+
+
+                        <ul class="tech-used">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                        </ul>
+
+                        <div class="last">
+                            <p class="project-date"> <span>Completed :</span> April 2023</p>
+
+
+                            <button>
+                                <a href="https://github.com/Manuell00/html-css-spotifyweb">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    Github Repo
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 Project -->
+                <div class="single">
+
+                    <div class="single-details">
+                        <h4>Whatsapp</h4>
+
+                        <p> Delving deeper into the realm of advanced web development, I undertook the challenge of
+                            emulating one of the world's most used messaging platforms: <span
+                                class="highlight">WhatsApp</span>. This project involved creating an intricate frontend that
+                            captures the authentic feel of WhatsApp's user interface. Yet, its true complexity lies beneath
+                            the surface. Harnessing the power of various <span class="highlight">APIs</span>, I successfully
+                            built real-time chat functionalities, allowing for dynamic interactions reminiscent of the
+                            actual app. This venture not only pushed my frontend skills but also gave me profound insights
+                            into backend development and the seamless integration of third-party services.</p>
+
+
+                        <ul class="tech-used">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>VUE</li>
+                        </ul>
+
+                        <div class="last">
+                            <p class="project-date"> <span>Completed :</span> May 2023</p>
+
+
+                            <button>
+                                <a href="https://github.com/Manuell00/vue-boolzapp">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    Github Repo
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="single-img">
+                        <img class="img-2" src="../../public/Screenshot 2023-08-29 alle 14.47.30.png" alt="">
+                    </div>
+                </div>
 
 
 
@@ -357,7 +436,7 @@ export default {
     // WORKS
     .work {
         width: 100%;
-        height: 1000px;
+        height: auto;
         background-color: black;
         padding-top: 15rem;
 
@@ -380,8 +459,196 @@ export default {
             }
 
         }
+
+        .projects {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 3rem 0 7rem;
+            padding: 0 5rem;
+
+            .single {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                margin: 6rem 0;
+                width: 100%;
+
+                .single-img {
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    width: 60%;
+
+                    img {
+                        border-radius: 15px;
+                        box-shadow: 0 60px 123px -25px hsla(225, 2%, 62%, .42), 0 35px 75px -35px hsla(225, 2%, 62%, .08);
+                        -webkit-filter: blur(0);
+                        filter: blur(0);
+                        height: 398px;
+                        opacity: 1;
+                        -webkit-transform: perspective(800px) rotateY(25deg) scale(.8) rotateX(10deg);
+                        transform: perspective(800px) rotateY(25deg) scale(.8) rotateX(10deg);
+                        transition: all .6s ease;
+                        width: 700px;
+
+
+                        &:hover {
+                            box-shadow: 0 19px 67px -38px hsla(225, 2%, 62%, .8);
+                            -webkit-filter: blur(.2px);
+                            filter: blur(.2px);
+                            opacity: 1;
+                            -webkit-transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
+                            transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
+                        }
+                    }
+
+                    .img-2 {
+                        transform: perspective(800px) rotateY(-25deg) scale(.8) rotateX(10deg);
+
+                        &:hover {
+                            -webkit-transform: perspective(800px) rotateY(15deg) translateY(50px) rotateX(10deg) scale(1);
+                            transform: perspective(800px) rotateY(15deg) translateY(50px) rotateX(10deg) scale(1);
+                        }
+                    }
+                }
+            }
+
+            .single-details {
+                align-items: center;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 1rem;
+                width: 40%;
+
+                h4 {
+                    border: 3px solid $violet;
+                    box-shadow: 6px 6px 0 0 $violet;
+                    color: $violet;
+                    font-family: Cyborg;
+                    font-weight: 700;
+                    font-weight: 900;
+                    margin-bottom: 3rem;
+                    padding: .7rem 1.1rem;
+                    text-transform: uppercase;
+                    transition: transform 0.7s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+
+                .highlight {
+                    color: #2C3E50;
+                    background-color: #EAECEE;
+                    padding: 2px 5px;
+                    border-radius: 5px;
+                    font-weight: bold;
+                }
+
+
+                .tech-used {
+                    margin-top: 1.5rem;
+                    border: 2px solid $violet;
+                    border-radius: 15px;
+                    background-color: rgba($violet, 0.1);
+                    text-align: center;
+                    padding: 1rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1rem;
+
+                    li {
+                        list-style-type: none;
+                        background-color: #fff;
+                        color: $violet;
+                        padding: 0.5rem 1rem;
+                        border-radius: 7px;
+                        font-weight: 600;
+                        transition: background-color 0.3s ease;
+
+                        &:hover {
+                            background-color: $violet;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .last {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 3rem;
+                    max-width: 100%;
+
+                    .project-date {
+                        margin: 1.5rem;
+                        font-size: 1.7rem;
+                        font-weight: 600;
+                        transition: transform 0.5s ease;
+
+                        &:hover {
+                            transform: scale(1.2);
+                        }
+
+                        span {
+                            display: inline-block;
+                            padding: 0.2rem 0.5rem;
+                            color: $violet;
+                            text-transform: capitalize;
+                            transition: color 0.3s ease;
+
+                            &:hover {
+                                color: lighten($violet, 15%);
+                            }
+                        }
+                    }
+
+                    button {
+                        background-color: $violet; // supponendo che tu voglia mantenere il tema viola, ma puoi sostituirlo con qualsiasi colore
+                        color: white;
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease, transform 0.3s ease;
+                        display: inline-flex; // per allineare correttamente l'icona e il testo
+                        align-items: center;
+
+                        i {
+                            margin-right: 8px; // spazio tra l'icona e il testo
+                        }
+
+                        &:hover {
+                            background-color: darken($violet, 15%); // scurisce il colore del pulsante quando si passa sopra con il mouse
+                            transform: translateY(-2px); // dà un effetto di "sollevamento" al pulsante
+                        }
+
+                        &:active {
+                            transform: translateY(0); // re-imposta la posizione del pulsante quando viene cliccato
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: inherit; // prende il colore dal genitore, in questo caso `button`
+                            display: flex; // per allineare correttamente l'icona e il testo
+                            align-items: center;
+                        }
+                    }
+                }
+
+            }
+        }
     }
 }
+
+
 
 
 // MEDIA QUERY
