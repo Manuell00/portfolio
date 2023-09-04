@@ -28,7 +28,7 @@ export default {
     <div class="container-fluid">
 
         <!-- Home intro -->
-        <div class="home-intro">
+        <div class="home-intro" id="home">
 
             <!-- Primo contenuto (scritto) -->
             <div class="content">
@@ -115,7 +115,7 @@ export default {
         </div>
 
         <!-- MY WORKS -->
-        <div class="work">
+        <div class="work" id="portfolio">
             <div class="work-header">
                 <h2>Portfolio of Projects</h2>
             </div>

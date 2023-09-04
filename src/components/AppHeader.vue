@@ -13,6 +13,22 @@ export default {
   },
 
   methods: {
+    scrollTo(sectionId) {
+      const element = document.getElementById(sectionId);
+
+      if (element) {
+        let top = element.offsetTop;
+
+        // Sottrai una quantità desiderata dalla posizione di top
+        top = top - 200;  // ad esempio, per ridurre di 50px
+
+        window.scrollTo({
+          top: top,
+          behavior: 'smooth'
+        });
+      }
+    }
+
 
   }
 
@@ -28,8 +44,10 @@ export default {
 
     <div class="main-nav">
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
+
+        <!-- Inserisco gli eventi al click -->
+        <li><a href="#home" @click.prevent="scrollTo('home')">Home</a></li>
+        <li><a href="#portfolio" @click.prevent="scrollTo('portfolio')">Portfolio</a></li>
       </ul>
 
       <div class="social-links">
