@@ -423,6 +423,8 @@ export default {
                     margin: 0;
                     opacity: .8;
                     text-transform: lowercase;
+                    color: grey;
+                    ;
                 }
             }
         }
