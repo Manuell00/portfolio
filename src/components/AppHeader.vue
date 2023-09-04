@@ -38,7 +38,7 @@ export default {
       </div>
     </div>
 
-    <button class="cta-button">Contact me</button>
+    <button class="cta-button">CONTACT ME</button>
   </nav>
 </template>
 
@@ -55,7 +55,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  background-color: $violet !important;
+  background-color: black !important;
   height: 10vh;
   width: 100%; // Imposta la larghezza al 100%
   box-sizing: border-box; // Include padding e bordo nella larghezza totale
@@ -103,7 +103,7 @@ nav {
         font-size: 2.0rem;
 
         &:hover {
-          color: darken($violet, 15%); // Scurisce il colore violet quando si passa sopra con il mouse
+          color: $green;
         }
       }
     }
@@ -119,25 +119,28 @@ nav {
       margin-left: 1rem;
       color: white;
       font-size: 4.5rem;
+      transition: 0.7s all ease;
 
       &:hover {
-        color: darken($violet, 15%);
+        color: $green;
       }
     }
   }
 
   .cta-button {
     background-color: white;
-    color: $violet;
+    color: black;
+    font-weight: 600;
     padding: 1rem 3rem;
     border: none;
     border-radius: 15px;
     transition: background-color 0.3s ease;
     font-size: 1.5rem;
+    transition: 0.7s all ease;
 
     &:hover {
-      background-color: darken(white, 30%);
-      color: lighten($violet, 30%);
+      background-color: darken(white, 20%);
+      color: $green;
     }
   }
 }
@@ -167,7 +170,7 @@ nav {
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: $violet;
+        background-color: $green;
         width: 100%;
         gap: 0.5rem;
         padding: 1rem 0;

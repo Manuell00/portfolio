@@ -80,5 +80,24 @@ body {
 
 
     // Modifico il cursore 
-    cursor: url('../../public/icons8-cursore-mano.svg'), auto;
+    cursor: url('../../public/icons8-cursor.svg'), auto;
+
+
+    // Modifico la scrollbar
+    ::-webkit-scrollbar {
+        width: 8px; /* Larghezza della barra di scorrimento */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #2a2a2a; /* Colore di sfondo della barra */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #555; /* Colore del pollice (la parte scorrevole) */
+        border-radius: 4px; /* Arrotonda i bordi del pollice */
+        border: 2px solid #2a2a2a; /* Aggiunge un bordo intorno al pollice per farlo risaltare di più */
+    }
+
+    /* Per Firefox */
+    scrollbar-color: #555 #2a2a2a;
 }

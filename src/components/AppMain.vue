@@ -60,32 +60,7 @@ export default {
 
             <!-- Secondo contenuto (Sticker) -->
             <div class="emoj">
-
-                <!-- Prima svg -->
-                <svg class="mini-img" width="800px" height="800px" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 6L3.40208 11.1314C3.1859 11.3296 3.1859 11.6704 3.40208 11.8686L9 17" stroke="#000000"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M14 17L19.5979 11.8686C19.8141 11.6704 19.8141 11.3296 19.5979 11.1314L14 6" stroke="#000000"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-                <!-- Immagine -->
-                <img src="../../computers.svg" alt="">
-
-                <!-- Seconda svg -->
-                <svg class="mini-img" width="800px" height="800px" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M7.90451 6.92144C8.41341 6.45495 8.44779 5.66424 7.9813 5.15534C7.51481 4.64645 6.7241 4.61207 6.2152 5.07856L7.90451 6.92144ZM1.46194 11.1314L2.3066 12.0529L2.3066 12.0529L1.46194 11.1314ZM1.46194 11.8686L2.3066 10.9471L2.3066 10.9471L1.46194 11.8686ZM6.2152 17.9214C6.7241 18.3879 7.51481 18.3536 7.9813 17.8447C8.44779 17.3358 8.41341 16.545 7.90451 16.0786L6.2152 17.9214ZM6.2152 5.07856L0.617287 10.21L2.3066 12.0529L7.90451 6.92144L6.2152 5.07856ZM0.617287 12.79L6.2152 17.9214L7.90451 16.0786L2.3066 10.9471L0.617287 12.79ZM0.617287 10.21C-0.139356 10.9036 -0.139356 12.0964 0.617287 12.79L2.3066 10.9471C2.63087 11.2444 2.63087 11.7556 2.3066 12.0529L0.617287 10.21Z"
-                        fill="#000000" />
-                    <path
-                        d="M16.0557 16.0786C15.5468 16.545 15.5125 17.3358 15.9789 17.8447C16.4454 18.3536 17.2361 18.3879 17.745 17.9214L16.0557 16.0786ZM22.4983 11.8686L21.6537 10.9471L21.6537 10.9471L22.4983 11.8686ZM22.4983 11.1314L21.6537 12.0529L21.6537 12.0529L22.4983 11.1314ZM17.745 5.07856C17.2361 4.61207 16.4454 4.64645 15.979 5.15534C15.5125 5.66424 15.5468 6.45495 16.0557 6.92144L17.745 5.07856ZM17.745 17.9214L23.343 12.79L21.6537 10.9471L16.0557 16.0786L17.745 17.9214ZM23.343 10.21L17.745 5.07856L16.0557 6.92144L21.6537 12.0529L23.343 10.21ZM23.343 12.79C24.0996 12.0964 24.0996 10.9036 23.343 10.21L21.6537 12.0529C21.3294 11.7556 21.3294 11.2444 21.6537 10.9471L23.343 12.79Z"
-                        fill="#000000" />
-                    <path
-                        d="M15.2127 3.80317C15.3801 3.13343 14.9729 2.45476 14.3032 2.28732C13.6334 2.11989 12.9548 2.52709 12.7873 3.19683L15.2127 3.80317ZM8.78732 19.1968C8.61989 19.8666 9.02709 20.5452 9.69683 20.7127C10.3666 20.8801 11.0452 20.4729 11.2127 19.8032L8.78732 19.1968ZM12.7873 3.19683L8.78732 19.1968L11.2127 19.8032L15.2127 3.80317L12.7873 3.19683Z"
-                        fill="#000000" />
-                </svg>
+                <img src="../../public/hand-computer.jpeg" alt="">
             </div>
 
         </div>
@@ -238,6 +213,127 @@ export default {
                     </div>
                 </div>
 
+                <!-- 3 Project -->
+                <div class="single">
+                    <div class="single-img">
+                        <img src="../../public/Screenshot 2023-08-30 alle 13.00.08.png" alt="">
+                    </div>
+
+                    <div class="single-details">
+                        <h4>Netflix</h4>
+
+                        <p>This project is a <span class="highlight">modern interpretation</span> of the film and TV show
+                            search concept, inspired by Netflix's aesthetic. Leveraging an API and axios calls, it allows
+                            users to <span class="highlight">delve into detailed characteristics</span> of any film or TV
+                            series. It stands as a testament to my advanced skills in <span class="highlight">API
+                                integration</span> and interface design.</p>
+
+
+
+                        <ul class="tech-used">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Vue</li>
+                            <li>Vite</li>
+                        </ul>
+
+                        <div class="last">
+                            <p class="project-date"> <span>Completed :</span> June 2023</p>
+
+
+                            <button>
+                                <a href="https://github.com/Manuell00/vite-boolflix">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    Github Repo
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 4 Project -->
+                <div class="single">
+
+                    <div class="single-details">
+                        <h4>Interactive Project Management Platform</h4>
+
+                        <p>This application is a comprehensive <span class="highlight">project management system</span>
+                            tailored for professionals seeking robustness and clarity. With full <span
+                                class="highlight">CRUD functionalities</span>, users can effortlessly manage, visualize, and
+                            collaborate on their projects as well as explore those created by other community members. The
+                            underlying database architecture boasts intricate <span class="highlight">relational
+                                tables</span>, ensuring data integrity and streamlined workflows.</p>
+
+
+
+                        <ul class="tech-used">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Laravel</li>
+                            <li>php</li>
+                            <li>Sass</li>
+                        </ul>
+
+                        <div class="last">
+                            <p class="project-date"> <span>Completed :</span> August 2023</p>
+
+
+                            <button>
+                                <a href="https://github.com/Manuell00/laravel-many-to-many">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    Github Repo
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="single-img">
+                        <img class="img-2" src="../../public/Screenshot 2023-08-29 alle 14.46.28.png" alt="">
+                    </div>
+                </div>
+
+                <!-- 5 Project -->
+                <div class="single">
+                    <div class="single-img">
+                        <video width="320" height="240" controls>
+                            <source src="../../public/registrazione1.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <div class="single-details">
+                        <h4>Data Analysis of European Football 2020</h4>
+
+                        <p>This endeavor represents a detailed <span class="highlight">statistical analysis</span> of
+                            footballers' performances in the UEFA Euro 2020 Championship. By meticulously dissecting
+                            multiple datasets, the project illuminates patterns and insights across five distinct <span
+                                class="highlight">visual representations</span>. Each graph is a culmination of dissected
+                            columns from various datasets, seamlessly merged to provide a comprehensive view of players'
+                            prowess and contributions during the tournament.</p>
+
+
+
+
+                        <ul class="tech-used">
+                            <li>Python</li>
+                            <li>SQL</li>
+                        </ul>
+
+                        <div class="last">
+                            <p class="project-date"> <span>Completed :</span> May 2022</p>
+
+
+                            <button>
+                                <a href="https://github.com/Manuell00/analysis-of-European-football">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    Github Repo
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
 
 
 
@@ -261,7 +357,6 @@ export default {
     width: 100%;
     min-height: 90vh;
     max-height: 100%;
-    background-image: url(../../public/endless-constellation.svg);
 
     .home-intro {
         padding: 50px;
@@ -272,10 +367,12 @@ export default {
         justify-content: space-between;
 
 
+
         // PRIMO CONTENUTO
         .content {
             animation: slideFromLeft 1s forwards;
             width: 50%;
+            color: black;
 
             // First row of content
             .content-movement {
@@ -288,7 +385,7 @@ export default {
                 div {
                     padding: 0px 15px;
                     border-radius: 12px;
-                    background-color: rgba(75, 0, 130, 0.6);
+                    background-color: rgba(16, 233, 86, 1);
                     font-size: 2.0rem;
                     font-weight: 900;
                     letter-spacing: .05em;
@@ -301,7 +398,6 @@ export default {
                         margin: 20px 0;
                         display: inline-block;
                         background-color: transparent;
-
                     }
 
                 }
@@ -319,7 +415,7 @@ export default {
                     margin: 0;
 
                     span {
-                        color: #007BFF;
+                        color: $green;
                         font-family: Cyborg;
                         font-size: 4.2rem;
                         text-shadow: 3px 3px 0 #1f2127, -1px -1px 0 #1f2127, 1px -1px 0 #1f2127, -1px 1px 0 #1f2127, 1px 1px 0 #1f2127;
@@ -348,19 +444,16 @@ export default {
         .emoj {
             animation: slideFromRight 1s forwards;
             width: 50%;
+            height: 100%;
             padding: 0 10%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: row;
 
-            .mini-img {
-                max-width: 200px; // Questo garantisce che le immagini non siano più grandi del loro contenitore
-                height: auto;
-            }
-
             img {
-                max-width: 500px; // Questo garantisce che le immagini non siano più grandi del loro contenitore
+                max-width: 500px;
+                max-height: 500px;
                 height: auto;
             }
         }
@@ -373,16 +466,17 @@ export default {
         flex-direction: column;
         justify-content: center;
         padding: 5rem 0;
-        background: linear-gradient(to bottom, black, $violet );
-        background-size: 200% 200%;
+        background-image: url(../../public/tortoise-shell.svg);
+        background-position: center;
+        background-size: cover;
 
         .tooling-title {
             align-items: center;
             background: #12141d;
             border-radius: 12px;
-            box-shadow: inset 0 0 4px 1px $violet;
-            -webkit-box-shadow: inset 0 0 4px 1px $violet;
-            -moz-box-shadow: inset 0 0 4px 1px $violet;
+            box-shadow: inset 0 0 4px 1px $green;
+            -webkit-box-shadow: inset 0 0 4px 1px $green;
+            -moz-box-shadow: inset 0 0 4px 1px $green;
             display: flex;
             justify-content: center;
             margin-bottom: 5rem;
@@ -395,7 +489,7 @@ export default {
 
             h2 {
                 font-size: 3.5rem;
-                color: $violet;
+                color: $green;
                 font-family: 'CYBORG', sans-serif;
                 font-weight: 900;
                 text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -413,6 +507,8 @@ export default {
             justify-content: center;
             padding: 1.5rem;
             width: 50%;
+            background: #12141d;
+
 
             .flex-row {
                 display: flex;
@@ -451,6 +547,7 @@ export default {
                 display: flex;
 
                 h2 {
+                    text-transform: uppercase;
                     font-family: Cyborg;
                     font-weight: 900;
                     margin: 0 .5rem;
@@ -480,6 +577,28 @@ export default {
                     display: flex;
                     justify-content: center;
                     width: 60%;
+
+                    video {
+                        border-radius: 15px;
+                        box-shadow: 0 60px 123px -25px hsla(225, 2%, 62%, .42), 0 35px 75px -35px hsla(225, 2%, 62%, .08);
+                        -webkit-filter: blur(0);
+                        filter: blur(0);
+                        height: 398px;
+                        opacity: 1;
+                        -webkit-transform: perspective(800px) rotateY(25deg) scale(.8) rotateX(10deg);
+                        transform: perspective(800px) rotateY(25deg) scale(.8) rotateX(10deg);
+                        transition: all .6s ease;
+                        width: 700px;
+
+                        &:hover {
+                            box-shadow: 0 19px 67px -38px hsla(225, 2%, 62%, .8);
+                            -webkit-filter: blur(.2px);
+                            filter: blur(.2px);
+                            opacity: 1;
+                            -webkit-transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
+                            transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
+                        }
+                    }
 
                     img {
                         border-radius: 15px;
@@ -525,9 +644,9 @@ export default {
                 width: 40%;
 
                 h4 {
-                    border: 3px solid $violet;
-                    box-shadow: 6px 6px 0 0 $violet;
-                    color: $violet;
+                    border: 3px solid $green;
+                    box-shadow: 6px 6px 0 0 $green;
+                    color: $green;
                     font-family: Cyborg;
                     font-weight: 700;
                     font-weight: 900;
@@ -552,9 +671,9 @@ export default {
 
                 .tech-used {
                     margin-top: 1.5rem;
-                    border: 2px solid $violet;
+                    border: 2px solid $green;
                     border-radius: 15px;
-                    background-color: rgba($violet, 0.1);
+                    background-color: rgba($green, 0.1);
                     text-align: center;
                     padding: 1rem;
                     display: flex;
@@ -566,14 +685,14 @@ export default {
                     li {
                         list-style-type: none;
                         background-color: #fff;
-                        color: $violet;
+                        color: black;
                         padding: 0.5rem 1rem;
                         border-radius: 7px;
                         font-weight: 600;
                         transition: background-color 0.3s ease;
 
                         &:hover {
-                            background-color: $violet;
+                            background-color: $green;
                             color: #fff;
                         }
                     }
@@ -599,18 +718,18 @@ export default {
                         span {
                             display: inline-block;
                             padding: 0.2rem 0.5rem;
-                            color: $violet;
+                            color: $green;
                             text-transform: capitalize;
                             transition: color 0.3s ease;
 
                             &:hover {
-                                color: lighten($violet, 15%);
+                                color: lighten($green, 15%);
                             }
                         }
                     }
 
                     button {
-                        background-color: $violet; // supponendo che tu voglia mantenere il tema viola, ma puoi sostituirlo con qualsiasi colore
+                        background-color: $green; // supponendo che tu voglia mantenere il tema viola, ma puoi sostituirlo con qualsiasi colore
                         color: white;
                         padding: 10px 20px;
                         border: none;
@@ -626,7 +745,7 @@ export default {
                         }
 
                         &:hover {
-                            background-color: darken($violet, 15%); // scurisce il colore del pulsante quando si passa sopra con il mouse
+                            background-color: darken($green, 15%); // scurisce il colore del pulsante quando si passa sopra con il mouse
                             transform: translateY(-2px); // dà un effetto di "sollevamento" al pulsante
                         }
 
