@@ -55,6 +55,12 @@ export default {
                         my engineering background, I'm eager to contribute and grow in the digital space.
                     </p>
                 </div>
+
+                <!-- Inserisco button per download  -->
+                <div class="cv-download">
+                    <a href="../../public/manuel-cv.pdf" download="Manuel-CV.pdf" class="cv-button">Download
+                        CV</a>
+                </div>
             </div>
 
 
@@ -63,14 +69,18 @@ export default {
                 <img src="../../public/hand-computer.jpeg" alt="">
             </div>
 
+
+
         </div>
 
 
         <!-- TOOLING -->
         <div class="tooling">
             <div class="tooling-title">
-                <h2>Tool - Technologies</h2>
+                <h2>Technologies</h2>
+                <i class="fas fa-wrench animated-icon"></i>
             </div>
+
 
             <div class="tooling-box">
                 <div class="row flex-row">
@@ -117,8 +127,12 @@ export default {
         <!-- MY WORKS -->
         <div class="work" id="portfolio">
             <div class="work-header">
-                <h2>Portfolio of Projects</h2>
+                <div class="work-title">
+                    <h2>Portfolio</h2>
+                    <i class="fas fa-folder"></i> <!-- Questa è l'icona di FontAwesome -->
+                </div>
             </div>
+
 
 
             <!-- PROJECTS -->
@@ -247,7 +261,8 @@ export default {
 
                         <p>This application is a comprehensive <span class="highlight">project management system</span>
                             tailored for professionals seeking robustness and clarity. With full <span
-                                class="highlight">CRUD functionalities</span>, users can effortlessly manage, visualize, and
+                                class="highlight">CRUD
+                                functionalities</span>, users can effortlessly manage, visualize, and
                             collaborate on their projects as well as explore those created by other community members. The
                             underlying database architecture boasts intricate <span class="highlight">relational
                                 tables</span>, ensuring data integrity and streamlined workflows.</p>
@@ -427,6 +442,25 @@ export default {
                     ;
                 }
             }
+
+            .cv-button {
+                display: inline-block;
+                padding: 10px 20px;
+                margin-top: 20px;
+                background-color: #333;
+                color: #fff;
+                text-transform: uppercase;
+                text-decoration: none;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #555;
+                }
+            }
+
         }
 
         // SECONDO CONTENUTO
@@ -475,12 +509,22 @@ export default {
                 box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
             }
 
+            .animated-icon {
+                padding-left: 50px;
+                padding-bottom: 30px;
+                display: block;
+                font-size: 2rem;
+                animation: rotateIcon 8s infinite linear;
+            }
+
+
             h2 {
-                font-size: 3.0rem;
-                color: $green;
-                font-family: 'CYBORG', sans-serif;
+                font-family: 'Arial', sans-serif;
                 font-weight: 900;
+                font-size: 2rem;
                 text-transform: uppercase;
+                color: white;
+                letter-spacing: 1.5px;
             }
         }
 
@@ -531,16 +575,44 @@ export default {
             background: #f7f7f7;
             border-radius: 10px;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+
+            .work-title {
+                align-items: center;
+                border-radius: 12px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                display: flex;
+                justify-content: center;
+                padding: 0 3rem;
+                transition: 0.7s ease-in;
+
+                i {
+                    color: #333;
+                    padding-left: 20px;
+                    display: block;
+                    font-size: 2rem;
+                    animation: pulse 2s infinite;
+                }
+
+                h2 {
+                    font-family: 'Arial', sans-serif;
+                    font-weight: 900;
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    color: #333;
+                    letter-spacing: 1.5px;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+                }
+
+            }
+
+
+
         }
 
-        h2 {
-            font-family: 'Arial', sans-serif;
-            font-weight: 900;
-            font-size: 2rem;
-            text-transform: uppercase;
-            color: #333;
-            letter-spacing: 1.5px;
-        }
 
 
 
