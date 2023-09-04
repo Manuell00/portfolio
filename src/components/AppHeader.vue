@@ -57,12 +57,13 @@ nav {
   flex-direction: row;
   background-color: black !important;
   height: 10vh;
-  width: 100%; // Imposta la larghezza al 100%
-  box-sizing: border-box; // Include padding e bordo nella larghezza totale
-  padding: 0 2rem; // Padding laterale
-  z-index: 1000; // Nota: hai dichiarato 'z-index' due volte, quindi ho tenuto il valore più grande
-  text-transform: capitalize;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 2rem;
+  z-index: 1000;
+  text-transform: uppercase;
   position: fixed;
+  font-family: sans-serif;
   top: 0;
 
   .logo-section {

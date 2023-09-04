@@ -69,7 +69,7 @@ export default {
         <!-- TOOLING -->
         <div class="tooling">
             <div class="tooling-title">
-                <h2>Tooling</h2>
+                <h2>Tool - Technologies</h2>
             </div>
 
             <div class="tooling-box">
@@ -117,22 +117,9 @@ export default {
         <!-- MY WORKS -->
         <div class="work">
             <div class="work-header">
-                <span>
-                    <svg width="16" height="40" viewBox="0 0 8 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M6.99999 18C6.46955 18 5.96085 17.7893 5.58577 17.4142C5.2107 17.0391 4.99999 16.5304 4.99999 16V13.61C5.00042 12.9513 4.83816 12.3027 4.52764 11.7218C4.21712 11.1408 3.76793 10.6456 3.21999 10.28L2.79999 10L3.21999 9.72C3.76793 9.35442 4.21712 8.85917 4.52764 8.27825C4.83816 7.69733 5.00042 7.04871 4.99999 6.39V4C4.99999 3.46957 5.2107 2.96086 5.58577 2.58579C5.96085 2.21071 6.46955 2 6.99999 2C7.2652 2 7.51956 1.89464 7.70709 1.70711C7.89463 1.51957 7.99999 1.26522 7.99999 1C7.99999 0.734784 7.89463 0.48043 7.70709 0.292893C7.51956 0.105357 7.2652 0 6.99999 0C5.93912 0 4.92171 0.421427 4.17156 1.17157C3.42142 1.92172 2.99999 2.93913 2.99999 4V6.39C3.00103 6.7202 2.92029 7.04552 2.765 7.33692C2.6097 7.62832 2.38467 7.87674 2.10999 8.06L0.449988 9.17C0.313865 9.26148 0.202329 9.38503 0.125209 9.52977C0.0480885 9.67451 0.00775146 9.836 0.00775146 10C0.00775146 10.164 0.0480885 10.3255 0.125209 10.4702C0.202329 10.615 0.313865 10.7385 0.449988 10.83L2.10999 11.94C2.38467 12.1233 2.6097 12.3717 2.765 12.6631C2.92029 12.9545 3.00103 13.2798 2.99999 13.61V16C2.99999 17.0609 3.42142 18.0783 4.17156 18.8284C4.92171 19.5786 5.93912 20 6.99999 20C7.2652 20 7.51956 19.8946 7.70709 19.7071C7.89463 19.5196 7.99999 19.2652 7.99999 19C7.99999 18.7348 7.89463 18.4804 7.70709 18.2929C7.51956 18.1054 7.2652 18 6.99999 18Z"
-                            fill="#14E956"></path>
-                    </svg>
-                    <h2>My Works</h2>
-
-                    <svg width="16" height="40" viewBox="0 0 8 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7.55 9.17L5.89 8.06C5.61532 7.87674 5.39029 7.62832 5.23499 7.33692C5.07969 7.04552 4.99896 6.7202 5 6.39V4C5 2.93913 4.57857 1.92172 3.82843 1.17157C3.07828 0.421427 2.06087 0 1 0C0.734784 0 0.480429 0.105357 0.292892 0.292893C0.105356 0.48043 0 0.734784 0 1C0 1.26522 0.105356 1.51957 0.292892 1.70711C0.480429 1.89464 0.734784 2 1 2C1.53043 2 2.03914 2.21071 2.41421 2.58579C2.78929 2.96086 3 3.46957 3 4V6.39C2.99957 7.04871 3.16183 7.69733 3.47235 8.27825C3.78287 8.85917 4.23205 9.35442 4.78 9.72L5.2 10L4.78 10.28C4.23205 10.6456 3.78287 11.1408 3.47235 11.7218C3.16183 12.3027 2.99957 12.9513 3 13.61V16C3 16.5304 2.78929 17.0391 2.41421 17.4142C2.03914 17.7893 1.53043 18 1 18C0.734784 18 0.480429 18.1054 0.292892 18.2929C0.105356 18.4804 0 18.7348 0 19C0 19.2652 0.105356 19.5196 0.292892 19.7071C0.480429 19.8946 0.734784 20 1 20C2.06087 20 3.07828 19.5786 3.82843 18.8284C4.57857 18.0783 5 17.0609 5 16V13.61C4.99896 13.2798 5.07969 12.9545 5.23499 12.6631C5.39029 12.3717 5.61532 12.1233 5.89 11.94L7.55 10.83C7.68612 10.7385 7.79766 10.615 7.87478 10.4702C7.9519 10.3255 7.99224 10.164 7.99224 10C7.99224 9.836 7.9519 9.67451 7.87478 9.52977C7.79766 9.38503 7.68612 9.26148 7.55 9.17Z"
-                            fill="#14E956"></path>
-                    </svg>
-
-                </span>
+                <h2>Portfolio of Projects</h2>
             </div>
+
 
             <!-- PROJECTS -->
             <div class="projects">
@@ -179,14 +166,14 @@ export default {
                     <div class="single-details">
                         <h4>Whatsapp</h4>
 
-                        <p> Delving deeper into the realm of advanced web development, I undertook the challenge of
-                            emulating one of the world's most used messaging platforms: <span
-                                class="highlight">WhatsApp</span>. This project involved creating an intricate frontend that
-                            captures the authentic feel of WhatsApp's user interface. Yet, its true complexity lies beneath
-                            the surface. Harnessing the power of various <span class="highlight">APIs</span>, I successfully
-                            built real-time chat functionalities, allowing for dynamic interactions reminiscent of the
-                            actual app. This venture not only pushed my frontend skills but also gave me profound insights
-                            into backend development and the seamless integration of third-party services.</p>
+                        <p>
+                            I embarked on an advanced web development journey by recreating the look and feel of the
+                            globally recognized platform: <span class="highlight">WhatsApp</span>. While the frontend
+                            mirrors WhatsApp's UI, the real challenge was integrating real-time chat functionalities through
+                            various <span class="highlight">APIs</span>. This project honed both my frontend and backend
+                            skills, emphasizing the integration of third-party services.
+                        </p>
+
 
 
                         <ul class="tech-used">
@@ -452,8 +439,8 @@ export default {
             flex-direction: row;
 
             img {
-                max-width: 500px;
-                max-height: 500px;
+                max-width: 800px;
+                max-height: 800px;
                 height: auto;
             }
         }
@@ -466,17 +453,15 @@ export default {
         flex-direction: column;
         justify-content: center;
         padding: 5rem 0;
-        background-image: url(../../public/tortoise-shell.svg);
-        background-position: center;
-        background-size: cover;
+        background-color: black;
+        padding-bottom: 10rem;
+
 
         .tooling-title {
             align-items: center;
-            background: #12141d;
+            background: linear-gradient(135deg, rgba(18, 20, 29, 0.8), rgba(28, 30, 39, 0.8));
             border-radius: 12px;
-            box-shadow: inset 0 0 4px 1px $green;
-            -webkit-box-shadow: inset 0 0 4px 1px $green;
-            -moz-box-shadow: inset 0 0 4px 1px $green;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             display: flex;
             justify-content: center;
             margin-bottom: 5rem;
@@ -484,18 +469,19 @@ export default {
             transition: 0.7s ease-in;
 
             &:hover {
-                transform: scale(1.2);
+                transform: scale(1.1);
+                box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
             }
 
             h2 {
-                font-size: 3.5rem;
+                font-size: 3.0rem;
                 color: $green;
                 font-family: 'CYBORG', sans-serif;
                 font-weight: 900;
-                text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
                 text-transform: uppercase;
             }
         }
+
 
         .tooling-box {
             align-items: center;
@@ -534,35 +520,33 @@ export default {
         width: 100%;
         height: auto;
         background-color: black;
-        padding-top: 15rem;
 
         .work-header {
-            align-items: flex-start;
             display: flex;
-            justify-content: flex-start;
-            padding-left: 5rem;
-            font-size: 1.6rem;
-
-            span {
-                display: flex;
-
-                h2 {
-                    text-transform: uppercase;
-                    font-family: Cyborg;
-                    font-weight: 900;
-                    margin: 0 .5rem;
-                    padding: 0;
-                }
-            }
-
+            justify-content: center;
+            align-items: center;
+            padding: 3rem 0;
+            background: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
         }
+
+        h2 {
+            font-family: 'Arial', sans-serif;
+            font-weight: 900;
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: #333;
+            letter-spacing: 1.5px;
+        }
+
+
 
         .projects {
             align-items: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin: 3rem 0 7rem;
             padding: 0 5rem;
 
             .single {
@@ -578,29 +562,8 @@ export default {
                     justify-content: center;
                     width: 60%;
 
+                    img,
                     video {
-                        border-radius: 15px;
-                        box-shadow: 0 60px 123px -25px hsla(225, 2%, 62%, .42), 0 35px 75px -35px hsla(225, 2%, 62%, .08);
-                        -webkit-filter: blur(0);
-                        filter: blur(0);
-                        height: 398px;
-                        opacity: 1;
-                        -webkit-transform: perspective(800px) rotateY(25deg) scale(.8) rotateX(10deg);
-                        transform: perspective(800px) rotateY(25deg) scale(.8) rotateX(10deg);
-                        transition: all .6s ease;
-                        width: 700px;
-
-                        &:hover {
-                            box-shadow: 0 19px 67px -38px hsla(225, 2%, 62%, .8);
-                            -webkit-filter: blur(.2px);
-                            filter: blur(.2px);
-                            opacity: 1;
-                            -webkit-transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
-                            transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
-                        }
-                    }
-
-                    img {
                         border-radius: 15px;
                         box-shadow: 0 60px 123px -25px hsla(225, 2%, 62%, .42), 0 35px 75px -35px hsla(225, 2%, 62%, .08);
                         -webkit-filter: blur(0);
@@ -643,22 +606,33 @@ export default {
                 padding: 1rem;
                 width: 40%;
 
+                p {
+                    font-family: 'Open Sans', sans-serif;
+                    line-height: 1.6;
+                    letter-spacing: 0.5px;
+                    font-weight: 400;
+                }
+
+
                 h4 {
-                    border: 3px solid $green;
-                    box-shadow: 6px 6px 0 0 $green;
+                    border: 2px solid $green;
+                    /* Cambiato da dashed a solid */
+                    box-shadow: 8px 8px 0 0 $green;
                     color: $green;
-                    font-family: Cyborg;
-                    font-weight: 700;
-                    font-weight: 900;
-                    margin-bottom: 3rem;
-                    padding: .7rem 1.1rem;
-                    text-transform: uppercase;
-                    transition: transform 0.7s ease-in-out;
+                    font-family: 'Futura';
+                    font-weight: 600;
+                    margin-bottom: 2rem;
+                    padding: 1rem 1.5rem;
+                    text-transform: capitalize;
+                    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 
                     &:hover {
-                        transform: scale(1.2);
+                        transform: rotate(5deg);
+                        box-shadow: 12px 12px 0 0 $green;
                     }
                 }
+
+
 
                 .highlight {
                     color: #2C3E50;
@@ -774,35 +748,10 @@ export default {
 
 @media (max-width: 1700px) {
     .container-fluid .emoj {
-        .mini-img {
-            width: 120px;
-        }
 
         img {
-            width: 350px; // Slightly reduce the image width for large devices
-        }
-    }
-}
-
-@media (max-width: 1200px) {
-    .container-fluid .home-intro {
-        .content {
-            width: 70%; // Increase width for more space
-        }
-
-        .emoj {
-            .mini-img {
-                width: 100px;
-            }
-
-            img {
-                width: 300px; // Slightly reduce the image width for large devices
-            }
-
-            svg.mini-img {
-                // Nascondi SVG con classe .mini-img a partire da 1300px
-                display: none;
-            }
+            width: 500px;
+            height: 500px;
         }
     }
 }
@@ -812,9 +761,10 @@ export default {
         padding-top: 15vh;
 
         .home-intro {
-            flex-direction: column; // Stack content and emoj sections on top of each other
+            flex-direction: column;
 
             .content {
+                width: 70%;
                 display: flex;
                 justify-content: center;
                 text-align: center;
@@ -827,16 +777,47 @@ export default {
                 }
 
                 .emoj {
-                    width: 100%; // Utilize full width
-                    padding: 20px 0; // Add some vertical padding
-
-                    svg.mini-img {
-                        display: none;
-                    }
+                    width: 100%;
+                    padding: 20px 0;
 
                     img {
-                        width: 250px; // Reduce the image width for tablets
+                        width: 300px;
+                        height: auto;
                     }
+                }
+            }
+        }
+
+        .work {
+            .projects {
+                .single {
+                    flex-direction: column;
+                    margin: 5rem 0;
+
+                    .single-img {
+                        order: 1;
+                        margin-bottom: 3rem;
+
+                        img,
+                        .img-2,
+                        video {
+                            transform: perspective(800px) rotateY(-25deg) scale(.8) rotateX(5deg);
+
+                            &:hover {
+                                -webkit-transform: perspective(800px) rotateY(0deg) translateY(0px) rotateX(0deg) scale(0.9);
+                                transform: perspective(800px) rotateY(0deg) translateY(0px) rotateX(0deg) scale(0.9);
+                            }
+                        }
+                    }
+
+                    .single-details {
+                        order: 2;
+
+                        p {
+                            display: none;
+                        }
+                    }
+
                 }
             }
         }
@@ -852,29 +833,25 @@ export default {
                 }
 
                 div {
-                    font-size: 1.5rem; // Reduce font size
+                    font-size: 1.5rem;
                 }
             }
 
             .content-primary h1 {
-                font-size: 1.8rem; // Reduce font size
+                font-size: 1.8rem;
 
                 span {
-                    font-size: 2.5rem; // Reduce font size
+                    font-size: 2.5rem;
                 }
             }
 
             .content-secondary p {
-                font-size: 1.2rem; // Reduce font size
+                font-size: 1.2rem;
             }
         }
 
-        .emoj {
-
-
-            img {
-                width: 200px; // Further reduce the image width for mobile phones
-            }
+        .emoj img {
+            width: 200px;
         }
     }
 }
@@ -883,26 +860,27 @@ export default {
     .container-fluid .home-intro {
         .content {
             .content-movement div {
-                font-size: 1.2rem; // Reduce font size more
+                font-size: 1.2rem;
             }
 
             .content-primary h1 {
-                font-size: 1.5rem; // Reduce font size more
+                font-size: 1.5rem;
 
                 span {
-                    font-size: 2.2rem; // Reduce font size more
+                    font-size: 2.2rem;
                 }
             }
 
             .content-secondary p {
-                font-size: 1rem; // Reduce font size more
+                font-size: 1rem;
             }
         }
 
         .emoj img {
-            width: 250px; // Reduce the image width even more for very small devices
+            width: 150px;
         }
     }
+
 }
 </style>
 
