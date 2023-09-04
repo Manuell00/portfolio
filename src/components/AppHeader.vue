@@ -165,13 +165,54 @@ nav {
 }
 
 
-// ... il resto del tuo stile ...
+// MEDIA QUERY
+
+@media (max-width: 1200px) {
+  nav {
+    padding: 0 1rem;
+
+    .logo-section {
+      height: 80px;
+      width: 80px;
+    }
+
+    .nav-links {
+      width: 40%;
+
+      li {
+        margin: 0 0.5rem;
+
+        a {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .social-links {
+      gap: 20px;
+
+      a {
+        font-size: 4rem;
+      }
+    }
+
+    .cta-button {
+      font-size: 1.4rem;
+      padding: 0.8rem 2.5rem;
+    }
+  }
+}
 
 @media (max-width: 992px) {
   nav {
     flex-direction: column;
     height: auto;
-    padding: 1rem;
+    padding: 0.8rem;
+
+    .logo-section {
+      height: 70px;
+      width: 70px;
+    }
 
     .main-nav {
       width: 100%;
@@ -192,13 +233,13 @@ nav {
         background-color: $green;
         width: 100%;
         gap: 0.5rem;
-        padding: 1rem 0;
+        padding: 0.8rem 0;
 
         li {
           margin: 0;
 
           a {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
           }
         }
       }
@@ -209,8 +250,30 @@ nav {
     }
 
     .cta-button {
-      margin-top: 1rem;
+      margin-top: 0.8rem;
       width: 100%;
+      font-size: 1.2rem;
+      padding: 0.7rem 2.2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    .logo-section {
+      height: 60px;
+      width: 60px;
+    }
+
+    .cta-button {
+      font-size: 1.1rem;
+      padding: 0.6rem 2rem;
+    }
+
+    .nav-links.active {
+      a {
+        font-size: 1.2rem;
+      }
     }
   }
 }

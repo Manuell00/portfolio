@@ -645,9 +645,9 @@ export default {
                         height: 398px;
                         opacity: 1;
                         -webkit-transform: perspective(800px) rotateY(25deg) scale(.8) rotateX(10deg);
-                        transform: perspective(800px) rotateY(25deg) scale(.8) rotateX(10deg);
                         transition: all .6s ease;
                         width: 700px;
+                        transform: perspective(800px) rotateY(25deg) scale(.8) rotateX(-5deg);
 
 
                         &:hover {
@@ -655,17 +655,17 @@ export default {
                             -webkit-filter: blur(.2px);
                             filter: blur(.2px);
                             opacity: 1;
-                            -webkit-transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
-                            transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
+                            -webkit-transform: perspective(800px) rotateY(0deg) translateY(0px) rotateX(0deg) scale(1.0);
+                            transform: perspective(800px) rotateY(0deg) translateY(0px) rotateX(0deg) scale(1.0);
                         }
                     }
 
                     .img-2 {
-                        transform: perspective(800px) rotateY(-25deg) scale(.8) rotateX(10deg);
+                        transform: perspective(800px) rotateY(-25deg) scale(.8) rotateX(5deg);
 
                         &:hover {
-                            -webkit-transform: perspective(800px) rotateY(15deg) translateY(50px) rotateX(10deg) scale(1);
-                            transform: perspective(800px) rotateY(15deg) translateY(50px) rotateX(10deg) scale(1);
+                            -webkit-transform: perspective(800px) rotateY(0deg) translateY(0px) rotateX(0deg) scale(1.0);
+                            transform: perspective(800px) rotateY(0deg) translateY(0px) rotateX(0deg) scale(1.0);
                         }
                     }
                 }
@@ -830,6 +830,24 @@ export default {
     }
 }
 
+@media (max-width: 1500px) {
+
+    .container-fluid {
+        .projects {
+            .single-img {
+
+                img,
+                video {
+                    width: 600px !important;
+                    height: auto;
+                }
+            }
+        }
+
+
+    }
+}
+
 @media (max-width: 1200px) {
     .container-fluid {
         padding-top: 15vh;
@@ -875,6 +893,7 @@ export default {
                         img,
                         .img-2,
                         video {
+                            width: 600px;
                             transform: perspective(800px) rotateY(-25deg) scale(.8) rotateX(5deg);
 
                             &:hover {
@@ -898,34 +917,46 @@ export default {
     }
 }
 
-@media (max-width: 768px) {
-    .container-fluid .home-intro {
-        .content {
-            .content-movement {
-                .sticker {
-                    display: block;
+@media (max-width: 768px) and (min-width: 577px) {
+    .container-fluid {
+        .home-intro {
+            .content {
+                .content-movement {
+                    .sticker {
+                        display: block;
+                    }
+
+                    div {
+                        font-size: 1.5rem;
+                    }
                 }
 
-                div {
-                    font-size: 1.5rem;
+                .content-primary h1 {
+                    font-size: 1.8rem;
+
+                    span {
+                        font-size: 2.5rem;
+                    }
+                }
+
+                .content-secondary p {
+                    font-size: 1.2rem;
                 }
             }
 
-            .content-primary h1 {
-                font-size: 1.8rem;
-
-                span {
-                    font-size: 2.5rem;
-                }
-            }
-
-            .content-secondary p {
-                font-size: 1.2rem;
+            .emoj img {
+                width: 300px;
             }
         }
 
-        .emoj img {
-            width: 200px;
+        .projects {
+            .single-img {
+
+                img,
+                video {
+                    width: 600px !important;
+                }
+            }
         }
     }
 }
@@ -934,27 +965,37 @@ export default {
     .container-fluid .home-intro {
         .content {
             .content-movement div {
-                font-size: 1.2rem;
+                font-size: 2.2rem;
             }
 
             .content-primary h1 {
-                font-size: 1.5rem;
+                font-size: 2.5rem;
 
                 span {
-                    font-size: 2.2rem;
+                    font-size: 2.5rem;
                 }
             }
 
             .content-secondary p {
-                font-size: 1rem;
+                font-size: 1.5rem;
             }
         }
 
         .emoj img {
-            width: 150px;
+            width: 230px;
+        }
+
+        .projects {
+            .single-img {
+
+                img,
+                video {
+                    max-width: 70%; // Riduce le immagini e i video al 70% della loro larghezza originale sotto 576px
+                    width: 100%;
+                }
+            }
         }
     }
-
 }
 </style>
 
