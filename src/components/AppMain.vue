@@ -57,7 +57,7 @@ export default {
                 </div>
 
                 <!-- Inserisco button per download  -->
-                <div class="cv-download">
+                <div id="cv" class="cv-download">
                     <a href="../../public/manuel-cv.pdf" download="Manuel-CV.pdf" class="cv-button">Download
                         CV</a>
                 </div>
@@ -820,6 +820,36 @@ export default {
 
 // MEDIA QUERY
 
+@media (max-width: 2500px) {
+    .container-fluid {
+
+        .emoj {
+            img {
+                width: 700px;
+                height: 700px;
+            }
+        }
+
+        .work {
+            .projects {
+                .single {
+                    .single-img {
+
+                        img,
+                        video {
+                            width: 750px;
+                            height: auto;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+    }
+}
+
 @media (max-width: 1700px) {
     .container-fluid .emoj {
 
@@ -833,15 +863,21 @@ export default {
 @media (max-width: 1500px) {
 
     .container-fluid {
-        .projects {
-            .single-img {
+        .work {
+            .projects {
+                .single {
+                    .single-img {
 
-                img,
-                video {
-                    width: 600px !important;
-                    height: auto;
+                        img,
+                        video {
+                            width: 600px;
+                            height: auto;
+                        }
+                    }
+
                 }
             }
+
         }
 
 
@@ -850,7 +886,6 @@ export default {
 
 @media (max-width: 1200px) {
     .container-fluid {
-        padding-top: 15vh;
 
         .home-intro {
             flex-direction: column;
@@ -893,7 +928,7 @@ export default {
                         img,
                         .img-2,
                         video {
-                            width: 600px;
+                            width: 700px;
                             transform: perspective(800px) rotateY(-25deg) scale(.8) rotateX(5deg);
 
                             &:hover {
@@ -949,53 +984,71 @@ export default {
             }
         }
 
-        .projects {
-            .single-img {
+        .work {
+            .projects {
+                .single {
+                    .single-img {
 
-                img,
-                video {
-                    width: 600px !important;
+                        img,
+                        video,
+                        .img-2 {
+                            width: 500px;
+                            height: auto;
+                        }
+                    }
+
                 }
             }
+
         }
     }
 }
 
 @media (max-width: 576px) {
-    .container-fluid .home-intro {
-        .content {
-            .content-movement div {
-                font-size: 2.2rem;
-            }
+    .container-fluid {
+        .home-intro {
+            .content {
+                .content-movement div {
+                    font-size: 2.2rem;
+                }
 
-            .content-primary h1 {
-                font-size: 2.5rem;
-
-                span {
+                .content-primary h1 {
                     font-size: 2.5rem;
+
+                    span {
+                        font-size: 2.5rem;
+                    }
+                }
+
+                .content-secondary p {
+                    font-size: 1.5rem;
                 }
             }
 
-            .content-secondary p {
-                font-size: 1.5rem;
+            .emoj img {
+                width: 230px;
             }
+
         }
 
-        .emoj img {
-            width: 230px;
-        }
+        .work {
+            .projects {
+                .single {
+                    .single-img {
 
-        .projects {
-            .single-img {
+                        img,
+                        video,
+                        .img-2 {
+                            width: 400px;
+                        }
+                    }
 
-                img,
-                video {
-                    max-width: 70%; // Riduce le immagini e i video al 70% della loro larghezza originale sotto 576px
-                    width: 100%;
                 }
             }
+
         }
     }
+
 }
 </style>
 

@@ -48,15 +48,21 @@ export default {
         <!-- Inserisco gli eventi al click -->
         <li><a href="#home" @click.prevent="scrollTo('home')">Home</a></li>
         <li><a href="#portfolio" @click.prevent="scrollTo('portfolio')">Portfolio</a></li>
+
+        <li class="social-links">
+          <span class="dropdown-toggle">Social</span>
+          <div class="dropdown-menu">
+            <a href="https://www.linkedin.com/in/manuel-caselli-78a0a7244/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Manuell00"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/manuel_caselli/"><i class="fa-brands fa-instagram"></i></a>
+
+          </div>
+        </li>
       </ul>
 
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/manuel-caselli-78a0a7244/"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/Manuell00"><i class="fa-brands fa-github"></i></a>
-      </div>
     </div>
 
-    <button class="cta-button">CONTACT ME</button>
+    <a href="mailto:manuell.caselli@gmail.com"> <button class="cta-button">CONTACT ME</button></a>
   </nav>
 </template>
 
@@ -126,25 +132,60 @@ nav {
         }
       }
     }
-  }
 
-  .social-links {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+    .social-links {
+      margin: 0 1rem;
+      position: relative;
 
-    a {
-      margin-left: 1rem;
-      color: white;
-      font-size: 4.5rem;
-      transition: 0.7s all ease;
+      .dropdown-toggle {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        font-size: 2.0rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.5s ease;
+
+        &:hover {
+          transform: translateY(-10px);
+          padding: 10px 0;
+          color: $green;
+        }
+
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        background-color: black;
+        border-radius: 5px;
+        overflow: hidden;
+        z-index: 1;
+
+        a {
+          display: block;
+          padding: 10px 20px;
+          color: white;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: lighten($footer-background-color, 10%);
+            color: $green;
+          }
+        }
+      }
 
       &:hover {
-        color: $green;
+        .dropdown-menu {
+          display: block;
+        }
       }
     }
   }
+
+
 
   .cta-button {
     background-color: white;
@@ -167,7 +208,7 @@ nav {
 
 // MEDIA QUERY
 
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
   nav {
     padding: 0 1rem;
 
@@ -210,8 +251,7 @@ nav {
     padding: 0.8rem;
 
     .logo-section {
-      height: 70px;
-      width: 70px;
+      display: none;
     }
 
     .main-nav {

@@ -8,7 +8,7 @@ import axios from 'axios';
 // Importo i COMPONENTI
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
-// import AppFooter from './components/AppFooter.vue'
+import AppFooter from './components/AppFooter.vue'
 
 
 // Inserisco l'EXPORT
@@ -16,7 +16,7 @@ export default {
   components: {
     AppHeader,
     AppMain,
-    // AppFooter,
+    AppFooter,
   },
 
   // Inserisco i dati
@@ -55,9 +55,9 @@ export default {
   </main>
 
   <!-- Inserisco il footer e il suo componente -->
-  <!-- <footer>
+  <footer>
     <AppFooter />
-  </footer> -->
+  </footer>
 </template>
 
 
