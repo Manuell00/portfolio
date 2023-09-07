@@ -51,8 +51,8 @@ export default {
       <ul class="nav-links">
         <!-- Inserisco gli eventi al click -->
         <li><a href="#home" @click.prevent="scrollTo('home')">Home</a></li>
-        <li><a href="#portfolio" @click.prevent="scrollTo('portfolio')">Portfolio</a></li>
         <li><a href="#tech" @click.prevent="scrollTo('tech')">Tools</a></li>
+        <li><a href="#portfolio" @click.prevent="scrollTo('portfolio')">Portfolio</a></li>
       </ul>
 
     </div>
@@ -199,11 +199,6 @@ nav {
   nav {
     padding: 0 1rem;
 
-    .logo-section {
-      height: 80px;
-      width: 80px;
-    }
-
     .nav-links {
       width: 40%;
 
@@ -236,10 +231,6 @@ nav {
     flex-direction: column;
     height: auto;
     padding: 0.8rem;
-
-    .logo-section {
-      display: none;
-    }
 
     .main-nav {
       width: 100%;
@@ -287,10 +278,6 @@ nav {
 
 @media (max-width: 768px) {
   nav {
-    .logo-section {
-      height: 60px;
-      width: 60px;
-    }
 
     .cta-button {
       font-size: 1.1rem;
@@ -300,6 +287,24 @@ nav {
     .nav-links.active {
       a {
         font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 400px) {
+  nav {
+    padding: 1rem 0;
+
+    .cta-button {
+      font-size: 0.8rem;
+      padding: 0.6rem 2rem;
+    }
+
+    .nav-links.active {
+      a {
+        font-size: 0.9rem;
       }
     }
   }

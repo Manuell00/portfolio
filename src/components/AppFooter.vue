@@ -356,6 +356,7 @@ export default {
                     font-size: 15px; // Font ancora più piccolo
                     gap: 10px;
                     flex: column;
+                    padding: 0;
 
                     li {
                         padding: 5px 10px;
@@ -365,6 +366,7 @@ export default {
                 .social-links {
                     font-size: 50px; // Isole social più piccole
                     gap: 10px;
+                    padding: 0;
                 }
             }
 

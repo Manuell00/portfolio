@@ -1,7 +1,13 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-})
+
+  // aggiunta della configurazione di risoluzione
+  resolve: {
+    alias: {
+      'vue-cookies': 'vue-cookies/dist/vue-cookies.esm.js',
+    }
+  }
+});

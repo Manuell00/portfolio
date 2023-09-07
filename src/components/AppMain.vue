@@ -1125,5 +1125,56 @@ export default {
     }
 
 }
+
+
+@media (max-width: 380px) {
+    .container-fluid {
+        .home-intro {
+            .content {
+                line-height: 50px;
+
+                .content-movement div {
+                    font-size: 1.5rem;
+                }
+
+                .content-primary h1 {
+                    font-size: 1.3rem;
+
+                    span {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                .content-secondary p {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .emoj img {
+                width: 200px;
+            }
+
+        }
+
+        .work {
+            .projects {
+                .single {
+
+                    .single-img {
+
+                        img,
+                        video,
+                        .img-2 {
+                            width: 300px;
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+
+}
 </style>
 

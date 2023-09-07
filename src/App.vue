@@ -21,14 +21,12 @@ export default {
     CookieApp,
   },
 
-  // Inserisco i dati
   data() {
     return {
       store,
     }
   },
 
-  // Dovrò inserire i metodi
   methods: {
 
   },
@@ -59,8 +57,10 @@ export default {
   <!-- Inserisco il footer e il suo componente -->
   <footer>
     <AppFooter />
-    <!-- <CookieApp /> -->
   </footer>
+
+  <!-- Banner dei cookies e overlay -->
+  <CookieApp />
 </template>
 
 
