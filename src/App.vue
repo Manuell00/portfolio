@@ -9,6 +9,7 @@ import axios from 'axios';
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
 import AppFooter from './components/AppFooter.vue'
+import CookieApp from './components/CookieApp.vue'
 
 
 // Inserisco l'EXPORT
@@ -17,6 +18,7 @@ export default {
     AppHeader,
     AppMain,
     AppFooter,
+    CookieApp,
   },
 
   // Inserisco i dati
@@ -57,6 +59,7 @@ export default {
   <!-- Inserisco il footer e il suo componente -->
   <footer>
     <AppFooter />
+    <!-- <CookieApp /> -->
   </footer>
 </template>
 
