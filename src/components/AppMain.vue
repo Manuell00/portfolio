@@ -75,7 +75,7 @@ export default {
 
 
         <!-- TOOLING -->
-        <div class="tooling">
+        <div class="tooling" id="tech">
             <div class="tooling-title">
                 <h2>Technologies</h2>
                 <i class="fas fa-wrench animated-icon"></i>
@@ -1031,9 +1031,84 @@ export default {
 
         }
 
+        #tech {
+            .tooling-title {
+                text-align: center;
+
+                h2 {
+                    font-size: 1.3rem;
+                }
+
+                a {
+                    font-size: 1.3rem;
+                }
+            }
+
+        }
+
+
         .work {
             .projects {
                 .single {
+                    text-align: center;
+
+                    .single-img {
+
+                        img,
+                        video,
+                        .img-2 {
+                            width: 400px;
+                        }
+                    }
+
+                    .last {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                    }
+
+                }
+            }
+
+        }
+    }
+
+}
+
+@media (max-width: 450px) {
+    .container-fluid {
+        .home-intro {
+            .content {
+                line-height: 50px;
+
+                .content-movement div {
+                    font-size: 2.0rem;
+                }
+
+                .content-primary h1 {
+                    font-size: 1.5rem;
+
+                    span {
+                        font-size: 1.7rem;
+                    }
+                }
+
+                .content-secondary p {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .emoj img {
+                width: 230px;
+            }
+
+        }
+
+        .work {
+            .projects {
+                .single {
+
                     .single-img {
 
                         img,

@@ -38,12 +38,6 @@ export default {
 
             <!-- Inserisco la navbar -->
             <nav>
-
-                <!-- Logo -->
-                <div class="logo-section">
-                    <img src="../../public/Logo.png" alt="Manuel Caselli Logo" />
-                </div>
-
                 <!-- Indirizzi -->
                 <ul class="direct">
                     <li><a href="#home" @click.prevent="scrollTo('home')">Home</a></li>
@@ -102,23 +96,6 @@ export default {
             align-items: center;
             width: 100%;
             padding: 0 100px;
-
-            .logo-section {
-                height: 100px;
-                width: 100px;
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); // ombra per il logo
-
-                img {
-                    border-radius: 50%;
-                    height: 100%;
-                    width: 100%;
-                    transition: 0.7s all ease;
-
-                    &:hover {
-                        transform: scale(1.05); // Sottile effetto zoom
-                    }
-                }
-            }
 
             .direct {
                 display: flex;
@@ -341,11 +318,11 @@ export default {
         // Adattamenti specifici per schermi tra 577px e 768px
         .content {
             nav {
-                flex-direction: column; // Imposta il layout in colonna
+                flex-direction: row; // Imposta il layout in colonna
 
                 .direct,
                 .social-links {
-                    flex-direction: row; // Orizzontale
+                    flex-direction: column; // Orizzontale
                     justify-content: center; // Centrato
                 }
 
@@ -359,7 +336,7 @@ export default {
                 }
 
                 .social-links {
-                    font-size: 80px; // Riduci le icone social
+                    font-size: 60px; // Riduci le icone social
                     gap: 15px;
                     margin: 0;
                 }
@@ -376,8 +353,9 @@ export default {
                 flex-direction: column; // Mantieni la colonna
 
                 .direct {
-                    font-size: 30px; // Font ancora più piccolo
+                    font-size: 15px; // Font ancora più piccolo
                     gap: 10px;
+                    flex: column;
 
                     li {
                         padding: 5px 10px;
@@ -388,6 +366,10 @@ export default {
                     font-size: 50px; // Isole social più piccole
                     gap: 10px;
                 }
+            }
+
+            p {
+                text-align: center;
             }
         }
     }
