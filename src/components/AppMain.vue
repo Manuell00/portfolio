@@ -1072,7 +1072,7 @@ export default {
                 }
 
                 .content-secondary p {
-                    font-size: 1.5rem;
+                    display: none;
                 }
             }
 
