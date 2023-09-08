@@ -36,7 +36,7 @@ export default {
                 <div class="content-movement">
                     <div>
                         <div id="sticker">🍝</div>
-                        Hi Everyone! I'm Manuel
+                        <span>Hi Everyone! I'm Manuel</span>
                     </div>
                 </div>
 
@@ -50,9 +50,12 @@ export default {
 
                 <div class="content-secondary">
                     <p>
-                        Fresh out of Management Engineering, I took a 6-month deep dive into coding with Boolean. Data
-                        analysis and web application development now capture my focus. Merging my newfound tech skills with
-                        my engineering background, I'm eager to contribute and grow in the digital space.
+                        Fresh out of Management Engineering, I took a 6-month deep dive into coding with Boolean. <span>Data
+                            analysis</span> and <span>web application development</span> now capture my focus.</p>
+                    <p>
+                        Merging my
+                        newfound tech skills with
+                        my <span>engineering background</span> , I'm eager to contribute and grow in the digital space.
                     </p>
                 </div>
 
@@ -437,9 +440,12 @@ export default {
                     letter-spacing: .04em;
                     margin: 0;
                     opacity: .8;
-                    text-transform: lowercase;
                     color: grey;
-                    ;
+
+                    span {
+                        color: $green;
+                        text-transform: uppercase;
+                    }
                 }
             }
 
@@ -1008,12 +1014,22 @@ export default {
     .container-fluid {
         .home-intro {
             .content {
-                .content-movement div {
-                    font-size: 2.2rem;
+                .content-movement {
+
+                    div {
+                        font-size: 1.8rem;
+
+                        span {
+                            display: block;
+                            font-size: 1.8rem;
+                            line-height: 3.0rem;
+
+                        }
+                    }
                 }
 
                 .content-primary h1 {
-                    font-size: 2.5rem;
+                    font-size: 2.3rem;
 
                     span {
                         font-size: 2.5rem;
@@ -1048,6 +1064,20 @@ export default {
 
 
         .work {
+            .work-header {
+                .work-title {
+                    text-align: center;
+
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+
+                    a {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
             .projects {
                 .single {
                     text-align: center;
@@ -1082,8 +1112,18 @@ export default {
             .content {
                 line-height: 50px;
 
-                .content-movement div {
-                    font-size: 2.0rem;
+                .content-movement {
+
+                    div {
+                        font-size: 1.3rem;
+
+
+                        span {
+                            display: block;
+                            font-size: 1.3rem;
+
+                        }
+                    }
                 }
 
                 .content-primary h1 {
@@ -1133,15 +1173,24 @@ export default {
             .content {
                 line-height: 50px;
 
-                .content-movement div {
-                    font-size: 1.5rem;
+                .content-movement {
+
+                    div {
+                        font-size: 1.1rem;
+
+                        span {
+                            font-size: 1.1em;
+
+                        }
+
+                    }
                 }
 
                 .content-primary h1 {
                     font-size: 1.3rem;
 
                     span {
-                        font-size: 1.4rem;
+                        font-size: 1.5rem;
                     }
                 }
 

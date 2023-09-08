@@ -62,7 +62,7 @@ export default {
                 </div>
             </nav>
 
-            <p>&copy; 2023 Manuel Caselli | All Rights Reserved</p>
+            <p id="reserved">&copy; 2023 Manuel Caselli | All Rights Reserved</p>
         </div>
     </footer>
 </template>
@@ -250,6 +250,12 @@ export default {
             nav {
                 padding: 0 50px; // Riduci lo spazio attorno alla nav
             }
+
+            #reserved {
+                text-align: center;
+                font-size: 2.5rem;
+
+            }
         }
     }
 
@@ -261,6 +267,12 @@ export default {
                 .direct {
                     font-size: 50px; // Riduci la dimensione del font
                 }
+            }
+
+            #reserved {
+                text-align: center;
+                font-size: 2.0rem;
+
             }
         }
     }
@@ -284,6 +296,12 @@ export default {
                         height: 300px;
                     }
                 }
+            }
+
+            #reserved {
+                text-align: center;
+                font-size: 1.8rem;
+
             }
         }
     }
@@ -310,7 +328,14 @@ export default {
                     display: none; // Nascondi la mappa
                 }
             }
+
+            #reserved {
+                text-align: center;
+                font-size: 1.5rem;
+
+            }
         }
+
     }
 
     @media (max-width: 768px) and (min-width: 577px) {
@@ -342,6 +367,12 @@ export default {
                 }
 
             }
+
+            #reserved {
+                text-align: center;
+                font-size: 1.3rem;
+
+            }
         }
     }
 
@@ -370,8 +401,10 @@ export default {
                 }
             }
 
-            p {
+            #reserved {
                 text-align: center;
+                font-size: 1.0rem;
+
             }
         }
     }
