@@ -75,7 +75,7 @@ export default {
 .app-footer {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     background-color: $footer-background-color;
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
     color: black;
     padding: 20px;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); // aggiunge ombra in alto

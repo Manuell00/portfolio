@@ -168,7 +168,7 @@ export default {
                             <button>
                                 <a href="https://github.com/Manuell00/html-css-spotifyweb">
                                     <i class="fa-solid fa-arrow-right"></i>
-                                    Github Repo
+                                    Code
                                 </a>
                             </button>
                         </div>
@@ -206,7 +206,7 @@ export default {
                             <button>
                                 <a href="https://github.com/Manuell00/vue-boolzapp">
                                     <i class="fa-solid fa-arrow-right"></i>
-                                    Github Repo
+                                    Code
                                 </a>
                             </button>
                         </div>
@@ -248,7 +248,7 @@ export default {
                             <button>
                                 <a href="https://github.com/Manuell00/vite-boolflix">
                                     <i class="fa-solid fa-arrow-right"></i>
-                                    Github Repo
+                                    Code
                                 </a>
                             </button>
                         </div>
@@ -287,7 +287,7 @@ export default {
                             <button>
                                 <a href="https://github.com/Manuell00/laravel-many-to-many">
                                     <i class="fa-solid fa-arrow-right"></i>
-                                    Github Repo
+                                    Code
                                 </a>
                             </button>
                         </div>
@@ -329,7 +329,7 @@ export default {
                             <button>
                                 <a href="https://github.com/Manuell00/analysis-of-European-football">
                                     <i class="fa-solid fa-arrow-right"></i>
-                                    Github Repo
+                                    Code
                                 </a>
                             </button>
                         </div>
@@ -358,6 +358,7 @@ export default {
     width: 100%;
     min-height: 90vh;
     max-height: 100%;
+    font-family: 'Montserrat', sans-serif;
 
     .home-intro {
         padding: 50px;
@@ -386,7 +387,7 @@ export default {
                     border-radius: 12px;
                     background-color: rgba(16, 233, 86, 1);
                     font-size: 2.0rem;
-                    font-weight: 900;
+                    font-weight: 600;
                     letter-spacing: .05em;
                     margin: 0;
                     text-transform: capitalize;
@@ -406,16 +407,16 @@ export default {
             // Second row of content
             .content-primary {
                 margin-bottom: 2rem;
+                line-height: 5rem;
 
                 h1 {
                     text-transform: capitalize;
-                    font-weight: 900;
+                    font-weight: 700;
                     letter-spacing: .02em;
                     margin: 0;
 
                     span {
                         color: $green;
-                        font-family: Cyborg;
                         font-size: 4.2rem;
                         text-shadow: 3px 3px 0 #1f2127, -1px -1px 0 #1f2127, 1px -1px 0 #1f2127, -1px 1px 0 #1f2127, 1px 1px 0 #1f2127;
                     }
@@ -636,8 +637,7 @@ export default {
                     justify-content: center;
                     width: 60%;
 
-                    img,
-                    video {
+                    img {
                         border-radius: 15px;
                         box-shadow: 0 60px 123px -25px hsla(225, 2%, 62%, .42), 0 35px 75px -35px hsla(225, 2%, 62%, .08);
                         -webkit-filter: blur(0);
@@ -681,7 +681,7 @@ export default {
                 width: 40%;
 
                 p {
-                    font-family: 'Open Sans', sans-serif;
+                    font-family: sans-serif;
                     line-height: 1.6;
                     letter-spacing: 0.5px;
                     font-weight: 400;
@@ -689,8 +689,8 @@ export default {
 
 
                 h4 {
+                    text-align: center;
                     border: 2px solid $green;
-                    /* Cambiato da dashed a solid */
                     box-shadow: 8px 8px 0 0 $green;
                     color: $green;
                     font-family: 'Futura';
@@ -718,6 +718,7 @@ export default {
 
 
                 .tech-used {
+                    font-family: 'Montserrat', sans-serif;
                     margin-top: 1.5rem;
                     border: 2px solid $green;
                     border-radius: 15px;
@@ -929,11 +930,19 @@ export default {
             flex-direction: column;
 
             .content {
-                width: 70%;
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 text-align: center;
                 flex-direction: column;
+                gap: 1.5rem;
+
+                .cv-download {
+                    a {
+                        margin: 0;
+                    }
+                }
+
 
                 .content-movement {
                     text-align: center;
@@ -951,6 +960,19 @@ export default {
                     }
                 }
             }
+        }
+
+        .tooling {
+            .tooling-box {
+                .flex-row {
+                    img {
+                        width: 100%;
+                        height: 100px;
+                    }
+                }
+
+            }
+
         }
 
         .work {
@@ -1060,16 +1082,26 @@ export default {
                     }
                 }
 
-                .content-primary h1 {
-                    font-size: 2.3rem;
+                .content-primary {
+                    margin-bottom: 0;
 
-                    span {
-                        font-size: 2.5rem;
+                    h1 {
+                        font-size: 1.3rem;
+                        line-height: 4rem;
+
+                        span {
+                            font-size: 2.5rem;
+                        }
                     }
+
                 }
 
-                .content-secondary p {
-                    display: none;
+                .content-secondary {
+                    margin-bottom: 0;
+
+                    p {
+                        display: none;
+                    }
                 }
             }
 
@@ -1116,10 +1148,15 @@ export default {
             }
 
             .projects {
+                padding: 0;
+
                 .single {
                     text-align: center;
+                    margin: 4.5rem 0;
+
 
                     .single-img {
+                        margin-bottom: 1rem;
 
                         img,
                         video,
@@ -1133,6 +1170,12 @@ export default {
                         align-items: center;
                         justify-content: center;
                         flex-direction: column;
+
+                        button {
+                            i {
+                                display: none;
+                            }
+                        }
                     }
 
                 }
