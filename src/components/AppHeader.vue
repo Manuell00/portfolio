@@ -77,6 +77,7 @@ nav {
   background-color: black !important;
   height: 10vh;
   width: 100%;
+  max-width: 3840px;
   box-sizing: border-box;
   padding: 0 2rem;
   z-index: 1000;

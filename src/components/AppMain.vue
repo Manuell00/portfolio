@@ -355,7 +355,6 @@ export default {
 .container-fluid {
     padding-top: 10vh;
     margin: 0;
-    max-width: 100%;
     width: 100%;
     min-height: 90vh;
     max-height: 100%;
