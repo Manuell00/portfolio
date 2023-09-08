@@ -788,6 +788,7 @@ export default {
                         transition: background-color 0.3s ease, transform 0.3s ease;
                         display: inline-flex; // per allineare correttamente l'icona e il testo
                         align-items: center;
+                        animation: pulse 4s infinite;
 
                         i {
                             margin-right: 8px; // spazio tra l'icona e il testo
@@ -804,6 +805,7 @@ export default {
 
                         a {
                             text-decoration: none;
+                            font-weight: 700;
                             color: inherit; // prende il colore dal genitore, in questo caso `button`
                             display: flex; // per allineare correttamente l'icona e il testo
                             align-items: center;
@@ -1111,25 +1113,23 @@ export default {
 
         }
 
-        #tech {
+        .tooling {
+            text-align: center;
+
             .tooling-title {
-                text-align: center;
+                h2 {
+                    font-size: 1.3rem;
+                }
 
-                .tooling {
-                    h2 {
-                        font-size: 1.3rem;
-                    }
-
-                    .animated-icon {
-                        padding-left: 20px;
-                        font-size: 1.3rem;
-                    }
-
+                .animated-icon {
+                    padding-left: 20px;
+                    font-size: 1.3rem;
                 }
 
             }
 
         }
+
 
 
         .work {
