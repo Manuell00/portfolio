@@ -1198,22 +1198,8 @@ export default {
 
                 .animated-icon {
                     font-size: 1.1rem;
+                    padding-left: 10px;
                 }
-            }
-
-        }
-
-        #tech {
-            .tooling {
-                .tooling-title {
-                    padding: 0 1rem;
-
-                    .animated-icon {
-                        font-size: 1.1rem;
-                        padding-left: 20px;
-                    }
-                }
-
             }
 
         }
