@@ -864,6 +864,31 @@ export default {
             height: 500px;
         }
     }
+
+    .container-fluid {
+        .work {
+            .projects {
+                .single {
+                    .single-details {
+                        p {
+                            font-size: 1.4rem;
+                        }
+                    }
+
+                    .last {
+                        .project-date {
+                            font-size: 1.5rem;
+                            text-align: center;
+
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+    }
 }
 
 @media (max-width: 1500px) {
@@ -878,6 +903,19 @@ export default {
                         video {
                             width: 600px;
                             height: auto;
+                        }
+                    }
+
+                    .single-details {
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+
+                    .last {
+                        .project-date {
+                            font-size: 1.2rem;
+
                         }
                     }
 
@@ -1112,6 +1150,10 @@ export default {
             .content {
                 line-height: 50px;
 
+                .cv-button {
+                    font-size: 1.3rem;
+                }
+
                 .content-movement {
 
                     div {
@@ -1145,7 +1187,38 @@ export default {
 
         }
 
+
+        #tech {
+            .tooling-title {
+                padding: 0;
+
+                h2 {
+                    font-size: 1.1rem;
+                }
+
+                i {
+                    font-size: 1.1rem;
+                }
+            }
+
+        }
+
         .work {
+
+            .work-header {
+                .work-title {
+                    text-align: center;
+
+                    h2 {
+                        font-size: 1.1rem;
+                    }
+
+                    i {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+
             .projects {
                 .single {
 
@@ -1172,6 +1245,10 @@ export default {
         .home-intro {
             .content {
                 line-height: 50px;
+
+                .cv-button {
+                    font-size: 1.0rem;
+                }
 
                 .content-movement {
 
@@ -1205,7 +1282,35 @@ export default {
 
         }
 
+        #tech {
+            .tooling-title {
+
+                h2 {
+                    font-size: 0.9rem;
+                }
+
+                a {
+                    font-size: 0.9rem;
+                }
+            }
+
+        }
+
         .work {
+            .work-header {
+                .work-title {
+                    text-align: center;
+
+                    h2 {
+                        font-size: 0.9rem;
+                    }
+
+                    i {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
             .projects {
                 .single {
 
