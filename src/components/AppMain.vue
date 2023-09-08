@@ -382,8 +382,6 @@ export default {
                 width: max-content;
                 padding-right: 5%;
 
-
-
                 div {
                     padding: 0px 15px;
                     border-radius: 12px;
@@ -1086,13 +1084,18 @@ export default {
             .tooling-title {
                 text-align: center;
 
-                h2 {
-                    font-size: 1.3rem;
+                .tooling {
+                    h2 {
+                        font-size: 1.3rem;
+                    }
+
+                    .animated-icon {
+                        padding-left: 20px;
+                        font-size: 1.3rem;
+                    }
+
                 }
 
-                a {
-                    font-size: 1.3rem;
-                }
             }
 
         }
@@ -1160,6 +1163,7 @@ export default {
                         span {
                             display: block;
                             font-size: 1.3rem;
+                            text-transform: uppercase;
 
                         }
                     }
@@ -1184,21 +1188,22 @@ export default {
 
         }
 
-
-        #tech {
+        .tooling {
             .tooling-title {
-                padding: 0;
+                padding: 0 1rem;
 
                 h2 {
                     font-size: 1.1rem;
                 }
 
-                i {
+                .animated-icon {
                     font-size: 1.1rem;
+                    padding-left: 20px;
                 }
             }
 
         }
+
 
         .work {
 
