@@ -144,7 +144,7 @@ export default {
                 <!-- 1 Project -->
                 <div class="single">
                     <div class="single-img">
-                        <img src="../../public/Screenshot 2023-08-29 alle 14.45.19.png" alt="">
+                        <img src="../../public/spotify.png" alt="">
                     </div>
 
                     <div class="single-details">
@@ -213,14 +213,14 @@ export default {
                     </div>
 
                     <div class="single-img">
-                        <img class="img-2" src="../../public/Screenshot 2023-08-29 alle 14.47.30.png" alt="">
+                        <img class="img-2" src="../../public/whatsapp.png" alt="">
                     </div>
                 </div>
 
                 <!-- 3 Project -->
                 <div class="single">
                     <div class="single-img">
-                        <img src="../../public/Screenshot 2023-08-30 alle 13.00.08.png" alt="">
+                        <img src="../../public/netflix.png" alt="">
                     </div>
 
                     <div class="single-details">
@@ -294,7 +294,7 @@ export default {
                     </div>
 
                     <div class="single-img">
-                        <img class="img-2" src="../../public/Screenshot 2023-08-29 alle 14.46.28.png" alt="">
+                        <img class="img-2" src="../../public/management.png" alt="">
                     </div>
                 </div>
 
