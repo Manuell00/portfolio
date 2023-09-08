@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
   plugins: [vue()],
+  assetsinclude: ['**/*.mov'],
 
   // aggiunta della configurazione di risoluzione
   resolve: {

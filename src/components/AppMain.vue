@@ -301,10 +301,7 @@ export default {
                 <!-- 5 Project -->
                 <div class="single">
                     <div class="single-img">
-                        <video width="320" height="240" controls>
-                            <source src="../../public/registrazione1.mov" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <img src="../../public/analysis.png" alt="">
                     </div>
 
                     <div class="single-details">
