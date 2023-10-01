@@ -27,96 +27,93 @@ export default {
 <template>
     <div class="container-fluid">
 
-        <!-- Home intro -->
-        <div class="home-intro" id="home">
+        <div id="first">
+            <!-- Home intro -->
+            <div class="home-intro" id="home">
 
-            <!-- Primo contenuto (scritto) -->
-            <div class="content">
+                <!-- Primo contenuto (scritto) -->
+                <div class="content">
 
-                <div class="content-movement">
-                    <div>
-                        <div id="sticker">🍝</div>
-                        <span>Hi Everyone! I'm Manuel</span>
+                    <div class="content-movement">
+                        <div>
+                            <div id="sticker">🍝</div>
+                            <span>Hi Everyone! I'm Manuel</span>
+                        </div>
+                    </div>
+
+
+                    <div class="content-primary">
+                        <h1>
+                            Full-stack developer & management engineer.
+                        </h1>
+                    </div>
+
+                    <div class="content-secondary">
+                        <p>
+                            Fresh out of Management Engineering, I took a 6-month deep dive into coding with Boolean.
+                        </p>
+
+                        <p>
+                            Now, <span>Data analysis</span> and <span>web application development</span> capture my focus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- TOOLING -->
+            <div class="tooling" id="tech">
+                <div class="tooling-header">
+                    <div class="tooling-title">
+                        <h2>Technologies</h2>
+                        <i class="fas fa-wrench animated-icon"></i>
                     </div>
                 </div>
 
 
-                <div class="content-primary">
-                    <h1>
-                        Full-stack developer & management engineer.
-                    </h1>
-                </div>
+                <div class="tooling-box">
+                    <div class="row flex-row">
+                        <!-- First row of images (HTML, CSS, JavaScript) -->
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 text-center mb-4">
+                            <img src="../../public/html-5-svgrepo-com.svg" alt="HTML 5">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 text-center mb-4">
+                            <img src="../../public/css-3-svgrepo-com.svg" alt="CSS 3">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 text-center mb-4">
+                            <img src="../../public/javascript-svgrepo-com.svg" alt="JavaScript">
+                        </div>
 
-                <div class="content-secondary">
-                    <p>
-                        Fresh out of Management Engineering, I took a 6-month deep dive into coding with Boolean.
-                    </p>
+                        <!-- Second row of images (PHP, Sass, SQL) -->
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 text-center mb-4">
+                            <img src="../../public/php-svgrepo-com.svg" alt="PHP">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 text-center mb-4">
+                            <img src="../../public/sass-svgrepo-com.svg" alt="Sass">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 text-center mb-4">
+                            <img src="../../public/sql-svgrepo-com.svg" alt="SQL">
+                        </div>
 
-                    <p>
-                        Now, <span>Data analysis</span> and <span>web application development</span> capture my focus.
-                    </p>
-                </div>
+                        <!-- Third row of images (Laravel, Vue, Vite, Python) -->
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-6 text-center mb-4">
+                            <img src="../../public/laravel-svgrepo-com.svg" alt="Laravel">
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-6 text-center mb-4">
+                            <img src="../../public/vue-svgrepo-com.svg" alt="Vue.js">
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-6 text-center mb-4">
+                            <img src="../../public/vite-svgrepo-com.svg" alt="Vite">
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-6 text-center mb-4">
+                            <img src="../../public/python-svgrepo-com.svg" alt="Python">
+                        </div>
+                    </div>
 
-                <!-- Inserisco button per download  -->
-                <div id="cv" class="cv-download">
-                    <a href="../../public/manuel-cv.pdf" download="Manuel-CV.pdf" class="cv-button">Download
-                        CV</a>
                 </div>
             </div>
         </div>
 
-
-        <!-- TOOLING -->
-        <div class="tooling" id="tech">
-            <div class="tooling-header">
-                <div class="tooling-title">
-                    <h2>Technologies</h2>
-                    <i class="fas fa-wrench animated-icon"></i>
-                </div>
-            </div>
-
-
-            <div class="tooling-box">
-                <div class="row flex-row">
-                    <!-- First row of images (HTML, CSS, JavaScript) -->
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 text-center mb-4">
-                        <img src="../../public/html-5-svgrepo-com.svg" alt="HTML 5">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 text-center mb-4">
-                        <img src="../../public/css-3-svgrepo-com.svg" alt="CSS 3">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 text-center mb-4">
-                        <img src="../../public/javascript-svgrepo-com.svg" alt="JavaScript">
-                    </div>
-
-                    <!-- Second row of images (PHP, Sass, SQL) -->
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 text-center mb-4">
-                        <img src="../../public/php-svgrepo-com.svg" alt="PHP">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 text-center mb-4">
-                        <img src="../../public/sass-svgrepo-com.svg" alt="Sass">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 text-center mb-4">
-                        <img src="../../public/sql-svgrepo-com.svg" alt="SQL">
-                    </div>
-
-                    <!-- Third row of images (Laravel, Vue, Vite, Python) -->
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 text-center mb-4">
-                        <img src="../../public/laravel-svgrepo-com.svg" alt="Laravel">
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 text-center mb-4">
-                        <img src="../../public/vue-svgrepo-com.svg" alt="Vue.js">
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 text-center mb-4">
-                        <img src="../../public/vite-svgrepo-com.svg" alt="Vite">
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-12 text-center mb-4">
-                        <img src="../../public/python-svgrepo-com.svg" alt="Python">
-                    </div>
-                </div>
-
-            </div>
-        </div>
 
         <!-- MY WORKS -->
         <div class="work" id="portfolio">
@@ -153,7 +150,8 @@ export default {
                         </ul>
 
                         <div class="last">
-                            <p class="project-date"> <span>Completed :</span> April 2023</p>
+                            <p class="project-date"> <span>Completed :</span> <i class="fa-regular fa-calendar"></i> - April
+                                2023 </p>
 
 
                             <button>
@@ -191,7 +189,8 @@ export default {
                         </ul>
 
                         <div class="last">
-                            <p class="project-date"> <span>Completed :</span> May 2023</p>
+                            <p class="project-date"> <span>Completed :</span> <i class="fa-regular fa-calendar"></i> - May
+                                2023</p>
 
 
                             <button>
@@ -233,7 +232,8 @@ export default {
                         </ul>
 
                         <div class="last">
-                            <p class="project-date"> <span>Completed :</span> June 2023</p>
+                            <p class="project-date"> <span>Completed :</span> <i class="fa-regular fa-calendar"></i> - June
+                                2023</p>
 
 
                             <button>
@@ -272,7 +272,8 @@ export default {
                         </ul>
 
                         <div class="last">
-                            <p class="project-date"> <span>Completed :</span> August 2023</p>
+                            <p class="project-date"> <span>Completed :</span> <i class="fa-regular fa-calendar"></i> -
+                                August 2023</p>
 
 
                             <button>
@@ -314,7 +315,8 @@ export default {
                         </ul>
 
                         <div class="last">
-                            <p class="project-date"> <span>Completed :</span> May 2022</p>
+                            <p class="project-date"> <span>Completed :</span> <i class="fa-regular fa-calendar"></i> - May
+                                2022</p>
 
 
                             <button>

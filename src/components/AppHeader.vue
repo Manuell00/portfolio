@@ -73,6 +73,10 @@ export default {
         <li><a href="#tech" @click.prevent="scrollTo('tech')">Tools</a></li>
         <li><a href="#portfolio" @click.prevent="scrollTo('portfolio')">Portfolio</a></li>
         <li> <a href="mailto:manuell.caselli@gmail.com">CONTACT ME</a></li>
+        <li>
+          <!-- Inserisco button per download  -->
+          <a href="../../public/MANUEL_CASELLI-cv.pdf" download="Manuel-CV.pdf" class="cv-button"> Curriculum</a>
+        </li>
 
         <!-- Dropdown social -->
         <li class="dropdown" @click="toggleDrop">
