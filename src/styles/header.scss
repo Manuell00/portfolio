@@ -1,8 +1,11 @@
 @use './general.scss';
 @use '../styles/partials/variables' as *;
 
+
 /* Stili per il tuo menu di navigazione */
 nav {
+    // Modifico il cursore 
+    cursor: url('../../public/icons8-cursor-black.svg'), auto;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -51,6 +54,9 @@ nav {
     position: fixed;
     top: 0;
     right: -300px;
+    cursor: url('../../public/icons8-cursor-black.svg'), auto;
+
+
     /* Offcanvas nascosto inizialmente a destra */
     width: 300px;
     height: 100%;
@@ -63,20 +69,23 @@ nav {
     align-items: center;
     justify-content: flex-start;
     font-family: sans-serif;
+    padding: 20px;
 
 
     &.active {
         right: 0;
-        /* Mostra l'offcanvas quando è attivo */
     }
 
     /* Stili per il contenuto dell'offcanvas */
     .offcanvas-content {
         flex-grow: 1;
-        padding: 20px;
         width: 100%;
         overflow-y: auto;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
 
         .nav-links {
             display: flex;
@@ -85,6 +94,7 @@ nav {
             list-style-type: none;
             font-size: 20px;
             text-transform: uppercase;
+            padding: 0;
 
             li {
                 cursor: pointer;
@@ -124,6 +134,7 @@ nav {
                     border: 1px solid lightgray;
                     border-radius: 5px;
                     padding: 10px 0;
+                    transition: display 0.7s ease-in-out;
 
                     a {
                         text-shadow: none;
@@ -152,6 +163,25 @@ nav {
                             color: white;
                         }
                     }
+                }
+            }
+        }
+
+        .close-button {
+
+            button{
+                cursor: pointer;
+                padding: 6px 10px;
+                background-color: rgba(red, 0.8);
+                color: white;
+                border: 1px solid red;
+                border-radius: 15px;
+                transition: background-color 0.3s, transform 0.3s;
+                text-shadow: 1.5px 1.5px 0 black, -0.5px -0.5px 0 black, 0.5px -0.5px 0 black, -0.5px 1px 0 black, 1px 1px 0 black;
+
+                &:hover {
+                    background-color: rgba(red, 1);
+                    transform: scale(1.1);
                 }
             }
         }

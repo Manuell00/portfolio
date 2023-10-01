@@ -85,10 +85,14 @@ export default {
           </div>
         </li>
       </ul>
-    </div>
 
-    <!-- Pulsante per chiudere l'offcanvas -->
-    <button class="close-button" @click="closeOffcanvas">Chiudi</button>
+      <!-- Pulsante per chiudere l'offcanvas -->
+      <div class="close-button" :style="{ 'padding-top': dropDisplay ? '180px' : '0' }">
+        <button @click="closeOffcanvas">
+          Close <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
