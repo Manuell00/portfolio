@@ -10,6 +10,7 @@ export default {
     return {
       store,
       offcanvasOpen: false,
+      dropDisplay: false,
     }
   },
 
@@ -20,6 +21,16 @@ export default {
     closeOffcanvas() {
       this.offcanvasOpen = false;
     },
+    toggleDrop() {
+      if (this.dropDisplay) {
+        this.dropDisplay = false
+      }
+      else {
+        this.dropDisplay = true
+      }
+
+    },
+
     scrollTo(sectionId) {
       const element = document.getElementById(sectionId);
 
@@ -27,7 +38,7 @@ export default {
         let top = element.offsetTop;
 
         // Sottrai una quantità desiderata dalla posizione di top
-        top = top - 200;  // ad esempio, per ridurre di 50px
+        top = top - 100;  // ad esempio, per ridurre di 50px
 
         window.scrollTo({
           top: top,
@@ -61,7 +72,18 @@ export default {
         <li><a href="#home" @click.prevent="scrollTo('home')">Home</a></li>
         <li><a href="#tech" @click.prevent="scrollTo('tech')">Tools</a></li>
         <li><a href="#portfolio" @click.prevent="scrollTo('portfolio')">Portfolio</a></li>
-        <li> <a href="mailto:manuell.caselli@gmail.com"><button class="cta-button">CONTACT ME</button></a></li>
+        <li> <a href="mailto:manuell.caselli@gmail.com">CONTACT ME</a></li>
+
+        <!-- Dropdown social -->
+        <li class="dropdown" @click="toggleDrop">
+          Social
+          <div :style="dropDisplay ? { display: 'block' } : {}" class="dropdown-content">
+            <!-- Inserisci qui gli elementi del dropdown -->
+            <a href="https://www.linkedin.com/in/manuel-caselli-78a0a7244/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Manuell00"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/manuel_caselli/"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </li>
       </ul>
     </div>
 
