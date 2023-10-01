@@ -27,20 +27,23 @@
 
         // PRIMO CONTENUTO
         .content {
-            animation: slideFromLeft 1s forwards;
+            animation: slideFromTop 1s forwards;
             width: 50%;
             color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
 
             // First row of content
             .content-movement {
                 margin-bottom: 1.5rem;
                 width: max-content;
-                padding-right: 5%;
 
                 div {
                     padding: 0px 15px;
                     border-radius: 12px;
-                    background-color: rgba(16, 233, 86, 1);
+                    background-color: rgba(16, 233, 86, 0.4);
                     font-size: 2.0rem;
                     font-weight: 600;
                     letter-spacing: .05em;
@@ -55,26 +58,28 @@
                         background-color: transparent;
                     }
 
+                    span{
+                        color: white;
+                    }
+
                 }
 
             }
 
             // Second row of content
             .content-primary {
-                margin-bottom: 2rem;
+                text-align: center;
                 line-height: 5rem;
+                margin-bottom: 2rem;
 
                 h1 {
                     text-transform: capitalize;
                     font-weight: 700;
+                    font-size: 4.2rem;
                     letter-spacing: .02em;
                     margin: 0;
-
-                    span {
-                        color: $green;
-                        font-size: 4.2rem;
-                        text-shadow: 3px 3px 0 #1f2127, -1px -1px 0 #1f2127, 1px -1px 0 #1f2127, -1px 1px 0 #1f2127, 1px 1px 0 #1f2127;
-                    }
+                    color: $green;
+                    text-shadow: 3px 3px 0 #1f2127, -1px -1px 0 #1f2127, 1px -1px 0 #1f2127, -1px 1px 0 #1f2127, 1px 1px 0 #1f2127;
                 }
             }
 
@@ -82,6 +87,8 @@
             // Third row of content
             .content-secondary {
                 margin-bottom: 2rem;
+                text-align: center;
+                width: 75%;
 
                 p {
                     line-height: 1.5;
@@ -129,41 +136,57 @@
         padding: 5rem 0;
         background-color: black;
         padding-bottom: 10rem;
+        width: 100%;
 
-
-        .tooling-title {
-            align-items: center;
-            background: linear-gradient(135deg, rgba(18, 20, 29, 0.8), rgba(28, 30, 39, 0.8));
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        .tooling-header {
+            width: 100%;
             display: flex;
             justify-content: center;
-            margin-bottom: 5rem;
-            padding: 0 3rem;
-            transition: 0.7s ease-in;
+            align-items: center;
+            padding: 1.5rem 0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 
-            &:hover {
-                transform: scale(1.1);
-                box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+            .tooling-title {
+                background: #f7f7f7;
+                align-items: center;
+                border-radius: 12px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                display: flex;
+                justify-content: center;
+                padding: 0 3rem;
+                transition: 0.7s ease-in;
+    
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+                }
+    
+                .animated-icon {
+                    color: #333;
+                    padding-left: 50px;
+                    padding-bottom: 30px;
+                    display: block;
+                    font-size: 2rem;
+                    animation: rotateIcon 8s infinite linear;
+                }
+    
+    
+                h2 {
+                    font-family: 'Arial', sans-serif;
+                    font-weight: 900;
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    color: #333;
+                    letter-spacing: 1.5px;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+                }
             }
 
-            .animated-icon {
-                padding-left: 50px;
-                padding-bottom: 30px;
-                display: block;
-                font-size: 2rem;
-                animation: rotateIcon 8s infinite linear;
-            }
-
-
-            h2 {
-                font-family: 'Arial', sans-serif;
-                font-weight: 900;
-                font-size: 2rem;
-                text-transform: uppercase;
-                color: white;
-                letter-spacing: 1.5px;
-            }
         }
 
 

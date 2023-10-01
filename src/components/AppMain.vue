@@ -43,19 +43,17 @@ export default {
 
                 <div class="content-primary">
                     <h1>
-                        A <span>Full-stack developer</span> and <span>management engineer</span>, blending tech expertise
-                        with optimization skills.
+                        Full-stack developer & management engineer.
                     </h1>
                 </div>
 
                 <div class="content-secondary">
                     <p>
-                        Fresh out of Management Engineering, I took a 6-month deep dive into coding with Boolean. <span>Data
-                            analysis</span> and <span>web application development</span> now capture my focus.</p>
+                        Fresh out of Management Engineering, I took a 6-month deep dive into coding with Boolean.
+                    </p>
+
                     <p>
-                        Merging my
-                        newfound tech skills with
-                        my <span>engineering background</span> , I'm eager to contribute and grow in the digital space.
+                        Now, <span>Data analysis</span> and <span>web application development</span> capture my focus.
                     </p>
                 </div>
 
@@ -70,9 +68,11 @@ export default {
 
         <!-- TOOLING -->
         <div class="tooling" id="tech">
-            <div class="tooling-title">
-                <h2>Technologies</h2>
-                <i class="fas fa-wrench animated-icon"></i>
+            <div class="tooling-header">
+                <div class="tooling-title">
+                    <h2>Technologies</h2>
+                    <i class="fas fa-wrench animated-icon"></i>
+                </div>
             </div>
 
 
