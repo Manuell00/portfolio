@@ -9,10 +9,17 @@ export default {
   data() {
     return {
       store,
+      offcanvasOpen: false,
     }
   },
 
   methods: {
+    openOffcanvas() {
+      this.offcanvasOpen = true;
+    },
+    closeOffcanvas() {
+      this.offcanvasOpen = false;
+    },
     scrollTo(sectionId) {
       const element = document.getElementById(sectionId);
 
@@ -37,28 +44,30 @@ export default {
 
 <!-- TEMPLATE -->
 <template>
+  <!-- NAVBAR -->
   <nav>
-    <div class="social-links">
-      <span class="dropdown-toggle"><i class="fa-solid fa-share-from-square"></i></span>
-      <div class="dropdown-menu">
-        <a href="https://www.linkedin.com/in/manuel-caselli-78a0a7244/"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/Manuell00"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.instagram.com/manuel_caselli/"><i class="fa-brands fa-instagram"></i></a>
-      </div>
-    </div>
+    <button class="btn" @click="openOffcanvas">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </nav>
 
-    <div class="main-nav">
+  <!-- OFFCANAS -->
+  <div class="offcanvas" :class="{ 'active': offcanvasOpen }">
+
+    <!-- Contenuto dell'offcanvas -->
+    <div class="offcanvas-content">
+      <!-- Contenuto del menu di navigazione -->
       <ul class="nav-links">
-        <!-- Inserisco gli eventi al click -->
         <li><a href="#home" @click.prevent="scrollTo('home')">Home</a></li>
         <li><a href="#tech" @click.prevent="scrollTo('tech')">Tools</a></li>
         <li><a href="#portfolio" @click.prevent="scrollTo('portfolio')">Portfolio</a></li>
+        <li> <a href="mailto:manuell.caselli@gmail.com"><button class="cta-button">CONTACT ME</button></a></li>
       </ul>
-
     </div>
 
-    <a href="mailto:manuell.caselli@gmail.com"> <button class="cta-button">CONTACT ME</button></a>
-  </nav>
+    <!-- Pulsante per chiudere l'offcanvas -->
+    <button class="close-button" @click="closeOffcanvas">Chiudi</button>
+  </div>
 </template>
 
 

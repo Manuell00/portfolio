@@ -1,12 +1,12 @@
 @use './general.scss';
 @use '../styles/partials/variables' as *;
 
+/* Stili per il tuo menu di navigazione */
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    background-color: black !important;
+    justify-content: flex-end;
+    background-color: $green;
     height: 10vh;
     width: 100%;
     max-width: 3840px;
@@ -17,229 +17,48 @@ nav {
     position: fixed;
     font-family: sans-serif;
     top: 0;
-  
-    .social-links {
-      margin: 0 1rem;
-      position: relative;
-  
-      .dropdown-toggle {
-        text-decoration: none;
-        color: white;
-        font-weight: 500;
-        font-size: 2.0rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.5s ease;
-  
-        &:hover {
-          transform: translateY(-10px);
-          padding: 10px 0;
-          color: $green;
-        }
-  
-      }
-  
-      .dropdown-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translate(-50%, 0%);
-        background-color: black;
+
+    button.btn {
+        background: none;
+        border: 2px solid white;
         border-radius: 5px;
-        overflow: hidden;
-        z-index: 1;
-  
-        a {
-          display: block;
-          padding: 10px 20px;
-          color: white;
-          transition: background-color 0.3s;
-  
-          &:hover {
-            background-color: lighten($footer-background-color, 10%);
-            color: $green;
-          }
-        }
-      }
-  
-      &:hover {
-        .dropdown-menu {
-          display: block;
-        }
-      }
-  
-    }
-  
-    .main-nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 100px;
-    }
-  
-    .nav-links {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      list-style: none;
-      padding: 0;
-      width: 30%;
-  
-  
-      li {
-        margin: 0 1rem;
-  
-        a {
-          text-decoration: none;
-          color: white;
-          font-weight: 500;
-          transition: color 0.3s ease;
-          font-size: 2.0rem;
-  
-          &:hover {
-            color: $green;
-          }
-        }
-      }
-  
-  
-    }
-  
-  
-  
-    .cta-button {
-      background-color: white;
-      color: black;
-      font-weight: 600;
-      padding: 1rem 3rem;
-      border: none;
-      border-radius: 15px;
-      transition: background-color 0.3s ease;
-      font-size: 1.5rem;
-      transition: 0.7s all ease;
-  
-      &:hover {
-        background-color: darken(white, 20%);
-        color: $green;
-      }
-    }
-  }
-  
-  
-  // MEDIA QUERY
-  
-  @media (max-width: 1500px) {
-    nav {
-      padding: 0 1rem;
-  
-      .nav-links {
-        width: 40%;
-  
-        li {
-          margin: 0 0.5rem;
-  
-          a {
-            font-size: 1.8rem;
-          }
-        }
-      }
-  
-      .social-links {
-        gap: 20px;
-  
-        a {
-          font-size: 4rem;
-        }
-      }
-  
-      .cta-button {
-        font-size: 1.4rem;
-        padding: 0.8rem 2.5rem;
-      }
-    }
-  }
-  
-  @media (max-width: 992px) {
-    nav {
-      flex-direction: column;
-      height: auto;
-      padding: 0.8rem;
-  
-      .main-nav {
-        width: 100%;
-        gap: 0;
-        justify-content: center;
-      }
-  
-      .nav-links {
-        display: none; // Nasconde i link di default su schermi più piccoli
-  
-        &.active {
-          // Mostra i link quando il menu hamburger è attivo
-          display: flex;
-          flex-direction: column;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          background-color: $green;
-          width: 100%;
-          gap: 0.5rem;
-          padding: 0.8rem 0;
-  
-          li {
-            margin: 0;
-  
-            a {
-              font-size: 1.4rem;
+        padding: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: border-color 0.7s ease; 
+
+        &:hover {
+            border:2px solid black; 
+
+            .fa-bars{
+                color: black;
             }
-          }
         }
-      }
-  
-      .social-links {
-        display: none;
-      }
-  
-      .cta-button {
-        margin-top: 0.8rem;
-        width: 100%;
-        font-size: 1.2rem;
-        padding: 0.7rem 2.2rem;
-      }
-    }
-  }
-  
-  @media (max-width: 768px) {
-    nav {
-  
-      .cta-button {
-        font-size: 1.1rem;
-        padding: 0.6rem 2rem;
-      }
-  
-      .nav-links.active {
-        a {
-          font-size: 1.2rem;
+    
+        .fa-bars {
+          font-size: 24px; 
+          font-weight: 800;
+          color: white; 
+          transition: color 0.3s ease; 
         }
-      }
+
     }
-  }
+}
   
+  /* Stili per l'offcanvas */
+  .offcanvas {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Offcanvas nascosto inizialmente a destra */
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    transition: right 0.3s ease;
+    z-index: 1000;
   
-  @media (max-width: 400px) {
-    nav {
-      padding: 1rem 0;
-  
-      .cta-button {
-        font-size: 0.8rem;
-        padding: 0.6rem 2rem;
-      }
-  
-      .nav-links.active {
-        a {
-          font-size: 0.9rem;
-        }
-      }
+    &.active {
+      right: 0; /* Mostra l'offcanvas quando è attivo */
     }
+
   }
-  
