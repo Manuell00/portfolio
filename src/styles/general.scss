@@ -1,199 +1,194 @@
-@use '../styles/partials/variables' as *;
+@use "../styles/partials/variables" as *;
 
 // FONT
-@import url('https://fonts.cdnfonts.com/css/exo-space');
-@import url('https://fonts.cdnfonts.com/css/cyborg-2');
-
-
+@import url("https://fonts.cdnfonts.com/css/exo-space");
+@import url("https://fonts.cdnfonts.com/css/cyborg-2");
 
 // ANIMATIONS
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
 @keyframes cursor {
+  0%,
+  100% {
+    border-color: $green;
+  }
 
-    0%,
-    100% {
-        border-color: $green;
-    }
-
-    50% {
-        border-color: rgba($green,0.6);
-    }
+  50% {
+    border-color: rgba($green, 0.6);
+  }
 }
 
 @keyframes typing {
-    0% {
-        width: 0ch
-    }
+  0% {
+    width: 0ch;
+  }
 
-    /*Text is hidden*/
-    30% {
-        width: 16ch;
-    }
+  /*Text is hidden*/
+  30% {
+    width: 16ch;
+  }
 
-    /*The enitre header will be typed out*/
-    80% {
-        width: 16ch;
-    }
+  /*The enitre header will be typed out*/
+  80% {
+    width: 16ch;
+  }
 
-    /*Text stays visible*/
-    90% {
-        width: 0ch;
-    }
+  /*Text stays visible*/
+  90% {
+    width: 0ch;
+  }
 
-    /*Text is deleted*/
-    100% {
-        width: 0ch;
-    }
+  /*Text is deleted*/
+  100% {
+    width: 0ch;
+  }
 
-    /*Text stays hidden*/
+  /*Text stays hidden*/
 }
 
 @keyframes slideFromLeft {
-    0% {
-        transform: translateX(-100%); // Inizia completamente fuori dal lato sx
-    }
+  0% {
+    transform: translateX(-100%); // Inizia completamente fuori dal lato sx
+  }
 
-    100% {
-        transform: translateX(0); // Termina nella sua posizione originale
-    }
+  100% {
+    transform: translateX(0); // Termina nella sua posizione originale
+  }
 }
 
 @keyframes slideFromTop {
-    0% {
-        transform: translateY(-100%); // Inizia completamente fuori dal lato sx
-    }
+  0% {
+    transform: translateY(-100%); // Inizia completamente fuori dal lato sx
+  }
 
-    100% {
-        transform: translateY(0); // Termina nella sua posizione originale
-    }
+  100% {
+    transform: translateY(0); // Termina nella sua posizione originale
+  }
 }
 
 @keyframes slideFromRight {
-    0% {
-        transform: translateX(100%); // Inizia completamente fuori dal lato dx
-    }
+  0% {
+    transform: translateX(100%); // Inizia completamente fuori dal lato dx
+  }
 
-    100% {
-        transform: translateX(0); // Termina nella sua posizione originale
-    }
+  100% {
+    transform: translateX(0); // Termina nella sua posizione originale
+  }
 }
 
 @keyframes computerMovement {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
 
-    0%,
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
+  10% {
+    transform: translateY(10px) rotate(-3deg);
+  }
 
-    10% {
-        transform: translateY(10px) rotate(-3deg);
-    }
+  20% {
+    transform: translateY(15px) rotate(-5deg);
+  }
 
-    20% {
-        transform: translateY(15px) rotate(-5deg);
-    }
+  30% {
+    transform: translateY(10px) rotate(-3deg);
+  }
 
-    30% {
-        transform: translateY(10px) rotate(-3deg);
-    }
+  40%,
+  60% {
+    transform: translateY(0) rotate(0deg);
+  }
 
-    40%,
-    60% {
-        transform: translateY(0) rotate(0deg);
-    }
+  70% {
+    transform: translateY(-10px) rotate(3deg);
+  }
 
-    70% {
-        transform: translateY(-10px) rotate(3deg);
-    }
+  80% {
+    transform: translateY(-15px) rotate(5deg);
+  }
 
-    80% {
-        transform: translateY(-15px) rotate(5deg);
-    }
-
-    90% {
-        transform: translateY(-10px) rotate(3deg);
-    }
+  90% {
+    transform: translateY(-10px) rotate(3deg);
+  }
 }
 
 @keyframes rotateIcon {
-    0% {
-        transform: rotate(-30deg);
-    }
+  0% {
+    transform: rotate(-30deg);
+  }
 
-    50% {
-        transform: rotate(150deg);
-    }
+  50% {
+    transform: rotate(150deg);
+  }
 
-    100% {
-        transform: rotate(-30deg);
-    }
+  100% {
+    transform: rotate(-30deg);
+  }
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
 
-    50% {
-        transform: scale(1.3);
-    }
+  50% {
+    transform: scale(1.3);
+  }
 
-    100% {
-        transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
+  }
 }
-
-
-
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
-
-
-
 body {
-    // max-width: 100vw;
-    padding: 0;
-    box-sizing: border-box;
-    max-width: 3840px;
-    margin: 0 auto;
+  // max-width: 100vw;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 3840px;
+  margin: 0 auto;
 
+  // Font e colori
+  -moz-osx-font-smoothing: grayscale;
+  color: #f5f5f5;
+  font-size: 25px;
 
+  // Modifico il cursore
+  cursor: url("../../public/icons8-cursor.svg"), auto;
 
-    // Font e colori
-    -moz-osx-font-smoothing: grayscale;
-    color: #f5f5f5;
-    font-size: 25px;
+  // Modifico la scrollbar
+  ::-webkit-scrollbar {
+    width: 8px;
+    /* Larghezza della barra di scorrimento */
+  }
 
+  ::-webkit-scrollbar-track {
+    background: #2a2a2a;
+    /* Colore di sfondo della barra */
+  }
 
-    // Modifico il cursore 
-    cursor: url('../../public/icons8-cursor.svg'), auto;
+  ::-webkit-scrollbar-thumb {
+    background-color: #555;
+    /* Colore del pollice (la parte scorrevole) */
+    border-radius: 4px;
+    /* Arrotonda i bordi del pollice */
+    border: 2px solid #2a2a2a;
+    /* Aggiunge un bordo intorno al pollice per farlo risaltare di più */
+  }
 
-
-    // Modifico la scrollbar
-    ::-webkit-scrollbar {
-        width: 8px;
-        /* Larghezza della barra di scorrimento */
-    }
-
-    ::-webkit-scrollbar-track {
-        background: #2a2a2a;
-        /* Colore di sfondo della barra */
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: #555;
-        /* Colore del pollice (la parte scorrevole) */
-        border-radius: 4px;
-        /* Arrotonda i bordi del pollice */
-        border: 2px solid #2a2a2a;
-        /* Aggiunge un bordo intorno al pollice per farlo risaltare di più */
-    }
-
-    /* Per Firefox */
-    scrollbar-color: #555 #2a2a2a;
+  /* Per Firefox */
+  scrollbar-color: #555 #2a2a2a;
 }

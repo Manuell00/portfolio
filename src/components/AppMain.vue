@@ -71,46 +71,20 @@ export default {
                 </div>
 
 
-                <div class="tooling-box">
-                    <div class="row flex-row">
-                        <!-- First row of images (HTML, CSS, JavaScript) -->
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 text-center mb-4">
-                            <img src="../../public/html-5-svgrepo-com.svg" alt="HTML 5">
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 text-center mb-4">
-                            <img src="../../public/css-3-svgrepo-com.svg" alt="CSS 3">
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 text-center mb-4">
-                            <img src="../../public/javascript-svgrepo-com.svg" alt="JavaScript">
-                        </div>
-
-                        <!-- Second row of images (PHP, Sass, SQL) -->
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 text-center mb-4">
-                            <img src="../../public/php-svgrepo-com.svg" alt="PHP">
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 text-center mb-4">
-                            <img src="../../public/sass-svgrepo-com.svg" alt="Sass">
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 text-center mb-4">
-                            <img src="../../public/sql-svgrepo-com.svg" alt="SQL">
-                        </div>
-
-                        <!-- Third row of images (Laravel, Vue, Vite, Python) -->
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-6 text-center mb-4">
-                            <img src="../../public/laravel-svgrepo-com.svg" alt="Laravel">
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-6 text-center mb-4">
-                            <img src="../../public/vue-svgrepo-com.svg" alt="Vue.js">
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-6 text-center mb-4">
-                            <img src="../../public/vite-svgrepo-com.svg" alt="Vite">
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-6 text-center mb-4">
-                            <img src="../../public/python-svgrepo-com.svg" alt="Python">
-                        </div>
+                <div class="container">
+                    <div class="tooling-box">
+                        <div class="carousel__face"><span>This is something</span></div>
+                        <div class="carousel__face"><span>Very special</span></div>
+                        <div class="carousel__face"><span>Special is the key</span></div>
+                        <div class="carousel__face"><span>For you</span></div>
+                        <div class="carousel__face"><span>Just give it</span></div>
+                        <div class="carousel__face"><span>A try</span></div>
+                        <div class="carousel__face"><span>And see</span></div>
+                        <div class="carousel__face"><span>How IT Works</span></div>
+                        <div class="carousel__face"><span>Woow</span></div>
                     </div>
-
                 </div>
+
             </div>
         </div>
 
@@ -138,10 +112,14 @@ export default {
                     <div class="single-details">
                         <h4>Spotify Web</h4>
 
-                        <p>This project is a <span class="highlight">meticulous recreation</span> of Spotify's main web
-                            application page. Crafted as one of my <span class="highlight">initial endeavors</span> into web
+                        <p class="desc">This project is a <span class="highlight">meticulous recreation</span> of
+                            Spotify's main web
+                            application page. Crafted as one of my <span class="highlight">initial endeavors</span> into
+                            web
                             design, it showcases my foundational skills in <span class="highlight">frontend
-                                development</span>.</p>
+                                development</span>.
+                        </p>
+
 
 
                         <ul class="tech-used">
@@ -172,7 +150,7 @@ export default {
                     <div class="single-details">
                         <h4>Whatsapp</h4>
 
-                        <p>
+                        <p class="desc">
                             I embarked on an advanced web development journey by recreating the look and feel of the
                             globally recognized platform: <span class="highlight">WhatsApp</span>. While the frontend
                             mirrors WhatsApp's UI, the real challenge was integrating real-time chat functionalities through
@@ -216,7 +194,8 @@ export default {
                     <div class="single-details">
                         <h4>Netflix</h4>
 
-                        <p>This project is a <span class="highlight">modern interpretation</span> of the film and TV show
+                        <p class="desc">This project is a <span class="highlight">modern interpretation</span> of the film
+                            and TV show
                             search concept, inspired by Netflix's aesthetic. Leveraging an API and axios calls, it allows
                             users to <span class="highlight">delve into detailed characteristics</span> of any film or TV
                             series. It stands as a testament to my advanced skills in <span class="highlight">API
@@ -253,7 +232,8 @@ export default {
                     <div class="single-details">
                         <h4>Interactive Project Management Platform</h4>
 
-                        <p>This application is a comprehensive <span class="highlight">project management system</span>
+                        <p class="desc">This application is a comprehensive <span class="highlight">project management
+                                system</span>
                             tailored for professionals seeking robustness and clarity. With full <span
                                 class="highlight">CRUD
                                 functionalities</span>, users can effortlessly manage, visualize, and
@@ -299,7 +279,8 @@ export default {
                     <div class="single-details">
                         <h4>Data Analysis of European Football 2020</h4>
 
-                        <p>This endeavor represents a detailed <span class="highlight">statistical analysis</span> of
+                        <p class="desc">This endeavor represents a detailed <span class="highlight">statistical
+                                analysis</span> of
                             footballers' performances in the UEFA Euro 2020 Championship. By meticulously dissecting
                             multiple datasets, the project illuminates patterns and insights across five distinct <span
                                 class="highlight">visual representations</span>. Each graph is a culmination of dissected
