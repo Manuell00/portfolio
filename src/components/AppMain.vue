@@ -54,7 +54,8 @@ export default {
                         </p>
 
                         <p>
-                            Now, <span>Data analysis</span> and <span>web application development</span> capture my focus.
+                            Now, <span>Data analysis</span> and <span>web application
+                                development</span> capture my focus.
                         </p>
                     </div>
                 </div>
@@ -223,13 +224,25 @@ export default {
                     <div class="single-details">
                         <h4>Spotify Web</h4>
 
-                        <p class="desc">This project is a <span class="highlight">meticulous recreation</span> of
-                            Spotify's main web
-                            application page. Crafted as one of my <span class="highlight">initial endeavors</span> into
-                            web
-                            design, it showcases my foundational skills in <span class="highlight">frontend
-                                development</span>.
-                        </p>
+                        <div class="desc">
+                            <p>This project is a <span class="highlight">meticulous recreation</span> of
+                                Spotify's main web
+                                application page. Crafted as one of my <span class="highlight">initial endeavors</span> into
+                                web
+                                design, it showcases my foundational skills in <span class="highlight">frontend
+                                    development
+                                </span>.
+                            </p>
+                            <div class="button-row">
+                                <button>
+                                    <a href="https://github.com/Manuell00/html-css-spotifyweb">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                        Code
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+
 
 
 
@@ -238,18 +251,6 @@ export default {
                             <li>CSS3</li>
                         </ul>
 
-                        <div class="last">
-                            <p class="project-date"> <span>Completed :</span> <i class="fa-regular fa-calendar"></i> - April
-                                2023 </p>
-
-
-                            <button>
-                                <a href="https://github.com/Manuell00/html-css-spotifyweb">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                    Code
-                                </a>
-                            </button>
-                        </div>
                     </div>
                 </div>
 

@@ -348,6 +348,7 @@
       width: 40%;
 
       h4 {
+        width: 100%;
         text-align: center;
         border: 2px solid $green;
         box-shadow: 8px 8px 0 0 $green;
@@ -365,25 +366,62 @@
       }
 
       .desc {
-        font-family: sans-serif;
-        line-height: 1.6;
-        letter-spacing: 0.5px;
-        font-weight: 400;
-        padding: 1rem;
-        text-align: center;
         border: 2px solid rgba(white, 0.6);
         box-shadow: 5px 5px rgba(white, 0.6);
-      }
+        padding: 1rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
 
-      .highlight {
-        color: #2c3e50;
-        background-color: #eaecee;
-        padding: 2px 5px;
-        border-radius: 5px;
-        font-weight: bold;
+        p {
+          font-family: sans-serif;
+          line-height: 1.6;
+          letter-spacing: 0.5px;
+          font-weight: 400;
+          text-align: center;
+
+          .highlight {
+            color: #2c3e50;
+            background-color: #eaecee;
+            padding: 2px 5px;
+            border-radius: 5px;
+            font-weight: bold;
+          }
+        }
+
+        .button-row {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          button {
+            width: 50%;
+            background-color: grey; // supponendo che tu voglia mantenere il tema viola, ma puoi sostituirlo con qualsiasi colore
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-flex; // per allineare correttamente l'icona e il testo
+            align-items: center;
+
+            a {
+              text-decoration: none;
+              font-weight: 700;
+              color: inherit; // prende il colore dal genitore, in questo caso `button`
+              display: flex; // per allineare correttamente l'icona e il testo
+              align-items: center;
+            }
+          }
+        }
       }
 
       .tech-used {
+        width: 100%;
         font-family: "Montserrat", sans-serif;
         margin-top: 1.5rem;
         border: 2px solid $green;
@@ -414,80 +452,12 @@
       }
 
       .last {
+        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         gap: 3rem;
         max-width: 100%;
-
-        .project-date {
-          margin: 1.5rem;
-          font-size: 1.7rem;
-          font-weight: 600;
-          transition: transform 0.5s ease;
-          text-shadow: 3px 3px 0 #1f2127, -1px -1px 0 #1f2127,
-            1px -1px 0 #1f2127, -1px 1px 0 #1f2127, 1px 1px 0 #1f2127;
-
-          &:hover {
-            transform: scale(1.05);
-          }
-
-          span {
-            display: inline-block;
-            padding: 0.2rem 0.5rem;
-            color: $green;
-            text-transform: capitalize;
-            transition: color 0.3s ease;
-            text-shadow: 3px 3px 0 #1f2127, -1px -1px 0 #1f2127,
-              1px -1px 0 #1f2127, -1px 1px 0 #1f2127, 1px 1px 0 #1f2127;
-            text-decoration: underline;
-
-            &:hover {
-              color: lighten($green, 15%);
-            }
-          }
-        }
-
-        button {
-          background-color: $green; // supponendo che tu voglia mantenere il tema viola, ma puoi sostituirlo con qualsiasi colore
-          color: white;
-          padding: 10px 20px;
-          border: none;
-          border-radius: 5px;
-          font-size: 16px;
-          cursor: pointer;
-          transition: background-color 0.3s ease, transform 0.3s ease;
-          display: inline-flex; // per allineare correttamente l'icona e il testo
-          align-items: center;
-
-          i {
-            margin-right: 8px; // spazio tra l'icona e il testo
-          }
-
-          &:hover {
-            background-color: darken(
-              $green,
-              15%
-            ); // scurisce il colore del pulsante quando si passa sopra con il mouse
-            transform: translateY(
-              -2px
-            ); // dà un effetto di "sollevamento" al pulsante
-          }
-
-          &:active {
-            transform: translateY(
-              0
-            ); // re-imposta la posizione del pulsante quando viene cliccato
-          }
-
-          a {
-            text-decoration: none;
-            font-weight: 700;
-            color: inherit; // prende il colore dal genitore, in questo caso `button`
-            display: flex; // per allineare correttamente l'icona e il testo
-            align-items: center;
-          }
-        }
       }
     }
   }
