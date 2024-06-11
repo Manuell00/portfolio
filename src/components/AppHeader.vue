@@ -93,7 +93,7 @@ export default {
       <!-- Pulsante per chiudere l'offcanvas -->
       <div class="close-button" :style="{ 'padding-top': dropDisplay ? '180px' : '0' }">
         <button @click="closeOffcanvas">
-          Close <i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
     </div>

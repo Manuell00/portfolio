@@ -44,13 +44,13 @@ export default {
 
                     <div class="content-primary">
                         <h1>
-                            Full-stack developer & management engineer.
+                            Data Analyst & Management Engineer.
                         </h1>
                     </div>
 
                     <div class="content-secondary">
                         <p>
-                            Fresh out of Management Engineering, I took a 6-month deep dive into coding with Boolean.
+                            Fresh out of Bechelor Degree in Management Engineering, I took a 6-month deep dive into coding.
                         </p>
 
                         <p>
@@ -63,6 +63,8 @@ export default {
 
             <!-- TOOLING -->
             <div class="tooling" id="tech">
+
+                <!-- Riga di titolo -->
                 <div class="tooling-header">
                     <div class="tooling-title">
                         <h2>Technologies</h2>
@@ -70,21 +72,130 @@ export default {
                     </div>
                 </div>
 
-
-                <div class="container">
+                <!-- Riga elementi -->
+                <div class="tooling-element">
                     <div class="tooling-box">
-                        <div class="carousel__face"><span>This is something</span></div>
-                        <div class="carousel__face"><span>Very special</span></div>
-                        <div class="carousel__face"><span>Special is the key</span></div>
-                        <div class="carousel__face"><span>For you</span></div>
-                        <div class="carousel__face"><span>Just give it</span></div>
-                        <div class="carousel__face"><span>A try</span></div>
-                        <div class="carousel__face"><span>And see</span></div>
-                        <div class="carousel__face"><span>How IT Works</span></div>
-                        <div class="carousel__face"><span>Woow</span></div>
+
+                        <!-- Frontend Frameworks -->
+                        <!-- Contenitore React -->
+                        <div class="box-content">
+                            <div class="box-icon">
+                                <i class="fa-brands fa-react"></i>
+                            </div>
+                            <div class="techname">
+                                React
+                            </div>
+                        </div>
+                        <!-- Contenitore Vue -->
+                        <div class="box-content">
+                            <div class="box-icon">
+                                <i class="fa-brands fa-vuejs"></i>
+                            </div>
+                            <div class="techname">
+                                Vue.js
+                            </div>
+                        </div>
+
+                        <!-- Backend Frameworks -->
+                        <!-- Contenitore Laravel -->
+                        <div class="box-content">
+                            <div class="box-icon">
+                                <i class="fa-brands fa-laravel"></i>
+                            </div>
+                            <div class="techname">
+                                Laravel
+                            </div>
+                        </div>
+
+                        <!-- Languages -->
+                        <!-- Contenitore Python -->
+                        <div class="box-content">
+                            <div class="box-icon">
+                                <i class="fa-brands fa-python"></i>
+                            </div>
+                            <div class="techname">
+                                Python
+                            </div>
+                        </div>
+                        <!-- Contenitore Javascript -->
+                        <div class="box-content">
+                            <div class="box-icon">
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            <div class="techname">
+                                JavaScript
+                            </div>
+                        </div>
+                        <!-- Contenitore PHP -->
+                        <div class="box-content">
+                            <div class="box-icon">
+                                <i class="fa-brands fa-php"></i>
+                            </div>
+                            <div class="techname">
+                                PHP
+                            </div>
+                        </div>
+
+                        <!-- Styling -->
+                        <!-- Contenitore SASS -->
+                        <div class="box-content">
+                            <div class="box-icon">
+                                <i class="fa-brands fa-sass"></i>
+                            </div>
+                            <div class="techname">
+                                SASS
+                            </div>
+                        </div>
+                        <!-- Contenitore Tailwind -->
+                        <div class="box-content">
+                            <div class="box-icon">
+                                <i class="fa-brands fa-tailwind-css"></i>
+                            </div>
+                            <div class="techname">
+                                Tailwind CSS
+                            </div>
+                        </div>
+                        <!-- Contenitore HTML -->
+                        <div class="box-content">
+                            <div class="box-icon">
+                                <i class="fa-brands fa-html5"></i>
+                            </div>
+                            <div class="techname">
+                                HTML
+                            </div>
+                        </div>
+                        <!-- Contenitore CSS -->
+                        <div class="box-content">
+                            <div class="box-icon">
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </div>
+                            <div class="techname">
+                                CSS
+                            </div>
+                        </div>
+
+                        <!-- Database -->
+                        <!-- Contenitore SQL -->
+                        <div class="box-content">
+                            <div class="box-icon">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <div class="techname">
+                                SQL
+                            </div>
+                        </div>
+                        <!-- Contenitore Office -->
+                        <div class="box-content">
+                            <div class="box-icon">
+                                <i class="fa-brands fa-windows"></i>
+                            </div>
+                            <div class="techname">
+                                Office
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -93,8 +204,8 @@ export default {
         <div class="work" id="portfolio">
             <div class="work-header">
                 <div class="work-title">
-                    <h2>Portfolio</h2>
-                    <i class="fas fa-folder"></i> <!-- Questa è l'icona di FontAwesome -->
+                    <h2>My Projects</h2>
+                    <i class="fa-solid fa-diagram-project"></i>
                 </div>
             </div>
 
