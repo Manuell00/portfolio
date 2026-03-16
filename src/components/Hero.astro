@@ -1,0 +1,46 @@
+---
+import { profile, ui } from "../data/site";
+
+const { lang = "it" } = Astro.props;
+const langUi = ui[lang];
+---
+
+<section class="hero-grid section-space">
+  <div class="hero-copy" data-reveal>
+    <div class="eyebrow">{langUi.heroEyebrow}</div>
+    <h1>{profile.shortRole[lang]}</h1>
+    <p class="lede">{profile.role[lang]}</p>
+    <p class="support-copy">{profile.intro[lang]}</p>
+
+    <div class="stats-grid">
+      {profile.heroStats.map((stat) => (
+        <div class="stat-card">
+          <strong>{stat.value}</strong>
+          <span>{stat.label[lang]}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="hero-panel" data-reveal>
+    <div class="hero-panel-inner">
+      <div class="panel-kicker">{profile.location}</div>
+      <h2>{profile.name}</h2>
+      <p>{profile.heroSummary[lang]}</p>
+      <div class="panel-stack">
+        <span>Excel</span>
+        <span>SQL Server</span>
+        <span>Zucchetti Mago</span>
+        <span>AI Workflows</span>
+      </div>
+      <div class="panel-line"></div>
+      <div class="hero-panel-links hero-contact-list">
+        {profile.contacts.map((contact) => (
+          <a class="inline-link" href={contact.href} target={contact.href.startsWith("mailto:") ? undefined : "_blank"} rel={contact.href.startsWith("mailto:") ? undefined : "noreferrer"}>
+            {contact.label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

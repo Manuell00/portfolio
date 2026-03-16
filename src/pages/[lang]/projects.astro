@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import { profile, projects, ui } from "../../data/site";
+
+export async function getStaticPaths() {
+  return [{ params: { lang: "it" } }, { params: { lang: "en" } }];
+}
+
+const { lang } = Astro.params;
+const langUi = ui[lang];
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${profile.name} | ${langUi.projectsPageTitle}`}
+  description={langUi.projectsPageCopy}
+>
+  <section class="page-intro section-space" data-reveal>
+    <span class="section-label">{langUi.projectsPageTitle}</span>
+    <h1>{langUi.projectsPageTitle}</h1>
+    <p>{langUi.projectsPageCopy}</p>
+  </section>
+
+  <section class="project-grid section-space">
+    {projects.map((project) => (
+      <ProjectCard project={project} lang={lang} />
+    ))}
+  </section>
+</BaseLayout>

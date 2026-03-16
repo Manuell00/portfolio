@@ -1,0 +1,52 @@
+---
+import { ui } from "../data/site";
+
+const { project, lang = "it", featured = false } = Astro.props;
+const langUi = ui[lang];
+---
+
+<article class:list={["project-card", featured && "featured"]} data-reveal>
+  <div class="project-media">
+    <div class="project-browser">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    {
+      project.image ? (
+        <img src={project.image} alt={project.name} loading="lazy" />
+      ) : (
+        <div class="project-placeholder">
+          <span>{project.name}</span>
+          <small>{project.tags.join(" / ")}</small>
+        </div>
+      )
+    }
+  </div>
+
+  <div class="project-body">
+    <div class="project-topline">
+      <h3>{project.name}</h3>
+      <span>{project.slug}</span>
+    </div>
+
+    <p>{project.description[lang]}</p>
+
+    <ul class="tag-list">
+      {project.tags.map((tag) => (
+        <li>{tag}</li>
+      ))}
+    </ul>
+
+    <div class="project-links">
+      <a class="inline-link" href={project.href} target="_blank" rel="noreferrer">{langUi.openCode}</a>
+      {
+        project.live && (
+          <a class="inline-link" href={project.live} target="_blank" rel="noreferrer">
+            {langUi.openLive}
+          </a>
+        )
+      }
+    </div>
+  </div>
+</article>

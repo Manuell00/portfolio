@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { profile, ui } from "../../data/site";
+
+export async function getStaticPaths() {
+  return [{ params: { lang: "it" } }, { params: { lang: "en" } }];
+}
+
+const { lang } = Astro.params;
+const langUi = ui[lang];
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${profile.name} | ${langUi.resumePageTitle}`}
+  description={langUi.resumePageCopy}
+>
+  <section class="page-intro section-space" data-reveal>
+    <span class="section-label">{langUi.resumePageTitle}</span>
+    <h1>{langUi.resumePageTitle}</h1>
+    <p>{langUi.resumePageCopy}</p>
+  </section>
+
+  <section class="content-grid section-space">
+    <article class="content-card content-card-strong" data-reveal>
+      <span class="section-label">{langUi.resumeStatusTitle}</span>
+      <h2>{langUi.resumeStatusTitle}</h2>
+      <p>{langUi.resumeStatusCopy}</p>
+      <div class="hero-actions">
+        <a class="primary-button" href={`mailto:${profile.email}`}>{langUi.heroSecondaryCta}</a>
+      </div>
+    </article>
+
+    <article class="content-card" data-reveal>
+      <span class="section-label">{langUi.contactTitle}</span>
+      <div class="contact-list">
+        <a href={`mailto:${profile.email}`}>
+          <strong>{langUi.mailLabel}</strong>
+          <span>{profile.email}</span>
+        </a>
+        <a href={profile.github} target="_blank" rel="noreferrer">
+          <strong>{langUi.githubLabel}</strong>
+          <span>github.com/Manuell00</span>
+        </a>
+        <a href={profile.linkedin} target="_blank" rel="noreferrer">
+          <strong>{langUi.linkedinLabel}</strong>
+          <span>manuel-caselli-78a0a7244</span>
+        </a>
+      </div>
+    </article>
+  </section>
+</BaseLayout>

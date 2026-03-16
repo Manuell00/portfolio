@@ -1,0 +1,69 @@
+---
+import "../styles/global.css";
+import { navigation, profile, ui } from "../data/site";
+
+const { lang = "it", title, description } = Astro.props;
+const langUi = ui[lang];
+const nav = navigation[lang];
+const alternateLang = lang === "it" ? "en" : "it";
+const currentPath = Astro.url.pathname;
+const alternatePath = currentPath.replace(`/${lang}/`, `/${alternateLang}/`);
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-graphite text-white antialiased">
+    <div class="page-shell">
+      <div class="ambient ambient-one"></div>
+      <div class="ambient ambient-two"></div>
+
+      <header class="site-header">
+        <a href={`/${lang}/`} class="brand">
+          <span class="brand-mark">MC</span>
+          <span class="brand-text">{profile.name}</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          {nav.map((item) => (
+            <a href={item.href} class:list={{ active: currentPath === item.href }}>{item.label}</a>
+          ))}
+        </nav>
+
+        <div class="site-actions">
+          <a class="lang-switch" href={alternatePath}>{langUi.switchLabel}</a>
+        </div>
+      </header>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-top">
+          <div class="footer-branding">
+            <span class="section-label">Manuel Caselli</span>
+            <p>{langUi.footer}</p>
+          </div>
+          <div class="footer-links">
+            <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
+            <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>{profile.shortRole[lang]}</span>
+          <span>{profile.location}</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
