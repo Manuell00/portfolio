@@ -9,11 +9,13 @@ export async function getStaticPaths() {
 
 const { lang } = Astro.params;
 const langUi = ui[lang];
+const featuredExperience = profile.experience.filter((item) => item.featuredTop);
+const workExperience = profile.experience.filter((item) => !item.featuredTop);
 ---
 
 <BaseLayout
   lang={lang}
-  title={`${profile.name} | ${profile.shortRole[lang]}`}
+  title={`${profile.name} | ${profile.shortRole[lang].join(" · ")}`}
   description={profile.role[lang]}
 >
   <Hero lang={lang} />
@@ -44,7 +46,7 @@ const langUi = ui[lang];
       </div>
     </div>
 
-    <div class="content-card" data-reveal>
+    <div class="content-card" id="skills" data-reveal>
       <span class="section-label">{langUi.skillsTitle}</span>
       <h2 class="section-title">{langUi.skillsTitle}</h2>
       <div class="skills-groups">
@@ -73,15 +75,18 @@ const langUi = ui[lang];
     <div class="highlight-grid">
       {profile.highlights.map((item) => (
         <article class="highlight-card" data-reveal>
-          <img class="highlight-mark" src={
+          <div class="highlight-topline">
+            <img class="highlight-mark" src={
             item.icon === "XL"
-              ? "/excel-mark.svg"
+              ? "https://cdn.simpleicons.org/microsoftexcel/217346"
               : item.icon === "DB"
-                ? "/sql-server-mark.svg"
+                ? "https://cdn.simpleicons.org/microsoftsqlserver/CC2927"
                 : item.icon === "MG"
-                  ? "/mago-mark.svg"
-                  : "/airbnb-mark.svg"
+                  ? "https://cdn.simpleicons.org/zucchetti/0B8C7B"
+                  : "https://cdn.simpleicons.org/airbnb/FF5A5F"
           } alt="" loading="lazy" />
+            <span class="highlight-arrow" aria-hidden="true">↗</span>
+          </div>
           <h3>{item.title[lang]}</h3>
           <p>{item.body[lang]}</p>
           <ul class="tag-list">
@@ -101,12 +106,33 @@ const langUi = ui[lang];
       <p>{langUi.experienceCopy}</p>
     </div>
 
+    <div class="experience-featured-grid">
+      {featuredExperience.map((item) => (
+        <article class:list={["timeline-item", "timeline-item-top", item.featured && "timeline-item-featured"]} data-reveal>
+          <div class="timeline-node"></div>
+          <span class="timeline-period">{item.period[lang]}</span>
+          <h3>
+            {item.title[lang]}
+            {item.company?.[lang] && <span class="timeline-company"> {lang === "it" ? "—" : "—"} {item.company[lang]}</span>}
+          </h3>
+          <ul class="timeline-tags">
+            {item.details[lang].map((detail) => (
+              <li>{detail}</li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+
     <div class="timeline-sequence">
-      {profile.experience.map((item) => (
+      {workExperience.map((item) => (
         <article class:list={["timeline-item", item.featured && "timeline-item-featured"]} data-reveal>
           <div class="timeline-node"></div>
           <span class="timeline-period">{item.period[lang]}</span>
-          <h3>{item.title[lang]}</h3>
+          <h3>
+            {item.title[lang]}
+            {item.company?.[lang] && <span class="timeline-company"> {lang === "it" ? "—" : "—"} {item.company[lang]}</span>}
+          </h3>
           <ul class="timeline-tags">
             {item.details[lang].map((detail) => (
               <li>{detail}</li>

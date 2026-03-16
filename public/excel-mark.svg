@@ -1,5 +1,9 @@
-<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect x="8" y="12" width="64" height="56" rx="14" fill="#1F6F43"/>
-  <rect x="20" y="22" width="40" height="36" rx="8" fill="#2CA15F"/>
-  <path d="M31 31L38 40L31 49H37L41 43L45 49H51L44 40L51 31H45L41 37L37 31H31Z" fill="white"/>
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="14" width="76" height="68" rx="18" fill="#11161F"/>
+  <rect x="22" y="24" width="44" height="48" rx="10" fill="#1E8E5B"/>
+  <path d="M33.5 36L41.25 48L33.5 60H40.75L45.25 52.4L49.75 60H57L49.2 48L57 36H49.75L45.25 43.5L40.75 36H33.5Z" fill="white"/>
+  <rect x="51" y="28" width="19" height="7" rx="3.5" fill="#DFF3E9" fill-opacity="0.9"/>
+  <rect x="51" y="39" width="19" height="7" rx="3.5" fill="#DFF3E9" fill-opacity="0.72"/>
+  <rect x="51" y="50" width="19" height="7" rx="3.5" fill="#DFF3E9" fill-opacity="0.6"/>
+  <rect x="51" y="61" width="13" height="7" rx="3.5" fill="#DFF3E9" fill-opacity="0.45"/>
 </svg>

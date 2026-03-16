@@ -1,12 +1,12 @@
 export const profile = {
   name: "Manuel Caselli",
   role: {
-    it: "Domain expert, data analyst e sviluppatore di applicativi web con focus su processi reali, dati affidabili e strumenti moderni.",
-    en: "Domain expert, data analyst, and web application builder focused on real processes, reliable data, and modern tools.",
+    it: "Domain expert, ERP specialist, data analyst e sviluppatore di applicativi web.",
+    en: "Domain expert, ERP specialist, data analyst, and web application builder.",
   },
   shortRole: {
-    it: "Domain Expert, Data Analyst & Web App Builder",
-    en: "Domain Expert, Data Analyst & Web App Builder",
+    it: ["Domain Expert", "Data Analyst", "Web App Builder"],
+    en: ["Domain Expert", "Data Analyst", "Web App Builder"],
   },
   location: "Genova, Italia",
   email: "manuell.caselli@gmail.com",
@@ -98,16 +98,36 @@ export const profile = {
   experience: [
     {
       period: {
+        it: "Formazione continua",
+        en: "Continuous learning",
+      },
+      title: {
+        it: "Coursera, corsi specialistici e AI",
+        en: "Coursera, specialist courses, and AI",
+      },
+      details: {
+        it: ["Coursera", "AI per coding", "Skill analitiche", "Aggiornamento continuo"],
+        en: ["Coursera", "AI for coding", "Analytical skills", "Continuous upskilling"],
+      },
+      featured: true,
+      featuredTop: true,
+    },
+    {
+      period: {
         it: "2026 - oggi",
         en: "2026 - today",
       },
       title: {
-        it: "Domain Expert presso Zucchetti",
-        en: "Domain Expert at Zucchetti",
+        it: "Domain Expert",
+        en: "Domain Expert",
+      },
+      company: {
+        it: "Zucchetti",
+        en: "Zucchetti",
       },
       details: {
-        it: ["Mago Zucchetti", "Retail e logistica", "Forecast e riordino", "Training IT/EN"],
-        en: ["Zucchetti Mago", "Retail and logistics", "Forecasting and replenishment", "Training IT/EN"],
+        it: ["Mago Zucchetti", "Retail e logistica", "Forecast e riordino", "Testing web e mobile"],
+        en: ["Zucchetti Mago", "Retail and logistics", "Forecasting and replenishment", "Web and mobile testing"],
       },
     },
     {
@@ -116,8 +136,12 @@ export const profile = {
         en: "2025",
       },
       title: {
-        it: "Data Analyst presso Ignazio Messina",
-        en: "Data Analyst at Ignazio Messina",
+        it: "Data Analyst",
+        en: "Data Analyst",
+      },
+      company: {
+        it: "Ignazio Messina",
+        en: "Ignazio Messina",
       },
       details: {
         it: ["Analisi dati", "Data quality", "Supporto decisionale"],
@@ -130,8 +154,12 @@ export const profile = {
         en: "2023 - 2025",
       },
       title: {
-        it: "Domain Expert presso Zucchetti",
-        en: "Domain Expert at Zucchetti",
+        it: "Domain Expert",
+        en: "Domain Expert",
+      },
+      company: {
+        it: "Zucchetti",
+        en: "Zucchetti",
       },
       details: {
         it: ["Supporto funzionale", "Procedure ERP", "Conoscenza cliente"],
@@ -147,25 +175,14 @@ export const profile = {
         it: "Laurea in Ingegneria Gestionale",
         en: "Management Engineering degree",
       },
+      company: {
+        it: "UniGe",
+        en: "UniGe",
+      },
       details: {
         it: ["Analisi dei dati", "Processi aziendali", "Basi di sviluppo web"],
         en: ["Data analysis", "Business processes", "Web development basics"],
       },
-    },
-    {
-      period: {
-        it: "Formazione continua",
-        en: "Continuous learning",
-      },
-      title: {
-        it: "Coursera, corsi specialistici e AI",
-        en: "Coursera, specialist courses, and AI",
-      },
-      details: {
-        it: ["Coursera", "AI per coding", "Skill analitiche", "Aggiornamento continuo"],
-        en: ["Coursera", "AI for coding", "Analytical skills", "Continuous upskilling"],
-      },
-      featured: true,
     },
     {
       period: {
@@ -180,6 +197,7 @@ export const profile = {
         it: ["Siti web", "Collaborazioni Fiverr", "Progetti personali", "UI e delivery"],
         en: ["Websites", "Fiverr collaborations", "Personal projects", "UI and delivery"],
       },
+      featuredTop: true,
     },
   ],
   highlights: [
@@ -338,10 +356,10 @@ export const ui = {
     skillsTitle: "Competenze",
     highlightsTitle: "Aree di valore",
     highlightsCopy:
-      "Competenze che uniscono analisi del dato, conoscenza di dominio, sviluppo di applicativi web e lettura concreta dei processi.",
+      "Analisi, dominio ERP, database e visione operativa applicata a casi reali.",
     experienceTitle: "Esperienze",
     experienceCopy:
-      "Un percorso che parte dall'ingegneria gestionale, cresce nell'analisi dati e si consolida nel lavoro su ERP, database, clienti e prodotti digitali.",
+      "Formazione continua, progetti attivi e un percorso costruito tra ERP, dati e prodotti digitali.",
     projectsPageTitle: "Progetti selezionati",
     projectsPageCopy:
       "Repository e lavori che raccontano il mio approccio tra analisi dati, applicativi web e attenzione all'esperienza utente.",
@@ -369,10 +387,10 @@ export const ui = {
     skillsTitle: "Skills",
     highlightsTitle: "Core value areas",
     highlightsCopy:
-      "Capabilities that combine data analysis, domain knowledge, web application development, and a practical understanding of real processes.",
+      "Analytics, ERP domain expertise, databases, and practical execution in real operating contexts.",
     experienceTitle: "Experience",
     experienceCopy:
-      "A path that starts in management engineering, grows through data analysis, and becomes stronger through ERP, database, client, and digital product work.",
+      "Continuous learning, active projects, and a path built across ERP, data, and digital products.",
     projectsPageTitle: "Selected projects",
     projectsPageCopy:
       "Repositories and work that represent my approach across data analysis, web applications, and user-facing execution.",
