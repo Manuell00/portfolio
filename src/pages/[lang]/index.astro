@@ -23,6 +23,25 @@ const langUi = ui[lang];
       <span class="section-label">{langUi.expertiseTitle}</span>
       <h2 class="section-title">{profile.webAi.title[lang]}</h2>
       <p>{profile.webAi.body[lang]}</p>
+      <div class="feature-icons">
+        {profile.webAi.points.map((point) => (
+          <div class="feature-tile">
+            <span class="feature-icon">{point.icon}</span>
+            <small>{point[lang]}</small>
+          </div>
+        ))}
+      </div>
+      <div class="showcase-collage" aria-hidden="true">
+        <div class="showcase-card showcase-card-analysis showcase-placeholder">
+          <span>Project visual 01</span>
+          <small>Ready for your screenshot</small>
+        </div>
+        <div class="showcase-card showcase-card-web showcase-placeholder">
+          <span>Project visual 02</span>
+          <small>Ready for your screenshot</small>
+        </div>
+        <div class="showcase-badge">Ready for project visuals</div>
+      </div>
     </div>
 
     <div class="content-card" data-reveal>
@@ -32,6 +51,7 @@ const langUi = ui[lang];
         {profile.skillGroups.map((group) => (
           <article class="skill-group">
             <h3>{group.title[lang]}</h3>
+            <p class="skill-group-copy">{group.summary[lang]}</p>
             <ul class="skill-cloud compact">
               {group.items.map((skill) => (
                 <li>{skill}</li>
@@ -53,6 +73,15 @@ const langUi = ui[lang];
     <div class="highlight-grid">
       {profile.highlights.map((item) => (
         <article class="highlight-card" data-reveal>
+          <img class="highlight-mark" src={
+            item.icon === "XL"
+              ? "/excel-mark.svg"
+              : item.icon === "DB"
+                ? "/sql-server-mark.svg"
+                : item.icon === "MG"
+                  ? "/mago-mark.svg"
+                  : "/airbnb-mark.svg"
+          } alt="" loading="lazy" />
           <h3>{item.title[lang]}</h3>
           <p>{item.body[lang]}</p>
           <ul class="tag-list">
@@ -72,12 +101,17 @@ const langUi = ui[lang];
       <p>{langUi.experienceCopy}</p>
     </div>
 
-    <div class="timeline">
+    <div class="timeline-sequence">
       {profile.experience.map((item) => (
         <article class:list={["timeline-item", item.featured && "timeline-item-featured"]} data-reveal>
+          <div class="timeline-node"></div>
           <span class="timeline-period">{item.period[lang]}</span>
           <h3>{item.title[lang]}</h3>
-          <p>{item.body[lang]}</p>
+          <ul class="timeline-tags">
+            {item.details[lang].map((detail) => (
+              <li>{detail}</li>
+            ))}
+          </ul>
         </article>
       ))}
     </div>

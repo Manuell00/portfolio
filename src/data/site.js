@@ -17,14 +17,16 @@ export const profile = {
     { value: "Excel", label: { it: "analisi, pulizia e reporting", en: "analysis, cleaning, and reporting" } },
     { value: "SQL", label: { it: "query, restore e database ops", en: "queries, restore, and database ops" } },
     { value: "Web Apps", label: { it: "sviluppo con AI e UI moderne", en: "development with AI and modern UI" } },
+    { value: "AI", label: { it: "workflow e supporto al coding", en: "workflows and coding support" } },
+    { value: "Mago", label: { it: "Zucchetti ERP e processi", en: "Zucchetti ERP and processes" } },
   ],
   intro: {
     it: "Lavoro tra ERP, database, sviluppo web e AI per trasformare dati operativi e processi complessi in strumenti piu chiari, piu veloci e piu utili.",
     en: "I work across ERP systems, databases, web development, and AI to turn operational data and complex processes into tools that are clearer, faster, and more useful.",
   },
   heroSummary: {
-    it: "Competenze analitiche forti, esperienza di dominio su Zucchetti Mago e un focus crescente sulla costruzione di applicativi web e workflow assistiti dall'intelligenza artificiale.",
-    en: "Strong analytical skills, domain expertise on Zucchetti Mago, and a growing focus on building web applications and AI-assisted workflows.",
+    it: "Dati affidabili, processi chiari, strumenti utili.",
+    en: "Reliable data, clearer processes, useful tools.",
   },
   webAi: {
     title: {
@@ -35,6 +37,12 @@ export const profile = {
       it: "Oltre alla parte analitica, porto avanti sviluppo di applicativi web, interfacce responsive e siti orientati alla conversione. Utilizzo molto strumenti AI per programmare meglio, prototipare piu velocemente e rafforzare anche le mie capacita di analisi.",
       en: "Alongside analytics, I keep building web applications, responsive interfaces, and conversion-oriented websites. I actively use AI tools to code better, prototype faster, and strengthen my analytical work as well.",
     },
+    points: [
+      { icon: "AI", it: "AI per coding", en: "AI for coding" },
+      { icon: "UI", it: "UI responsive", en: "Responsive UI" },
+      { icon: "API", it: "Integrazione API", en: "API integration" },
+      { icon: "UX", it: "Prototipi veloci", en: "Fast prototyping" },
+    ],
   },
   contacts: [
     { label: "GitHub", href: "https://github.com/Manuell00" },
@@ -47,57 +55,44 @@ export const profile = {
         it: "Data analysis",
         en: "Data analysis",
       },
-      items: [
-        "Advanced Excel",
-        "Data Cleaning",
-        "SQL",
-        "SQL Server",
-        "Database Restore",
-        "Cloud Data Environments",
-        "Cash Flow Forecasting",
-      ],
+      summary: {
+        it: "Pulizia, lettura e organizzazione del dato per decisioni piu veloci.",
+        en: "Cleaning, reading, and structuring data for faster decisions.",
+      },
+      items: ["Advanced Excel", "Data Cleaning", "SQL", "SQL Server"],
     },
     {
       title: {
-        it: "Zucchetti e dominio",
-        en: "Zucchetti and domain",
+        it: "Zucchetti ERP",
+        en: "Zucchetti ERP",
       },
-      items: [
-        "Zucchetti Mago",
-        "Retail Processes",
-        "Logistics Processes",
-        "Sales Forecasting",
-        "Replenishment",
-        "Help Migration",
-        "Custom Zucchetti Editors",
-      ],
+      summary: {
+        it: "Mago, processi retail/logistica e supporto funzionale su scenari reali.",
+        en: "Mago, retail/logistics processes, and functional support in real scenarios.",
+      },
+      items: ["Zucchetti Mago", "Retail", "Logistics", "Sales Forecasting"],
     },
     {
       title: {
         it: "Sviluppo web",
         en: "Web development",
       },
-      items: [
-        "Web Applications",
-        "Astro",
-        "Tailwind CSS",
-        "JavaScript",
-        "Vue",
-        "PHP",
-      ],
+      summary: {
+        it: "Siti e applicativi web con focus su interfacce chiare e responsive.",
+        en: "Websites and web apps focused on clear, responsive interfaces.",
+      },
+      items: ["Web Applications", "Astro", "Tailwind CSS", "JavaScript"],
     },
     {
       title: {
         it: "AI e formazione continua",
         en: "AI and continuous learning",
       },
-      items: [
-        "AI Workflows",
-        "Prompting for Development",
-        "Boolean",
-        "Specialist Courses",
-        "Short-Term Rental Analytics",
-      ],
+      summary: {
+        it: "AI per coding e analisi, con aggiornamento costante su corsi specialistici.",
+        en: "AI for coding and analysis, with ongoing specialist learning.",
+      },
+      items: ["AI Workflows", "Prompting", "Coursera", "Specialist Courses"],
     },
   ],
   experience: [
@@ -110,9 +105,9 @@ export const profile = {
         it: "Domain Expert presso Zucchetti",
         en: "Domain Expert at Zucchetti",
       },
-      body: {
-        it: "Seconda esperienza nel ruolo, con presidio su Mago Zucchetti, processi retail e logistici, forecast vendite, riordino, supporto database, conversioni help e formazione clienti in italiano e inglese.",
-        en: "My second experience in the role, focusing on Zucchetti Mago, retail and logistics processes, sales forecasting, replenishment, database support, help conversions, and client training in both Italian and English.",
+      details: {
+        it: ["Mago Zucchetti", "Retail e logistica", "Forecast e riordino", "Training IT/EN"],
+        en: ["Zucchetti Mago", "Retail and logistics", "Forecasting and replenishment", "Training IT/EN"],
       },
     },
     {
@@ -124,9 +119,9 @@ export const profile = {
         it: "Data Analyst presso Ignazio Messina",
         en: "Data Analyst at Ignazio Messina",
       },
-      body: {
-        it: "Analisi dati e organizzazione delle informazioni in un contesto aziendale reale, con attenzione a qualita del dato, lettura dei processi e supporto operativo alle decisioni.",
-        en: "Data analysis and information structuring in a real business environment, with strong attention to data quality, process understanding, and operational decision support.",
+      details: {
+        it: ["Analisi dati", "Data quality", "Supporto decisionale"],
+        en: ["Data analysis", "Data quality", "Decision support"],
       },
     },
     {
@@ -138,9 +133,9 @@ export const profile = {
         it: "Domain Expert presso Zucchetti",
         en: "Domain Expert at Zucchetti",
       },
-      body: {
-        it: "Prima esperienza strutturata come domain expert, con lavoro su Mago Zucchetti, supporto funzionale, procedure retail e logistica, training e gestione della conoscenza lato cliente.",
-        en: "My first structured experience as a domain expert, working on Zucchetti Mago, functional support, retail and logistics procedures, training, and client-side knowledge management.",
+      details: {
+        it: ["Supporto funzionale", "Procedure ERP", "Conoscenza cliente"],
+        en: ["Functional support", "ERP procedures", "Client knowledge"],
       },
     },
     {
@@ -152,9 +147,9 @@ export const profile = {
         it: "Laurea in Ingegneria Gestionale",
         en: "Management Engineering degree",
       },
-      body: {
-        it: "Durante il percorso universitario ho approfondito analisi dei dati, processi aziendali e basi di sviluppo di applicativi web, costruendo una base molto utile per il mio lavoro attuale.",
-        en: "During my university path I deepened data analysis, business processes, and early web application development, building a foundation that is still central to my work today.",
+      details: {
+        it: ["Analisi dei dati", "Processi aziendali", "Basi di sviluppo web"],
+        en: ["Data analysis", "Business processes", "Web development basics"],
       },
     },
     {
@@ -163,14 +158,28 @@ export const profile = {
         en: "Continuous learning",
       },
       title: {
-        it: "Boolean, corsi specialistici e AI",
-        en: "Boolean, specialist courses, and AI",
+        it: "Coursera, corsi specialistici e AI",
+        en: "Coursera, specialist courses, and AI",
       },
-      body: {
-        it: "Il percorso Boolean e altri corsi successivi mi hanno aiutato ad ampliare sviluppo applicativo, frontend, skill analitiche e utilizzo dell'intelligenza artificiale per coding e data work.",
-        en: "The Boolean program and other follow-up courses helped me expand application development, frontend work, analytical skills, and the use of AI for both coding and data work.",
+      details: {
+        it: ["Coursera", "AI per coding", "Skill analitiche", "Aggiornamento continuo"],
+        en: ["Coursera", "AI for coding", "Analytical skills", "Continuous upskilling"],
       },
       featured: true,
+    },
+    {
+      period: {
+        it: "Progetti e freelance",
+        en: "Projects and freelance",
+      },
+      title: {
+        it: "Fiverr e progetti personali web",
+        en: "Fiverr and personal web projects",
+      },
+      details: {
+        it: ["Siti web", "Collaborazioni Fiverr", "Progetti personali", "UI e delivery"],
+        en: ["Websites", "Fiverr collaborations", "Personal projects", "UI and delivery"],
+      },
     },
   ],
   highlights: [
@@ -179,9 +188,10 @@ export const profile = {
         it: "Excel e analisi operativa",
         en: "Excel and operational analysis",
       },
+      icon: "XL",
       body: {
-        it: "Pulizia dati, strutturazione file, reportistica, controlli di coerenza e trasformazione di dati grezzi in materiale utile per il business.",
-        en: "Data cleaning, file structuring, reporting, consistency checks, and turning raw data into material that is truly useful for the business.",
+        it: "Pulizia dati, reporting e lettura veloce di file complessi per supportare il business.",
+        en: "Data cleaning, reporting, and fast reading of complex files to support the business.",
       },
       tags: ["Excel", "Data Cleaning", "Reporting"],
     },
@@ -190,9 +200,10 @@ export const profile = {
         it: "Database, SQL e restore",
         en: "Databases, SQL, and restore",
       },
+      icon: "DB",
       body: {
-        it: "Query, gestione database, restore, supporto su SQL Server e lavoro su ambienti dati cloud o ibridi con approccio operativo.",
-        en: "Queries, database management, restore procedures, SQL Server support, and practical work across cloud or hybrid data environments.",
+        it: "Query, restore, SQL Server e gestione operativa di ambienti dati strutturati.",
+        en: "Queries, restore, SQL Server, and hands-on management of structured data environments.",
       },
       tags: ["SQL", "SQL Server", "DB Restore"],
     },
@@ -201,9 +212,10 @@ export const profile = {
         it: "Zucchetti Mago e processi",
         en: "Zucchetti Mago and processes",
       },
+      icon: "MG",
       body: {
-        it: "Competenza funzionale su Mago Zucchetti per retail e logistica, forecast vendite, riordino, help migration, corsi in italiano e inglese e utilizzo di editor personalizzati Zucchetti.",
-        en: "Functional expertise on Zucchetti Mago for retail and logistics, sales forecasting, replenishment, help migration, training in Italian and English, and custom Zucchetti editors.",
+        it: "Retail, logistica, riordino, forecast vendite e formazione cliente su Mago Zucchetti.",
+        en: "Retail, logistics, replenishment, sales forecasting, and client training on Zucchetti Mago.",
       },
       tags: ["Mago", "Retail", "Logistics"],
     },
@@ -212,9 +224,10 @@ export const profile = {
         it: "Affitti brevi e investimenti",
         en: "Short-term rentals and investments",
       },
+      icon: "CF",
       body: {
-        it: "Sono molto coinvolto anche nella gestione degli affitti brevi e negli investimenti collegati, usando analisi per previsioni d'incasso, cash flow, pricing e monitoraggio della performance.",
-        en: "I am also deeply involved in short-term rental management and related investments, using analytics for revenue forecasting, cash flow, pricing, and performance monitoring.",
+        it: "Forecast incassi, cash flow, pricing e monitoraggio performance nel mondo short-term rental.",
+        en: "Revenue forecasting, cash flow, pricing, and performance monitoring in the short-term rental space.",
       },
       tags: ["Hospitality", "Forecasting", "Cash Flow"],
     },
@@ -319,7 +332,7 @@ export const navigation = {
 export const ui = {
   it: {
     switchLabel: "English",
-    heroEyebrow: "Analisi, sviluppo web, AI",
+    heroEyebrow: "ERP specialist, analisi, sviluppo web, AI",
     heroSecondaryCta: "Contattami",
     expertiseTitle: "Sviluppo web e AI",
     skillsTitle: "Competenze",
@@ -350,7 +363,7 @@ export const ui = {
   },
   en: {
     switchLabel: "Italiano",
-    heroEyebrow: "Analysis, web development, AI",
+    heroEyebrow: "ERP specialist, analysis, web development, AI",
     heroSecondaryCta: "Contact me",
     expertiseTitle: "Web development and AI",
     skillsTitle: "Skills",

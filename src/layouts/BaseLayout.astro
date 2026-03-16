@@ -18,7 +18,7 @@ const alternatePath = currentPath.replace(`/${lang}/`, `/${alternateLang}/`);
     <meta name="description" content={description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>{title}</title>
   </head>
   <body class="bg-graphite text-white antialiased">
@@ -48,20 +48,14 @@ const alternatePath = currentPath.replace(`/${lang}/`, `/${alternateLang}/`);
       </main>
 
       <footer class="site-footer">
-        <div class="footer-top">
-          <div class="footer-branding">
-            <span class="section-label">Manuel Caselli</span>
-            <p>{langUi.footer}</p>
-          </div>
+        <div class="footer-minimal">
+          <strong>{profile.name}</strong>
+          <span>{profile.shortRole[lang]}</span>
           <div class="footer-links">
             <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
             <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
             <a href={`mailto:${profile.email}`}>{profile.email}</a>
           </div>
-        </div>
-        <div class="footer-bottom">
-          <span>{profile.shortRole[lang]}</span>
-          <span>{profile.location}</span>
         </div>
       </footer>
     </div>
