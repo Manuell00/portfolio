@@ -465,6 +465,54 @@ img {
   margin-bottom: 0.4rem;
 }
 
+.eyebrow-text,
+.hero-line-text {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(0 100% 0 0);
+  animation: typeReveal var(--type-duration, 0.9s) steps(var(--type-steps, 18), end) var(--type-delay, 0s) forwards;
+}
+
+.eyebrow-text {
+  --type-duration: 1.05s;
+  --type-delay: 0.12s;
+  --type-steps: 34;
+}
+
+.hero-line-text {
+  --type-duration: 0.9s;
+  --type-delay: 0.55s;
+  --type-steps: 16;
+}
+
+.hero-line:nth-child(2) .hero-line-text {
+  --type-delay: 1.25s;
+  --type-steps: 14;
+}
+
+.hero-line:nth-child(3) .hero-line-text {
+  --type-delay: 1.95s;
+  --type-steps: 16;
+}
+
+.eyebrow-text::after,
+.hero-line-text::after {
+  content: "";
+  position: absolute;
+  top: 0.08em;
+  bottom: 0.08em;
+  right: 0;
+  width: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.16);
+  animation:
+    caretBlink 720ms steps(1, end) infinite,
+    caretFade 10ms linear calc(var(--type-delay, 0s) + var(--type-duration, 0.9s)) forwards;
+}
+
 .section-label {
   display: inline-flex;
   align-items: center;
@@ -2019,6 +2067,30 @@ h3 {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes typeReveal {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes caretBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes caretFade {
+  to {
+    opacity: 0;
   }
 }
 

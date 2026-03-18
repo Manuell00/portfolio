@@ -7,11 +7,11 @@ const langUi = ui[lang];
 
 <section class="hero-grid section-space">
   <div class="hero-copy" data-reveal>
-    <div class="eyebrow">{langUi.heroEyebrow}</div>
+    <div class="eyebrow"><span class="eyebrow-text">{langUi.heroEyebrow}</span></div>
     <h1>
       {profile.shortRole[lang].map((line) => (
         <>
-          <span class="hero-line">{line}</span>
+          <span class="hero-line"><span class="hero-line-text">{line}</span></span>
         </>
       ))}
     </h1>
