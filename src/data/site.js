@@ -1,8 +1,8 @@
 export const profile = {
   name: "Manuel Caselli",
   role: {
-    it: "Domain expert, ERP specialist, data analyst e sviluppatore di applicativi web.",
-    en: "Domain expert, ERP specialist, data analyst, and web application builder.",
+    it: "Domain expert, ERP specialist, data analyst e sviluppatore di web app.",
+    en: "Domain expert, ERP specialist, data analyst, and web app builder.",
   },
   shortRole: {
     it: ["Domain Expert", "Data Analyst", "Web App Builder"],
@@ -15,7 +15,7 @@ export const profile = {
   hospitalitySite: "https://marosa-house-website.vercel.app",
   heroStats: [
     { value: "Excel", label: { it: "analisi, pulizia e reporting", en: "analysis, cleaning, and reporting" } },
-    { value: "SQL", label: { it: "query, restore e database ops", en: "queries, restore, and database ops" } },
+    { value: "SQL", label: { it: "query, restore e operativita DB", en: "queries, restore, and database operations" } },
     { value: "Web Apps", label: { it: "sviluppo con AI e UI moderne", en: "development with AI and modern UI" } },
     { value: "AI", label: { it: "workflow e supporto al coding", en: "workflows and coding support" } },
     { value: "Mago", label: { it: "Zucchetti ERP e processi", en: "Zucchetti ERP and processes" } },
@@ -34,7 +34,7 @@ export const profile = {
       en: "Web development and AI",
     },
     body: {
-      it: "Oltre alla parte analitica, porto avanti sviluppo di applicativi web, interfacce responsive e siti orientati alla conversione. Utilizzo molto strumenti AI per programmare meglio, prototipare piu velocemente e rafforzare anche le mie capacita di analisi.",
+      it: "Oltre alla parte analitica, porto avanti sviluppo di web app, interfacce responsive e siti orientati alla conversione. Utilizzo molto strumenti AI per programmare meglio, prototipare piu velocemente e rafforzare anche le mie capacita di analisi.",
       en: "Alongside analytics, I keep building web applications, responsive interfaces, and conversion-oriented websites. I actively use AI tools to code better, prototype faster, and strengthen my analytical work as well.",
     },
     mobileBody: {
@@ -56,7 +56,7 @@ export const profile = {
   skillGroups: [
     {
       title: {
-        it: "Data Analysis",
+        it: "Analisi dati",
         en: "Data Analysis",
       },
       summary: {
@@ -198,7 +198,7 @@ export const profile = {
         en: "Fiverr and personal web projects",
       },
       details: {
-        it: ["Siti web", "Collaborazioni Fiverr", "Progetti personali", "UI e delivery"],
+        it: ["Siti web", "Collaborazioni Fiverr", "Progetti personali", "UI e consegna progetto"],
         en: ["Websites", "Fiverr collaborations", "Personal projects", "UI and delivery"],
       },
       featuredTop: true,
@@ -256,8 +256,8 @@ export const profile = {
   ],
   resume: {
     label: {
-      it: "CV in revisione",
-      en: "Resume in redesign",
+      it: "Curriculum Vitae",
+      en: "Resume",
     },
     path: null,
   },
@@ -270,7 +270,7 @@ export const projects = [
     slug: "marosa-house-website",
     description: {
       it: "Sito pubblicato legato anche al mio interesse per hospitality e affitti brevi: comunicazione chiara, fiducia immediata e attenzione alla conversione.",
-      en: "A published website connected to my interest in hospitality and short-term rentals: clear communication, immediate trust, and strong conversion focus.",
+      en: "A published website connected to my interest in hospitality and short-term rentals, designed around clear communication, immediate trust, and conversion focus.",
     },
     tags: ["Published", "Hospitality", "UX", "Frontend"],
     href: "https://github.com/Manuell00/marosa-house-website",
@@ -287,8 +287,8 @@ export const projects = [
     category: "commissioned",
     slug: "rolecha-company",
     description: {
-      it: "Sito corporate con taglio visivo piu deciso, costruito per dare solidita al brand, presentare servizi e curare la percezione professionale.",
-      en: "A corporate website with a stronger visual direction, built to give the brand more presence, present services clearly, and reinforce a professional perception.",
+      it: "Sito corporate dal taglio visivo piu deciso, costruito per dare solidita al brand, presentare i servizi con chiarezza e rafforzare la percezione professionale.",
+      en: "A corporate website with a stronger visual direction, built to give the brand more presence, present services clearly, and reinforce its professional image.",
     },
     tags: ["Corporate", "Branding", "Frontend", "UI"],
     href: "https://github.com/Manuell00/Rolecha_Company",
@@ -331,7 +331,7 @@ export const projects = [
     },
     description: {
       it: "Uno dei progetti che rappresenta meglio il mio lato analitico: dataset, query e visualizzazioni costruite per leggere dati complessi in modo piu chiaro.",
-      en: "One of the projects that best represents my analytical side: datasets, queries, and visualizations built to make complex data easier to read.",
+      en: "One of the projects that best represents my analytical side: datasets, queries, and visualizations designed to make complex data easier to read.",
     },
     tags: ["Analytics", "Visualization", "Jupyter"],
     href: "https://github.com/Manuell00/analysis-of-European-football",
@@ -363,7 +363,7 @@ export const navigation = {
 export const ui = {
   it: {
     switchLabel: "English",
-    heroEyebrow: "ERP specialist, analisi, sviluppo web, AI",
+    heroEyebrow: "ERP specialist, analisi dati, sviluppo web, AI",
     heroSecondaryCta: "Contattami",
     expertiseTitle: "Sviluppo web e AI",
     skillsTitle: "Competenze",
@@ -374,7 +374,7 @@ export const ui = {
     experienceCopy:
       "Formazione continua, progetti attivi e un percorso costruito tra ERP, dati e prodotti digitali.",
     projectsPageTitle: "Progetti",
-    projectsPageCopy: "Analisi dati, web interface e cura della presentazione.",
+    projectsPageCopy: "Analisi dati, interfacce web e cura della presentazione.",
     resumePageTitle: "Contatti",
     resumePageCopy:
       "Una sezione essenziale con i link principali per contattarmi e approfondire il mio profilo.",
@@ -389,6 +389,9 @@ export const ui = {
     resumeEnglishLabel: "CV inglese",
     openCode: "Codice",
     openLive: "Sito",
+    showcaseBadge: "Progetti selezionati",
+    previousImage: "Immagine precedente",
+    nextImage: "Immagine successiva",
     allProjects: "Vedi tutti i progetti",
     footer:
       "Portfolio bilingue pensato per comunicare solidita analitica, sviluppo web e competenza di dominio con un linguaggio piu pulito e professionale.",
@@ -421,6 +424,9 @@ export const ui = {
     resumeEnglishLabel: "English CV",
     openCode: "Code",
     openLive: "Website",
+    showcaseBadge: "Selected work",
+    previousImage: "Previous image",
+    nextImage: "Next image",
     allProjects: "See all projects",
     footer:
       "A bilingual portfolio designed to communicate analytical strength, web development, and domain expertise with a cleaner professional language.",

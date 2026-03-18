@@ -16,6 +16,29 @@ const langUi = ui[lang];
       ))}
     </h1>
 
+    <div class="hero-signal" aria-hidden="true">
+      <div class="hero-signal-screen">
+        <div class="hero-signal-topbar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="hero-signal-grid">
+          <div class="hero-signal-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="hero-signal-chart">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="stats-grid">
       {profile.heroStats.map((stat) => (
         <div class="stat-card">

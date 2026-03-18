@@ -12,7 +12,7 @@ const projectTitle = typeof project.name === "string" ? project.name : project.n
       project.gallery?.length ? (
         <div class="project-gallery-shell">
           {project.gallery.length > 1 && (
-            <div class="project-browser project-gallery-dots" aria-label="Project gallery navigation">
+            <div class="project-browser project-gallery-dots" aria-label={lang === "it" ? "Navigazione galleria progetto" : "Project gallery navigation"}>
               {project.gallery.map((item, index) => (
                 <button
                   type="button"
@@ -45,8 +45,8 @@ const projectTitle = typeof project.name === "string" ? project.name : project.n
           </div>
           {project.gallery.length > 1 && (
             <div class="project-gallery-controls">
-              <button type="button" class="project-gallery-button" data-project-prev aria-label="Previous image">‹</button>
-              <button type="button" class="project-gallery-button" data-project-next aria-label="Next image">›</button>
+              <button type="button" class="project-gallery-button" data-project-prev aria-label={langUi.previousImage}>‹</button>
+              <button type="button" class="project-gallery-button" data-project-next aria-label={langUi.nextImage}>›</button>
             </div>
           )}
         </div>

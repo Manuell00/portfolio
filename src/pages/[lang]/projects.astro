@@ -22,8 +22,8 @@ const commissionedLabel = lang === "it" ? "Lavori commissionati" : "Commissioned
 >
   {personalProjects.length > 0 && (
     <section class="section-space project-section-personal">
-      <div class="project-group-heading" data-reveal>
-        <h2 class="project-group-title">{personalLabel}</h2>
+      <div class:list={["project-group-heading", "project-group-heading-personal"]} data-reveal>
+        <h2 class:list={["project-group-title", "project-group-title-personal"]}>{personalLabel}</h2>
       </div>
 
       <section class="project-grid project-grid-group">
