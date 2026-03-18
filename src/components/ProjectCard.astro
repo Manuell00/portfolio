@@ -3,23 +3,43 @@ import { ui } from "../data/site";
 
 const { project, lang = "it", featured = false } = Astro.props;
 const langUi = ui[lang];
+const projectTitle = typeof project.name === "string" ? project.name : project.name?.[lang] || project.name?.it || "";
 ---
 
-<article class:list={["project-card", featured && "featured"]} data-reveal>
+<article id={project.slug} class:list={["project-card", featured && "featured"]} data-reveal>
   <div class="project-media">
-    <div class="project-browser">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
     {
       project.gallery?.length ? (
         <div class="project-gallery-shell">
+          {project.gallery.length > 1 && (
+            <div class="project-browser project-gallery-dots" aria-label="Project gallery navigation">
+              {project.gallery.map((item, index) => (
+                <button
+                  type="button"
+                  class:list={["project-browser-dot", index === 0 && "is-active"]}
+                  data-project-dot
+                  data-project-index={index}
+                  aria-label={item.label?.[lang] || `${projectTitle} ${index + 1}`}
+                ></button>
+              ))}
+            </div>
+          )}
           <div class="project-gallery" data-project-gallery>
           {project.gallery.map((item) => (
-            <figure class="project-shot">
-              <img src={item.src} alt={`${project.name} ${item.label?.[lang] || ""}`.trim()} loading="lazy" style={item.position ? `object-position:${item.position}` : undefined} />
-              <figcaption>{item.label?.[lang] || project.name}</figcaption>
+            <figure class:list={["project-shot", item.fit === "contain" && "project-shot-contain"]}>
+              <img
+                src={item.src}
+                alt={`${projectTitle} ${item.label?.[lang] || ""}`.trim()}
+                loading="lazy"
+                class:list={["project-shot-image", item.fit === "contain" && "project-shot-image-contain"]}
+                style={[
+                  item.position ? `object-position:${item.position}` : null,
+                  item.fit ? `object-fit:${item.fit}` : null,
+                ]
+                  .filter(Boolean)
+                  .join(";")}
+              />
+              <figcaption>{item.label?.[lang] || projectTitle}</figcaption>
             </figure>
           ))}
           </div>
@@ -31,10 +51,18 @@ const langUi = ui[lang];
           )}
         </div>
       ) : project.image ? (
-        <img src={project.image} alt={project.name} loading="lazy" />
+        <img
+          src={project.image}
+          alt={projectTitle}
+          loading="lazy"
+          class:list={["project-media-image", project.fit === "contain" && "project-media-image-contain"]}
+          style={[project.position ? `object-position:${project.position}` : null, project.fit ? `object-fit:${project.fit}` : null]
+            .filter(Boolean)
+            .join(";")}
+        />
       ) : (
         <div class="project-placeholder">
-          <span>{project.name}</span>
+          <span>{projectTitle}</span>
           <small>{project.tags.join(" / ")}</small>
         </div>
       )
@@ -43,7 +71,7 @@ const langUi = ui[lang];
 
   <div class="project-body">
     <div class="project-topline">
-      <h3>{project.name}</h3>
+      <h3>{projectTitle}</h3>
     </div>
 
     <p>{project.description[lang]}</p>
@@ -55,10 +83,25 @@ const langUi = ui[lang];
     </ul>
 
     <div class="project-links">
-      <a class="inline-link" href={project.href} target="_blank" rel="noreferrer">GitHub</a>
+      {
+        project.href && (
+          <a
+            class:list={[
+              "inline-link",
+              "project-link-button",
+              project.href.startsWith("mailto:") ? "project-link-contact" : "project-link-github",
+            ]}
+            href={project.href}
+            target={project.href.startsWith("mailto:") ? undefined : "_blank"}
+            rel={project.href.startsWith("mailto:") ? undefined : "noreferrer"}
+          >
+            {project.primaryLabel?.[lang] || "GitHub"}
+          </a>
+        )
+      }
       {
         project.live && (
-          <a class="inline-link" href={project.live} target="_blank" rel="noreferrer">
+          <a class:list={["inline-link", "project-link-button", "project-link-live"]} href={project.live} target="_blank" rel="noreferrer">
             {langUi.openLive}
           </a>
         )

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#EFF5FA"/>
+<rect x="80" y="70" width="1440" height="760" rx="26" fill="#FFFFFF" stroke="#D7E0EA" stroke-width="2"/>
+<text x="130" y="130" font-family="Aptos, Segoe UI, Arial" font-size="40" font-weight="700" fill="#17324D">Dashboard Preview</text>
+<rect x="130" y="170" width="250" height="110" rx="18" fill="#F7FAFC" stroke="#D7E0EA"/>
+<rect x="405" y="170" width="250" height="110" rx="18" fill="#F7FAFC" stroke="#D7E0EA"/>
+<rect x="680" y="170" width="250" height="110" rx="18" fill="#F7FAFC" stroke="#D7E0EA"/>
+<rect x="955" y="170" width="250" height="110" rx="18" fill="#F7FAFC" stroke="#D7E0EA"/>
+<rect x="1230" y="170" width="240" height="110" rx="18" fill="#F7FAFC" stroke="#D7E0EA"/>
+<rect x="130" y="340" width="630" height="390" rx="20" fill="#F7FAFC" stroke="#D7E0EA"/>
+<rect x="810" y="340" width="610" height="390" rx="20" fill="#F7FAFC" stroke="#D7E0EA"/>
+<text x="170" y="395" font-family="Aptos, Segoe UI, Arial" font-size="28" font-weight="700" fill="#17324D">ROAS by Ads Type</text>
+<rect x="190" y="440" width="320" height="36" rx="8" fill="#2F80ED"/>
+<rect x="190" y="500" width="180" height="36" rx="8" fill="#7DB3F4"/>
+<rect x="190" y="560" width="500" height="36" rx="8" fill="#17324D"/>
+<text x="190" y="433" font-family="Aptos, Segoe UI, Arial" font-size="18" fill="#4F667D">PRINCIPALE</text>
+<text x="190" y="493" font-family="Aptos, Segoe UI, Arial" font-size="18" fill="#4F667D">RETARGETING</text>
+<text x="190" y="553" font-family="Aptos, Segoe UI, Arial" font-size="18" fill="#4F667D">LOOKALIKE</text>
+<text x="850" y="395" font-family="Aptos, Segoe UI, Arial" font-size="28" font-weight="700" fill="#17324D">Average Funnel Drop-off</text>
+<rect x="860" y="435" width="110" height="220" rx="12" fill="#2F80ED"/>
+<rect x="1020" y="305" width="110" height="350" rx="12" fill="#7DB3F4"/>
+<rect x="1180" y="515" width="110" height="140" rx="12" fill="#17324D"/>
+<text x="855" y="690" font-family="Aptos, Segoe UI, Arial" font-size="18" fill="#4F667D">Ads→Landing</text>
+<text x="1000" y="690" font-family="Aptos, Segoe UI, Arial" font-size="18" fill="#4F667D">Landing→CTA</text>
+<text x="1155" y="690" font-family="Aptos, Segoe UI, Arial" font-size="18" fill="#4F667D">CTA→Checkout</text>
+</svg>

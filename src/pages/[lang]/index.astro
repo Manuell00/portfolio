@@ -22,7 +22,6 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
 
   <section class="content-grid section-space">
     <div class="content-card expertise-card" data-reveal>
-      <span class="section-label">{langUi.expertiseTitle}</span>
       <h2 class="section-title">{profile.webAi.title[lang]}</h2>
       <p class="desktop-copy">{profile.webAi.body[lang]}</p>
       <p class="mobile-copy">{profile.webAi.mobileBody[lang]}</p>
@@ -34,21 +33,26 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
           </div>
         ))}
       </div>
-      <div class="showcase-collage" aria-hidden="true">
-        <div class="showcase-card showcase-card-analysis showcase-placeholder">
-          <span>Project visual 01</span>
-          <small>Ready for your screenshot</small>
-        </div>
-        <div class="showcase-card showcase-card-web showcase-placeholder">
-          <span>Project visual 02</span>
-          <small>Ready for your screenshot</small>
-        </div>
-        <div class="showcase-badge">Ready for project visuals</div>
+      <div class="showcase-collage">
+        <a class="showcase-card showcase-card-analysis" href={`/${lang}/projects/#marosa-house-website`}>
+          <img src="/marosa-gallery-1.jpg" alt="MaRoSa House" loading="lazy" class="showcase-media" />
+          <div class="showcase-caption">
+            <span>MaRoSa House</span>
+            <small>{lang === "it" ? "Sito hospitality" : "Hospitality website"}</small>
+          </div>
+        </a>
+        <a class="showcase-card showcase-card-web" href={`/${lang}/projects/#rolecha-company`}>
+          <img src="/rolecha-card-cover.jpg" alt="Rolecha Company" loading="lazy" class="showcase-media" />
+          <div class="showcase-caption">
+            <span>Rolecha Company</span>
+            <small>{lang === "it" ? "Sito corporate" : "Corporate website"}</small>
+          </div>
+        </a>
+        <div class="showcase-badge">Selected work</div>
       </div>
     </div>
 
     <div class="content-card skills-card" id="skills" data-reveal>
-      <span class="section-label">{langUi.skillsTitle}</span>
       <h2 class="section-title">{langUi.skillsTitle}</h2>
       <div class="skills-groups">
         {profile.skillGroups.map((group) => (
@@ -66,8 +70,7 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
   </section>
 
   <section class="section-space">
-    <div class="section-heading mobile-clean-heading" data-reveal>
-      <span class="section-label">{langUi.highlightsTitle}</span>
+    <div class="section-heading section-heading-centered mobile-clean-heading" data-reveal>
       <h2 class="section-title">{langUi.highlightsTitle}</h2>
       <p>{langUi.highlightsCopy}</p>
     </div>
@@ -103,8 +106,7 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
   </section>
 
   <section class="section-space">
-    <div class="section-heading mobile-clean-heading" data-reveal>
-      <span class="section-label">{langUi.experienceTitle}</span>
+    <div class="section-heading section-heading-centered mobile-clean-heading" data-reveal>
       <h2 class="section-title">{langUi.experienceTitle}</h2>
       <p>{langUi.experienceCopy}</p>
     </div>

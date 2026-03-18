@@ -14,6 +14,7 @@ const currentPath = Astro.url.pathname;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <script is:inline>document.documentElement.classList.add("js-enhanced");</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Instrument+Sans:wght@500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
@@ -78,5 +79,27 @@ const currentPath = Astro.url.pathname;
         </div>
       </footer>
     </div>
+    <script is:inline>
+      const revealElements = Array.from(document.querySelectorAll("[data-reveal]"));
+
+      if (revealElements.length) {
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            rootMargin: "0px 0px -10% 0px",
+            threshold: 0.14,
+          }
+        );
+
+        revealElements.forEach((element) => revealObserver.observe(element));
+      }
+    </script>
   </body>
 </html>

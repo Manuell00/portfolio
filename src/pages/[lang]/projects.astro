@@ -9,6 +9,10 @@ export async function getStaticPaths() {
 
 const { lang } = Astro.params;
 const langUi = ui[lang];
+const personalProjects = projects.filter((project) => project.category === "personal");
+const commissionedProjects = projects.filter((project) => project.category === "commissioned");
+const personalLabel = lang === "it" ? "Progetti personali" : "Personal projects";
+const commissionedLabel = lang === "it" ? "Lavori commissionati" : "Commissioned work";
 ---
 
 <BaseLayout
@@ -16,17 +20,33 @@ const langUi = ui[lang];
   title={`${profile.name} | ${langUi.projectsPageTitle}`}
   description={langUi.projectsPageCopy}
 >
-  <section class="page-intro section-space" data-reveal>
-    <span class="section-label">{langUi.projectsPageTitle}</span>
-    <h1>{langUi.projectsPageTitle}</h1>
-    <p>{langUi.projectsPageCopy}</p>
-  </section>
+  {personalProjects.length > 0 && (
+    <section class="section-space project-section-personal">
+      <div class="project-group-heading" data-reveal>
+        <h2 class="project-group-title">{personalLabel}</h2>
+      </div>
 
-  <section class="project-grid section-space">
-    {projects.map((project) => (
-      <ProjectCard project={project} lang={lang} />
-    ))}
-  </section>
+      <section class="project-grid project-grid-group">
+        {personalProjects.map((project) => (
+          <ProjectCard project={project} lang={lang} />
+        ))}
+      </section>
+    </section>
+  )}
+
+  {commissionedProjects.length > 0 && (
+    <section class="section-space project-section-commissioned">
+      <div class="project-group-heading" data-reveal>
+        <h2 class="project-group-title">{commissionedLabel}</h2>
+      </div>
+
+      <section class="project-grid project-grid-group">
+        {commissionedProjects.map((project) => (
+          <ProjectCard project={project} lang={lang} />
+        ))}
+      </section>
+    </section>
+  )}
 
   <script is:inline>
     const galleries = Array.from(document.querySelectorAll("[data-project-gallery]"));
@@ -35,6 +55,31 @@ const langUi = ui[lang];
       const shell = gallery.closest(".project-gallery-shell");
       const prev = shell?.querySelector("[data-project-prev]");
       const next = shell?.querySelector("[data-project-next]");
+      const dots = Array.from(shell?.querySelectorAll("[data-project-dot]") || []);
+
+      const updateDots = () => {
+        const slides = Array.from(gallery.querySelectorAll(".project-shot"));
+        if (!slides.length || !dots.length) return;
+        const galleryRect = gallery.getBoundingClientRect();
+        const galleryCenter = galleryRect.left + galleryRect.width / 2;
+
+        let activeIndex = 0;
+        let smallestDistance = Number.POSITIVE_INFINITY;
+
+        slides.forEach((slide, index) => {
+          const rect = slide.getBoundingClientRect();
+          const slideCenter = rect.left + rect.width / 2;
+          const distance = Math.abs(slideCenter - galleryCenter);
+          if (distance < smallestDistance) {
+            smallestDistance = distance;
+            activeIndex = index;
+          }
+        });
+
+        dots.forEach((dot, index) => {
+          dot.classList.toggle("is-active", index === activeIndex);
+        });
+      };
 
       const move = (direction) => {
         const firstSlide = gallery.querySelector(".project-shot");
@@ -46,6 +91,18 @@ const langUi = ui[lang];
 
       prev?.addEventListener("click", () => move(-1));
       next?.addEventListener("click", () => move(1));
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          const index = Number(dot.dataset.projectIndex || "0");
+          const target = gallery.querySelectorAll(".project-shot")[index];
+          target?.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+        });
+      });
+
+      gallery.addEventListener("scroll", updateDots, { passive: true });
+      window.addEventListener("resize", updateDots);
+      updateDots();
     });
   </script>
 </BaseLayout>

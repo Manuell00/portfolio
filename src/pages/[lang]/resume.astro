@@ -15,19 +15,22 @@ const langUi = ui[lang];
   title={`${profile.name} | ${langUi.resumePageTitle}`}
   description={langUi.resumePageCopy}
 >
-  <section class="page-intro section-space" data-reveal>
-    <span class="section-label">{langUi.resumePageTitle}</span>
+  <section class="page-intro page-intro-centered resume-page-intro section-space" data-reveal>
     <h1>{langUi.resumePageTitle}</h1>
     <p>{langUi.resumePageCopy}</p>
   </section>
 
   <section class="content-grid section-space">
-    <article class="content-card content-card-strong" data-reveal>
-      <span class="section-label">{langUi.resumeStatusTitle}</span>
+    <article class="content-card content-card-strong contact-status-card" data-reveal>
       <h2>{langUi.resumeStatusTitle}</h2>
       <p>{langUi.resumeStatusCopy}</p>
       <div class="hero-actions">
-        <a class="primary-button" href={`mailto:${profile.email}`}>{langUi.heroSecondaryCta}</a>
+        <a class="primary-button" href={lang === "it" ? "/manuel-caselli-cv-it.pdf" : "/manuel-caselli-cv-en.pdf"} target="_blank" rel="noreferrer">
+          {lang === "it" ? langUi.resumeItalianLabel : langUi.resumeEnglishLabel}
+        </a>
+        <a class="subtle-link" href={lang === "it" ? "/manuel-caselli-cv-en.pdf" : "/manuel-caselli-cv-it.pdf"} target="_blank" rel="noreferrer">
+          {lang === "it" ? langUi.resumeEnglishLabel : langUi.resumeItalianLabel}
+        </a>
       </div>
     </article>
 
