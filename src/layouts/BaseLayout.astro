@@ -5,9 +5,7 @@ import { navigation, profile, ui } from "../data/site";
 const { lang = "it", title, description } = Astro.props;
 const langUi = ui[lang];
 const nav = navigation[lang];
-const alternateLang = lang === "it" ? "en" : "it";
 const currentPath = Astro.url.pathname;
-const alternatePath = currentPath.replace(`/${lang}/`, `/${alternateLang}/`);
 ---
 
 <!doctype html>
@@ -18,7 +16,7 @@ const alternatePath = currentPath.replace(`/${lang}/`, `/${alternateLang}/`);
     <meta name="description" content={description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Instrument+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Instrument+Sans:wght@500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
     <title>{title}</title>
   </head>
   <body class="bg-graphite text-white antialiased">
@@ -39,7 +37,27 @@ const alternatePath = currentPath.replace(`/${lang}/`, `/${alternateLang}/`);
         </nav>
 
         <div class="site-actions">
-          <a class="lang-switch" href={alternatePath}>{langUi.switchLabel}</a>
+          <div class="lang-toggle" aria-label="Language switch">
+            <a class:list={["lang-mini", lang === "it" && "active"]} href={currentPath.replace(`/${lang}/`, "/it/")}>IT</a>
+            <a class:list={["lang-mini", lang === "en" && "active"]} href={currentPath.replace(`/${lang}/`, "/en/")}>EN</a>
+          </div>
+          <details class="mobile-menu">
+            <summary class="mobile-menu-toggle" aria-label="Open menu">
+              <span></span>
+              <span></span>
+            </summary>
+            <div class="mobile-menu-panel">
+              <div class="mobile-menu-lang">
+                <a class:list={["lang-mini", lang === "it" && "active"]} href={currentPath.replace(`/${lang}/`, "/it/")}>IT</a>
+                <a class:list={["lang-mini", lang === "en" && "active"]} href={currentPath.replace(`/${lang}/`, "/en/")}>EN</a>
+              </div>
+              <nav class="mobile-menu-links" aria-label="Mobile">
+                {nav.map((item) => (
+                  <a href={item.href} class:list={{ active: currentPath === item.href }}>{item.label}</a>
+                ))}
+              </nav>
+            </div>
+          </details>
         </div>
       </header>
 
@@ -49,11 +67,8 @@ const alternatePath = currentPath.replace(`/${lang}/`, `/${alternateLang}/`);
 
       <footer class="site-footer">
         <div class="footer-minimal">
-          <strong class="footer-name">{profile.name}</strong>
-          <div class="footer-role">
-            {profile.shortRole[lang].map((item) => (
-              <a href={`/${lang}/#skills`}>{item}</a>
-            ))}
+          <div class="footer-identity">
+            <strong class="footer-name">{profile.name}</strong>
           </div>
           <div class="footer-links">
             <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>

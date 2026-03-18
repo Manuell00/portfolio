@@ -27,4 +27,25 @@ const langUi = ui[lang];
       <ProjectCard project={project} lang={lang} />
     ))}
   </section>
+
+  <script is:inline>
+    const galleries = Array.from(document.querySelectorAll("[data-project-gallery]"));
+
+    galleries.forEach((gallery) => {
+      const shell = gallery.closest(".project-gallery-shell");
+      const prev = shell?.querySelector("[data-project-prev]");
+      const next = shell?.querySelector("[data-project-next]");
+
+      const move = (direction) => {
+        const firstSlide = gallery.querySelector(".project-shot");
+        if (!firstSlide) return;
+        const gap = parseFloat(getComputedStyle(gallery).gap || "0");
+        const amount = firstSlide.getBoundingClientRect().width + gap;
+        gallery.scrollBy({ left: amount * direction, behavior: "smooth" });
+      };
+
+      prev?.addEventListener("click", () => move(-1));
+      next?.addEventListener("click", () => move(1));
+    });
+  </script>
 </BaseLayout>

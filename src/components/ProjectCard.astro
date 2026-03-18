@@ -13,7 +13,24 @@ const langUi = ui[lang];
       <span></span>
     </div>
     {
-      project.image ? (
+      project.gallery?.length ? (
+        <div class="project-gallery-shell">
+          <div class="project-gallery" data-project-gallery>
+          {project.gallery.map((item) => (
+            <figure class="project-shot">
+              <img src={item.src} alt={`${project.name} ${item.label?.[lang] || ""}`.trim()} loading="lazy" style={item.position ? `object-position:${item.position}` : undefined} />
+              <figcaption>{item.label?.[lang] || project.name}</figcaption>
+            </figure>
+          ))}
+          </div>
+          {project.gallery.length > 1 && (
+            <div class="project-gallery-controls">
+              <button type="button" class="project-gallery-button" data-project-prev aria-label="Previous image">‹</button>
+              <button type="button" class="project-gallery-button" data-project-next aria-label="Next image">›</button>
+            </div>
+          )}
+        </div>
+      ) : project.image ? (
         <img src={project.image} alt={project.name} loading="lazy" />
       ) : (
         <div class="project-placeholder">
@@ -27,7 +44,6 @@ const langUi = ui[lang];
   <div class="project-body">
     <div class="project-topline">
       <h3>{project.name}</h3>
-      <span>{project.slug}</span>
     </div>
 
     <p>{project.description[lang]}</p>
@@ -39,7 +55,7 @@ const langUi = ui[lang];
     </ul>
 
     <div class="project-links">
-      <a class="inline-link" href={project.href} target="_blank" rel="noreferrer">{langUi.openCode}</a>
+      <a class="inline-link" href={project.href} target="_blank" rel="noreferrer">GitHub</a>
       {
         project.live && (
           <a class="inline-link" href={project.live} target="_blank" rel="noreferrer">

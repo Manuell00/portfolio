@@ -21,10 +21,11 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
   <Hero lang={lang} />
 
   <section class="content-grid section-space">
-    <div class="content-card" data-reveal>
+    <div class="content-card expertise-card" data-reveal>
       <span class="section-label">{langUi.expertiseTitle}</span>
       <h2 class="section-title">{profile.webAi.title[lang]}</h2>
-      <p>{profile.webAi.body[lang]}</p>
+      <p class="desktop-copy">{profile.webAi.body[lang]}</p>
+      <p class="mobile-copy">{profile.webAi.mobileBody[lang]}</p>
       <div class="feature-icons">
         {profile.webAi.points.map((point) => (
           <div class="feature-tile">
@@ -46,14 +47,13 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
       </div>
     </div>
 
-    <div class="content-card" id="skills" data-reveal>
+    <div class="content-card skills-card" id="skills" data-reveal>
       <span class="section-label">{langUi.skillsTitle}</span>
       <h2 class="section-title">{langUi.skillsTitle}</h2>
       <div class="skills-groups">
         {profile.skillGroups.map((group) => (
           <article class="skill-group">
             <h3>{group.title[lang]}</h3>
-            <p class="skill-group-copy">{group.summary[lang]}</p>
             <ul class="skill-cloud compact">
               {group.items.map((skill) => (
                 <li>{skill}</li>
@@ -66,25 +66,28 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
   </section>
 
   <section class="section-space">
-    <div class="section-heading" data-reveal>
+    <div class="section-heading mobile-clean-heading" data-reveal>
       <span class="section-label">{langUi.highlightsTitle}</span>
       <h2 class="section-title">{langUi.highlightsTitle}</h2>
       <p>{langUi.highlightsCopy}</p>
     </div>
 
-    <div class="highlight-grid">
+    <div class="highlight-grid" data-carousel-track>
       {profile.highlights.map((item) => (
-        <article class="highlight-card" data-reveal>
+        <article class="highlight-card" data-reveal data-carousel-item>
           <div class="highlight-topline">
-            <img class="highlight-mark" src={
-            item.icon === "XL"
-              ? "https://cdn.simpleicons.org/microsoftexcel/217346"
-              : item.icon === "DB"
-                ? "https://cdn.simpleicons.org/microsoftsqlserver/CC2927"
-                : item.icon === "MG"
-                  ? "https://cdn.simpleicons.org/zucchetti/0B8C7B"
-                  : "https://cdn.simpleicons.org/airbnb/FF5A5F"
-          } alt="" loading="lazy" />
+            <span class:list={[
+              "highlight-badge",
+              item.icon === "XL"
+                ? "highlight-badge-excel"
+                : item.icon === "DB"
+                  ? "highlight-badge-db"
+                  : item.icon === "MG"
+                    ? "highlight-badge-erp"
+                    : "highlight-badge-hospitality",
+            ]}>
+              {item.tags[0]}
+            </span>
             <span class="highlight-arrow" aria-hidden="true">↗</span>
           </div>
           <h3>{item.title[lang]}</h3>
@@ -100,15 +103,18 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
   </section>
 
   <section class="section-space">
-    <div class="section-heading" data-reveal>
+    <div class="section-heading mobile-clean-heading" data-reveal>
       <span class="section-label">{langUi.experienceTitle}</span>
       <h2 class="section-title">{langUi.experienceTitle}</h2>
       <p>{langUi.experienceCopy}</p>
     </div>
 
-    <div class="experience-featured-grid">
+    <div class="experience-group-heading mobile-only" data-reveal>
+      <span>{lang === "it" ? "Formazione e progetti attivi" : "Learning and active projects"}</span>
+    </div>
+    <div class="experience-featured-grid" data-carousel-track>
       {featuredExperience.map((item) => (
-        <article class:list={["timeline-item", "timeline-item-top", item.featured && "timeline-item-featured"]} data-reveal>
+        <article class:list={["timeline-item", "timeline-item-top", item.featured && "timeline-item-featured"]} data-reveal data-carousel-item>
           <div class="timeline-node"></div>
           <span class="timeline-period">{item.period[lang]}</span>
           <h3>
@@ -124,9 +130,12 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
       ))}
     </div>
 
-    <div class="timeline-sequence">
+    <div class="experience-group-heading mobile-only" data-reveal>
+      <span>{lang === "it" ? "Percorso professionale" : "Work journey"}</span>
+    </div>
+    <div class="timeline-sequence" data-carousel-track>
       {workExperience.map((item) => (
-        <article class:list={["timeline-item", item.featured && "timeline-item-featured"]} data-reveal>
+        <article class:list={["timeline-item", item.featured && "timeline-item-featured"]} data-reveal data-carousel-item>
           <div class="timeline-node"></div>
           <span class="timeline-period">{item.period[lang]}</span>
           <h3>
@@ -142,4 +151,84 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
       ))}
     </div>
   </section>
+
+  <script is:inline>
+    const initCarousels = () => {
+      const tracks = Array.from(document.querySelectorAll("[data-carousel-track]"));
+
+      const setFocused = (track) => {
+        const items = Array.from(track.querySelectorAll("[data-carousel-item]"));
+        if (!items.length) return;
+
+        const trackRect = track.getBoundingClientRect();
+        const trackCenter = trackRect.left + trackRect.width / 2;
+
+        let closest = items[0];
+        let closestDistance = Number.POSITIVE_INFINITY;
+
+        for (const item of items) {
+          const rect = item.getBoundingClientRect();
+          const itemCenter = rect.left + rect.width / 2;
+          const distance = Math.abs(trackCenter - itemCenter);
+
+          item.classList.remove("is-focused");
+
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closest = item;
+          }
+        }
+
+        closest.classList.add("is-focused");
+      };
+
+      for (const track of tracks) {
+        const items = Array.from(track.querySelectorAll("[data-carousel-item]"));
+        if (!items.length) continue;
+
+        let raf = 0;
+        const requestUpdate = () => {
+          cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(() => setFocused(track));
+        };
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            let best = null;
+            let bestRatio = 0;
+
+            for (const entry of entries) {
+              if (entry.intersectionRatio > bestRatio) {
+                bestRatio = entry.intersectionRatio;
+                best = entry.target;
+              }
+            }
+
+            if (best) {
+              items.forEach((item) => item.classList.remove("is-focused"));
+              best.classList.add("is-focused");
+            } else {
+              requestUpdate();
+            }
+          },
+          {
+            root: track,
+            threshold: [0.35, 0.5, 0.65, 0.8, 0.95],
+          },
+        );
+
+        items.forEach((item) => observer.observe(item));
+        requestUpdate();
+        track.addEventListener("scroll", requestUpdate, { passive: true });
+        track.addEventListener("touchend", requestUpdate, { passive: true });
+        window.addEventListener("resize", requestUpdate);
+      }
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initCarousels, { once: true });
+    } else {
+      initCarousels();
+    }
+  </script>
 </BaseLayout>

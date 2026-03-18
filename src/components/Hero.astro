@@ -20,7 +20,6 @@ const langUi = ui[lang];
       {profile.heroStats.map((stat) => (
         <div class="stat-card">
           <strong>{stat.value}</strong>
-          <span>{stat.label[lang]}</span>
         </div>
       ))}
     </div>
@@ -34,7 +33,10 @@ const langUi = ui[lang];
       <div class="hero-panel-links hero-contact-list">
         {profile.contacts.map((contact) => (
           <a class="inline-link" href={contact.href} target={contact.href.startsWith("mailto:") ? undefined : "_blank"} rel={contact.href.startsWith("mailto:") ? undefined : "noreferrer"}>
-            {contact.label}
+            <span class="contact-icon" aria-hidden="true">
+              {contact.label === "GitHub" ? "G" : contact.label === "LinkedIn" ? "in" : "@"}
+            </span>
+            <span class="contact-label">{contact.label}</span>
           </a>
         ))}
       </div>
