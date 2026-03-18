@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Manuel Caselli Portfolio</title>
+  <desc id="desc">Portfolio favicon with initials MC inside a document-style card.</desc>
+  <defs>
+    <linearGradient id="bg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dcb765"/>
+      <stop offset="1" stop-color="#7aa2d6"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="6" width="48" height="52" rx="12" fill="#10151d"/>
+  <path d="M20 14h20l8 8v24a8 8 0 0 1-8 8H20a8 8 0 0 1-8-8V22a8 8 0 0 1 8-8Z" fill="url(#bg)" opacity=".16"/>
+  <path d="M40 14v8h8" fill="none" stroke="#dfe8f5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" opacity=".8"/>
+  <path d="M22 24h10M22 30h18" fill="none" stroke="#dcb765" stroke-linecap="round" stroke-width="2.4" opacity=".9"/>
+  <path d="M18 42V27h4.4l4 8.8 4-8.8H35v15h-3.4v-9.2l-3.7 8h-2.6l-3.8-8V42Zm21.6 0c-4.3 0-7-3-7-7.6 0-4.7 2.9-7.6 7-7.6 3.4 0 5.9 1.8 6.6 4.7h-3.7c-.5-1.1-1.5-1.8-2.9-1.8-2 0-3.4 1.7-3.4 4.7s1.4 4.7 3.4 4.7c1.5 0 2.5-.7 2.9-1.9h3.7c-.6 2.9-3.2 4.8-6.6 4.8Z" fill="#f8fbff"/>
+</svg>
