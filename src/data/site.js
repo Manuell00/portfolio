@@ -265,18 +265,37 @@ export const profile = {
 
 export const projects = [
   {
+    name: "La Terrazza Affittacamere",
+    category: "commissioned",
+    slug: "la-terrazza-affittacamere",
+    description: {
+      it: "Sito hospitality recente pensato per trasmettere calma, fiducia e conversione: struttura chiara, visual curato e CTA orientate alla prenotazione diretta.",
+      en: "A recent hospitality website designed to communicate calm, trust, and conversion: clear structure, polished visuals, and CTAs focused on direct booking.",
+    },
+    tags: ["Hospitality", "Booking UX", "Frontend", "Responsive"],
+    href: null,
+    live: "https://la-terrazza-web.vercel.app/",
+    image: "/la-terrazza-cover.png",
+    gallery: [
+      { src: "/la-terrazza-cover.png", label: { it: "Homepage", en: "Homepage" }, viewport: "desktop" },
+      { src: "/la-terrazza-room.png", label: { it: "Camera Sole", en: "Sole room" }, viewport: "desktop" },
+    ],
+  },
+  {
     name: "MaRoSa House Website",
     category: "personal",
     slug: "marosa-house-website",
     description: {
-      it: "Sito pubblicato legato anche al mio interesse per hospitality e affitti brevi: comunicazione chiara, fiducia immediata e attenzione alla conversione.",
-      en: "A published website connected to my interest in hospitality and short-term rentals, designed around clear communication, immediate trust, and conversion focus.",
+      it: "Sito hospitality pubblicato per una struttura short-term rental: oltre alle foto della casa, ho curato presentazione dell'appartamento, fiducia visiva, navigazione delle sezioni e flusso prenotazione per rendere il contatto piu immediato.",
+      en: "A published hospitality website for a short-term rental property: beyond the apartment photography, I shaped the presentation, visual trust cues, section navigation, and booking flow to make inquiries feel more immediate.",
     },
-    tags: ["Published", "Hospitality", "UX", "Frontend"],
+    tags: ["Published", "Hospitality", "Booking Flow", "Frontend"],
     href: "https://github.com/Manuell00/marosa-house-website",
     live: "https://marosa-house-website.vercel.app",
     image: "/marosa-gallery-1.jpg",
     gallery: [
+      { src: "/marosa-booking-form.png", label: { it: "Sezione prenotazione", en: "Booking form section" }, viewport: "desktop" },
+      { src: "/marosa-magnolie-gallery.png", label: { it: "Pagina galleria Magnolie", en: "Magnolie gallery page" }, viewport: "desktop" },
       { src: "/marosa-gallery-1.jpg", label: { it: "Magnolie living", en: "Magnolie living" }, viewport: "desktop" },
       { src: "/marosa-gallery-2.jpg", label: { it: "Magnolie camera", en: "Magnolie bedroom" }, viewport: "desktop" },
       { src: "/marosa-gallery-3.jpg", label: { it: "Magnolie dettagli", en: "Magnolie details" }, viewport: "desktop" },
@@ -343,6 +362,33 @@ export const projects = [
       { src: "/football-goal-timing.svg", label: { it: "Timing dei goal", en: "Goal timing" }, viewport: "desktop", fit: "contain" },
       { src: "/football-top-scorers.svg", label: { it: "Top scorer", en: "Top scorers" }, viewport: "desktop", fit: "contain" },
       { src: "/football-finish-types.svg", label: { it: "Tipi di finalizzazione", en: "Finish types" }, viewport: "desktop", fit: "contain" },
+    ],
+  },
+  {
+    name: {
+      it: "Template Asta Fantacalcio",
+      en: "Fantacalcio Auction Templates",
+    },
+    category: "personal",
+    slug: "fantacalcio-auction-templates",
+    description: {
+      it: "Prodotto digitale in Excel pensato per l'asta Fantacalcio, con due varianti dedicate a Classic e Mantra: configurazione lega, budget automatico, tracker asta e riepilogo finale pronti per essere distribuiti anche su Gumroad.",
+      en: "An Excel-based digital product for Fantacalcio auctions, with separate Classic and Mantra versions: league setup, automatic budget tracking, live auction workflow, and a final summary designed for Gumroad distribution as well.",
+    },
+    tags: ["Excel", "Digital Product", "Classic", "Mantra"],
+    href: "https://casellimanuel.gumroad.com/l/jgahw",
+    primaryLabel: {
+      it: "Acquista su Gumroad",
+      en: "Buy on Gumroad",
+    },
+    live: null,
+    image: "/fantacalcio-cover.png",
+    gallery: [
+      { src: "/fantacalcio-cover.png", label: { it: "Cover prodotto", en: "Product cover" }, viewport: "desktop" },
+      { src: "/fantacalcio-classic-config.png", label: { it: "Configurazione lega", en: "League setup" }, viewport: "desktop" },
+      { src: "/fantacalcio-classic-live.png", label: { it: "Asta live", en: "Live auction sheet" }, viewport: "desktop" },
+      { src: "/fantacalcio-classic-summary.png", label: { it: "Revisione finale", en: "Final summary" }, viewport: "desktop" },
+      { src: "/fantacalcio-classic-stats.png", label: { it: "Statistiche asta", en: "Auction statistics" }, viewport: "desktop" },
     ],
   },
 ];

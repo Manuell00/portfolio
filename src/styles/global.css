@@ -245,12 +245,14 @@ img {
     linear-gradient(180deg, rgba(72, 97, 133, 0.14), rgba(10, 12, 16, 0.92)),
     rgba(10, 12, 16, 0.92);
   box-shadow: 0 22px 48px rgba(0, 0, 0, 0.32);
+  text-align: center;
 }
 
 .mobile-menu-lang,
 .mobile-menu-links {
   display: grid;
   gap: 0.55rem;
+  justify-items: center;
 }
 
 .mobile-menu-links {
@@ -258,16 +260,21 @@ img {
 }
 
 .mobile-menu-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   padding: 0.8rem 0.9rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 0.95rem;
   background: rgba(255, 255, 255, 0.03);
+  text-align: center;
   transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease;
 }
 
 .mobile-menu-links a.active,
 .mobile-menu-links a:hover {
-  transform: translateX(2px);
+  transform: translateY(-1px);
   border-color: rgba(122, 162, 214, 0.24);
   background: rgba(122, 162, 214, 0.1);
 }
@@ -471,6 +478,10 @@ img {
 .hero-line-text {
   position: relative;
   display: inline-block;
+}
+
+.js-enhanced.reveal-ready .eyebrow-text,
+.js-enhanced.reveal-ready .hero-line-text {
   overflow: hidden;
   white-space: nowrap;
   clip-path: inset(0 100% 0 0);
@@ -501,6 +512,11 @@ img {
 
 .eyebrow-text::after,
 .hero-line-text::after {
+  content: none;
+}
+
+.js-enhanced.reveal-ready .eyebrow-text::after,
+.js-enhanced.reveal-ready .hero-line-text::after {
   content: "";
   position: absolute;
   top: 0.08em;
@@ -1449,7 +1465,7 @@ h3 {
 .showcase-collage {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 1.2rem;
   padding-bottom: 3rem;
@@ -1553,9 +1569,19 @@ h3 {
   transform: none;
 }
 
+.showcase-card-hospitality {
+  min-height: 100%;
+  transform: none;
+}
+
 .showcase-card-web {
   min-height: 100%;
   transform: none;
+}
+
+.showcase-collage:hover .showcase-card-hospitality {
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(255, 255, 255, 0.16);
 }
 
 .showcase-collage:hover .showcase-card-analysis {
@@ -2202,31 +2228,31 @@ h3 {
   text-align: center;
 }
 
-.js-enhanced [data-reveal] {
+.js-enhanced.reveal-ready [data-reveal] {
   opacity: 0;
   transform: translateY(24px) scale(0.985);
   will-change: transform, opacity;
 }
 
-.js-enhanced [data-reveal].is-visible {
+.js-enhanced.reveal-ready [data-reveal].is-visible {
   animation: reveal 760ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: var(--reveal-delay, 110ms);
 }
 
-.js-enhanced .project-card[data-reveal] {
+.js-enhanced.reveal-ready .project-card[data-reveal] {
   transform: none;
 }
 
-.js-enhanced .project-card[data-reveal].is-visible {
+.js-enhanced.reveal-ready .project-card[data-reveal].is-visible {
   animation: projectReveal 420ms ease forwards;
   animation-delay: 70ms;
 }
 
-.js-enhanced [data-reveal]:nth-child(2) {
+.js-enhanced.reveal-ready [data-reveal]:nth-child(2) {
   --reveal-delay: 190ms;
 }
 
-.js-enhanced [data-reveal]:nth-child(3) {
+.js-enhanced.reveal-ready [data-reveal]:nth-child(3) {
   --reveal-delay: 250ms;
 }
 
@@ -2560,9 +2586,9 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(2.08rem, 9.8vw, 2.85rem);
-    line-height: 1.08;
-    letter-spacing: -0.055em;
+    font-size: clamp(1.52rem, 6.7vw, 2.02rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
     text-transform: uppercase;
   }
 
@@ -2582,7 +2608,10 @@ h3 {
     max-width: 100%;
   }
 
-  .eyebrow-text {
+  .eyebrow-text,
+  .hero-line-text,
+  .js-enhanced.reveal-ready .eyebrow-text,
+  .js-enhanced.reveal-ready .hero-line-text {
     display: inline;
     white-space: normal;
     overflow: visible;
@@ -2590,7 +2619,10 @@ h3 {
     animation: none;
   }
 
-  .eyebrow-text::after {
+  .eyebrow-text::after,
+  .hero-line-text::after,
+  .js-enhanced.reveal-ready .eyebrow-text::after,
+  .js-enhanced.reveal-ready .hero-line-text::after {
     display: none;
   }
 
@@ -2599,19 +2631,19 @@ h3 {
   }
 
   .hero-line {
-    font-size: 0.82em;
-    letter-spacing: 0.06em;
+    font-size: 0.66em;
+    letter-spacing: 0.035em;
     margin-inline: auto;
     text-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
   }
 
   .hero-line + .hero-line {
-    margin-top: 0.62rem;
+    margin-top: 0.5rem;
   }
 
   .hero-line:nth-child(2) {
-    font-size: 0.9em;
-    letter-spacing: 0.04em;
+    font-size: 0.76em;
+    letter-spacing: 0.025em;
   }
 
   .hero-line::after {
@@ -2704,6 +2736,10 @@ h3 {
     gap: 0.75rem;
     min-height: auto;
     padding-bottom: 2.7rem;
+  }
+
+  .showcase-card-hospitality {
+    grid-column: 1 / -1;
   }
 
   .showcase-card {
@@ -2864,27 +2900,31 @@ h3 {
   }
 
   .highlight-grid {
-    --carousel-card-width: min(21.5rem, 82vw);
+    --carousel-card-width: min(20rem, 84vw);
     display: flex;
-    gap: 0.95rem;
+    gap: 0.85rem;
     overflow-x: auto;
-    padding-block: 0.2rem 0.35rem;
-    padding-inline: max(0.75rem, calc((100% - var(--carousel-card-width)) / 2));
-    scroll-padding-inline: max(0.75rem, calc((100% - var(--carousel-card-width)) / 2));
-    scroll-snap-type: x mandatory;
+    padding: 0.2rem 0.1rem 0.45rem;
+    scroll-padding-inline: 0.1rem;
+    scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(122, 162, 214, 0.34) transparent;
   }
 
   .highlight-grid::-webkit-scrollbar {
-    display: none;
+    height: 0.35rem;
+  }
+
+  .highlight-grid::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(122, 162, 214, 0.28);
   }
 
   .highlight-card {
     flex: 0 0 var(--carousel-card-width);
     min-width: var(--carousel-card-width);
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
+    scroll-snap-align: start;
     transform: none;
     opacity: 1;
     transition:
@@ -2904,32 +2944,33 @@ h3 {
     box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
   }
 
-  .highlight-card.is-focused {
-    border-color: rgba(255, 255, 255, 0.18);
-    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
-  }
-
   .highlight-card h3 {
     font-size: 1.24rem;
   }
 
   .experience-featured-grid,
   .timeline-sequence {
-    --carousel-card-width: min(21.5rem, 82vw);
+    --carousel-card-width: min(20rem, 84vw);
     display: flex;
-    gap: 0.95rem;
+    gap: 0.85rem;
     overflow-x: auto;
-    padding-block: 0.2rem 0.35rem;
-    padding-inline: max(0.75rem, calc((100% - var(--carousel-card-width)) / 2));
-    scroll-padding-inline: max(0.75rem, calc((100% - var(--carousel-card-width)) / 2));
-    scroll-snap-type: x mandatory;
+    padding: 0.2rem 0.1rem 0.45rem;
+    scroll-padding-inline: 0.1rem;
+    scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(122, 162, 214, 0.34) transparent;
   }
 
   .experience-featured-grid::-webkit-scrollbar,
   .timeline-sequence::-webkit-scrollbar {
-    display: none;
+    height: 0.35rem;
+  }
+
+  .experience-featured-grid::-webkit-scrollbar-thumb,
+  .timeline-sequence::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(122, 162, 214, 0.28);
   }
 
   .timeline-sequence {
@@ -2945,8 +2986,7 @@ h3 {
     flex: 0 0 var(--carousel-card-width);
     min-width: var(--carousel-card-width);
     padding-left: 1.25rem;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
+    scroll-snap-align: start;
     transform: none;
     opacity: 1;
     transition:
@@ -2958,12 +2998,6 @@ h3 {
   .timeline-item:focus-within,
   .timeline-item-top:active,
   .timeline-item-top:focus-within {
-    border-color: rgba(255, 255, 255, 0.18);
-    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
-  }
-
-  .timeline-item.is-focused,
-  .timeline-item-top.is-focused {
     border-color: rgba(255, 255, 255, 0.18);
     box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
   }
@@ -3104,6 +3138,211 @@ h3 {
 
   .footer-minimal {
     align-items: center;
+  }
+}
+
+.carousel-shell {
+  --carousel-progress: 18%;
+  margin-top: 1.55rem;
+}
+
+.carousel-meta,
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.carousel-meta {
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.carousel-frame {
+  position: relative;
+  padding: 1rem;
+  border: 1px solid rgba(122, 162, 214, 0.14);
+  border-radius: 1.9rem;
+  background:
+    linear-gradient(180deg, rgba(91, 118, 156, 0.12), rgba(10, 12, 16, 0.8)),
+    rgba(10, 12, 16, 0.78);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 22px 46px rgba(0, 0, 0, 0.26);
+  overflow: hidden;
+}
+
+.carousel-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 8, 11, 0.92), transparent 12%, transparent 88%, rgba(7, 8, 11, 0.92)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 26%);
+  pointer-events: none;
+}
+
+.carousel-viewport {
+  --carousel-peek: 2.2rem;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-left: 0;
+  padding-right: var(--carousel-peek);
+  scroll-padding-left: 0;
+  scroll-padding-right: var(--carousel-peek);
+}
+
+.carousel-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0;
+  padding: 0;
+  scroll-snap-type: x mandatory;
+  align-items: stretch;
+}
+
+.carousel-card {
+  flex: 0 0 var(--carousel-card-size, 32rem);
+  min-width: var(--carousel-card-size, 32rem);
+  max-width: min(100%, var(--carousel-card-size, 32rem));
+  scroll-snap-align: start;
+}
+
+.carousel-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #f4f7fb;
+  cursor: pointer;
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease,
+    opacity 220ms ease;
+}
+
+.carousel-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: rgba(122, 162, 214, 0.32);
+  background: rgba(122, 162, 214, 0.12);
+}
+
+.carousel-button:disabled {
+  opacity: 0.38;
+  cursor: default;
+}
+
+.carousel-shell .experience-group-heading {
+  margin: 0;
+  text-align: left;
+}
+
+.carousel-shell .experience-group-heading span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid rgba(122, 162, 214, 0.16);
+  border-radius: 999px;
+  background: rgba(122, 162, 214, 0.08);
+  color: #dfe7f2;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.carousel-shell-highlights .highlight-card,
+.carousel-shell-featured .timeline-item,
+.carousel-shell-timeline .timeline-item {
+  min-height: 100%;
+}
+
+.carousel-shell-highlights {
+  --carousel-card-size: 25.5rem;
+}
+
+.carousel-shell-featured,
+.carousel-shell-timeline {
+  --carousel-card-size: 29rem;
+}
+
+.carousel-shell-featured .timeline-item,
+.carousel-shell-timeline .timeline-item {
+  padding-right: 1.4rem;
+}
+
+@media (max-width: 1024px) {
+  .carousel-shell-highlights {
+    --carousel-card-size: min(24rem, calc(100vw - 8rem));
+  }
+
+  .carousel-shell-featured,
+  .carousel-shell-timeline {
+    --carousel-card-size: min(26rem, calc(100vw - 8rem));
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-shell {
+    margin-top: 1.15rem;
+  }
+
+  .carousel-meta,
+  .carousel-controls {
+    gap: 0.7rem;
+  }
+
+  .carousel-meta {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 0.85rem;
+  }
+
+  .carousel-shell .experience-group-heading {
+    text-align: center;
+  }
+
+  .carousel-controls {
+    justify-content: center;
+  }
+
+  .carousel-frame {
+    padding: 0.75rem;
+    border-radius: 1.45rem;
+  }
+
+  .carousel-track {
+    gap: 0.8rem;
+  }
+
+  .carousel-viewport {
+    --carousel-peek: 1rem;
+    padding-left: 0;
+    padding-right: var(--carousel-peek);
+    scroll-padding-left: 0;
+    scroll-padding-right: var(--carousel-peek);
+  }
+
+  .carousel-shell-highlights {
+    --carousel-card-size: min(19.5rem, calc(100vw - 4.2rem));
+  }
+
+  .carousel-shell-featured,
+  .carousel-shell-timeline {
+    --carousel-card-size: min(20.5rem, calc(100vw - 4.2rem));
   }
 }
 

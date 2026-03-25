@@ -84,22 +84,43 @@ const currentPath = Astro.url.pathname;
       const revealElements = Array.from(document.querySelectorAll("[data-reveal]"));
 
       if (revealElements.length) {
-        const revealObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-                revealObserver.unobserve(entry.target);
-              }
-            });
-          },
-          {
-            rootMargin: "0px 0px -10% 0px",
-            threshold: 0.14,
-          }
-        );
+        const setupReveal = () => {
+          const revealObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-visible");
+                  revealObserver.unobserve(entry.target);
+                }
+              });
+            },
+            {
+              rootMargin: "0px 0px -10% 0px",
+              threshold: 0.14,
+            }
+          );
 
-        revealElements.forEach((element) => revealObserver.observe(element));
+          revealElements.forEach((element) => {
+            const rect = element.getBoundingClientRect();
+            const inInitialViewport = rect.top <= window.innerHeight * 0.92 && rect.bottom >= 0;
+            const shouldStartVisible = inInitialViewport || Boolean(element.closest(".hero-grid"));
+
+            if (shouldStartVisible) {
+              element.classList.add("is-visible");
+              return;
+            }
+
+            revealObserver.observe(element);
+          });
+
+          document.documentElement.classList.add("reveal-ready");
+        };
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", setupReveal, { once: true });
+        } else {
+          setupReveal();
+        }
       }
     </script>
   </body>

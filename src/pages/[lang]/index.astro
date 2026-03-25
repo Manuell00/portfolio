@@ -34,6 +34,13 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
         ))}
       </div>
       <div class="showcase-collage">
+        <a class="showcase-card showcase-card-hospitality" href={`/${lang}/projects/#la-terrazza-affittacamere`}>
+          <img src="/la-terrazza-cover.png" alt="La Terrazza Affittacamere" loading="lazy" class="showcase-media" />
+          <div class="showcase-caption">
+            <span>La Terrazza</span>
+            <small>{lang === "it" ? "Affittacamere" : "Guesthouse website"}</small>
+          </div>
+        </a>
         <a class="showcase-card showcase-card-analysis" href={`/${lang}/projects/#marosa-house-website`}>
           <img src="/marosa-gallery-1.jpg" alt="MaRoSa House" loading="lazy" class="showcase-media" />
           <div class="showcase-caption">
@@ -75,33 +82,57 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
       <p>{langUi.highlightsCopy}</p>
     </div>
 
-    <div class="highlight-grid" data-carousel-track>
-      {profile.highlights.map((item) => (
-        <article class="highlight-card" data-reveal data-carousel-item>
-          <div class="highlight-topline">
-            <span class:list={[
-              "highlight-badge",
-              item.icon === "XL"
-                ? "highlight-badge-excel"
-                : item.icon === "DB"
-                  ? "highlight-badge-db"
-                  : item.icon === "MG"
-                    ? "highlight-badge-erp"
-                    : "highlight-badge-hospitality",
-            ]}>
-              {item.tags[0]}
-            </span>
-            <span class="highlight-arrow" aria-hidden="true">↗</span>
-          </div>
-          <h3>{item.title[lang]}</h3>
-          <p>{item.body[lang]}</p>
-          <ul class="tag-list">
-            {item.tags.map((tag) => (
-              <li>{tag}</li>
+    <div class="carousel-shell carousel-shell-highlights" data-content-carousel data-reveal>
+      <div class="carousel-frame">
+        <div class="carousel-viewport" data-carousel-viewport>
+          <div class="highlight-grid carousel-track">
+            {profile.highlights.map((item) => (
+              <article class="highlight-card carousel-card">
+                <div class="highlight-topline">
+                  <span class:list={[
+                    "highlight-badge",
+                    item.icon === "XL"
+                      ? "highlight-badge-excel"
+                      : item.icon === "DB"
+                        ? "highlight-badge-db"
+                        : item.icon === "MG"
+                          ? "highlight-badge-erp"
+                          : "highlight-badge-hospitality",
+                  ]}>
+                    {item.tags[0]}
+                  </span>
+                  <span class="highlight-arrow" aria-hidden="true">↗</span>
+                </div>
+                <h3>{item.title[lang]}</h3>
+                <p>{item.body[lang]}</p>
+                <ul class="tag-list">
+                  {item.tags.map((tag) => (
+                    <li>{tag}</li>
+                  ))}
+                </ul>
+              </article>
             ))}
-          </ul>
-        </article>
-      ))}
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button
+          type="button"
+          class="carousel-button"
+          data-carousel-prev
+          aria-label={lang === "it" ? "Scorri indietro nelle aree di valore" : "Scroll back through value areas"}
+        >
+          <span aria-hidden="true">←</span>
+        </button>
+        <button
+          type="button"
+          class="carousel-button"
+          data-carousel-next
+          aria-label={lang === "it" ? "Scorri avanti nelle aree di valore" : "Scroll forward through value areas"}
+        >
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -111,126 +142,156 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
       <p>{langUi.experienceCopy}</p>
     </div>
 
-    <div class="experience-group-heading mobile-only" data-reveal>
-      <span>{lang === "it" ? "Formazione e progetti attivi" : "Learning and active projects"}</span>
-    </div>
-    <div class="experience-featured-grid" data-carousel-track>
-      {featuredExperience.map((item) => (
-        <article class:list={["timeline-item", "timeline-item-top", item.featured && "timeline-item-featured"]} data-reveal data-carousel-item>
-          <div class="timeline-node"></div>
-          <span class="timeline-period">{item.period[lang]}</span>
-          <h3>
-            {item.title[lang]}
-            {item.company?.[lang] && <span class="timeline-company"> {lang === "it" ? "—" : "—"} {item.company[lang]}</span>}
-          </h3>
-          <ul class="timeline-tags">
-            {item.details[lang].map((detail) => (
-              <li>{detail}</li>
+    <div class="carousel-shell carousel-shell-featured" data-content-carousel data-reveal>
+      <div class="carousel-meta">
+        <div class="experience-group-heading">
+          <span>{lang === "it" ? "Formazione e progetti attivi" : "Learning and active projects"}</span>
+        </div>
+        <div class="carousel-controls">
+          <button
+            type="button"
+            class="carousel-button"
+            data-carousel-prev
+            aria-label={lang === "it" ? "Scorri indietro nella sezione formazione e progetti attivi" : "Scroll back through learning and active projects"}
+          >
+            <span aria-hidden="true">←</span>
+          </button>
+          <button
+            type="button"
+            class="carousel-button"
+            data-carousel-next
+            aria-label={lang === "it" ? "Scorri avanti nella sezione formazione e progetti attivi" : "Scroll forward through learning and active projects"}
+          >
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+      <div class="carousel-frame">
+        <div class="carousel-viewport" data-carousel-viewport>
+          <div class="experience-featured-grid carousel-track">
+            {featuredExperience.map((item) => (
+              <article class:list={["timeline-item", "timeline-item-top", "carousel-card", item.featured && "timeline-item-featured"]}>
+                <div class="timeline-node"></div>
+                <span class="timeline-period">{item.period[lang]}</span>
+                <h3>
+                  {item.title[lang]}
+                  {item.company?.[lang] && <span class="timeline-company"> {lang === "it" ? "—" : "—"} {item.company[lang]}</span>}
+                </h3>
+                <ul class="timeline-tags">
+                  {item.details[lang].map((detail) => (
+                    <li>{detail}</li>
+                  ))}
+                </ul>
+              </article>
             ))}
-          </ul>
-        </article>
-      ))}
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="experience-group-heading mobile-only" data-reveal>
-      <span>{lang === "it" ? "Percorso professionale" : "Work journey"}</span>
-    </div>
-    <div class="timeline-sequence" data-carousel-track>
-      {workExperience.map((item) => (
-        <article class:list={["timeline-item", item.featured && "timeline-item-featured"]} data-reveal data-carousel-item>
-          <div class="timeline-node"></div>
-          <span class="timeline-period">{item.period[lang]}</span>
-          <h3>
-            {item.title[lang]}
-            {item.company?.[lang] && <span class="timeline-company"> {lang === "it" ? "—" : "—"} {item.company[lang]}</span>}
-          </h3>
-          <ul class="timeline-tags">
-            {item.details[lang].map((detail) => (
-              <li>{detail}</li>
+    <div class="carousel-shell carousel-shell-timeline" data-content-carousel data-reveal>
+      <div class="carousel-meta">
+        <div class="experience-group-heading">
+          <span>{lang === "it" ? "Percorso professionale" : "Work journey"}</span>
+        </div>
+        <div class="carousel-controls">
+          <button
+            type="button"
+            class="carousel-button"
+            data-carousel-prev
+            aria-label={lang === "it" ? "Scorri indietro nel percorso professionale" : "Scroll back through work journey"}
+          >
+            <span aria-hidden="true">←</span>
+          </button>
+          <button
+            type="button"
+            class="carousel-button"
+            data-carousel-next
+            aria-label={lang === "it" ? "Scorri avanti nel percorso professionale" : "Scroll forward through work journey"}
+          >
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+      <div class="carousel-frame">
+        <div class="carousel-viewport" data-carousel-viewport>
+          <div class="timeline-sequence carousel-track">
+            {workExperience.map((item) => (
+              <article class:list={["timeline-item", "carousel-card", item.featured && "timeline-item-featured"]}>
+                <div class="timeline-node"></div>
+                <span class="timeline-period">{item.period[lang]}</span>
+                <h3>
+                  {item.title[lang]}
+                  {item.company?.[lang] && <span class="timeline-company"> {lang === "it" ? "—" : "—"} {item.company[lang]}</span>}
+                </h3>
+                <ul class="timeline-tags">
+                  {item.details[lang].map((detail) => (
+                    <li>{detail}</li>
+                  ))}
+                </ul>
+              </article>
             ))}
-          </ul>
-        </article>
-      ))}
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <script is:inline>
-    const initCarousels = () => {
-      const tracks = Array.from(document.querySelectorAll("[data-carousel-track]"));
+    const initContentCarousels = () => {
+      const carousels = Array.from(document.querySelectorAll("[data-content-carousel]"));
 
-      const setFocused = (track) => {
-        const items = Array.from(track.querySelectorAll("[data-carousel-item]"));
-        if (!items.length) return;
+      carousels.forEach((carousel) => {
+        const viewport = carousel.querySelector("[data-carousel-viewport]");
+        const prevButton = carousel.querySelector("[data-carousel-prev]");
+        const nextButton = carousel.querySelector("[data-carousel-next]");
+        const cards = Array.from(carousel.querySelectorAll(".carousel-card"));
 
-        const trackRect = track.getBoundingClientRect();
-        const trackCenter = trackRect.left + trackRect.width / 2;
+        if (!viewport || !cards.length) return;
 
-        let closest = items[0];
-        let closestDistance = Number.POSITIVE_INFINITY;
+        const getStep = () => {
+          const firstCard = cards[0];
+          const secondCard = cards[1];
 
-        for (const item of items) {
-          const rect = item.getBoundingClientRect();
-          const itemCenter = rect.left + rect.width / 2;
-          const distance = Math.abs(trackCenter - itemCenter);
-
-          item.classList.remove("is-focused");
-
-          if (distance < closestDistance) {
-            closestDistance = distance;
-            closest = item;
+          if (firstCard && secondCard) {
+            return secondCard.offsetLeft - firstCard.offsetLeft;
           }
-        }
 
-        closest.classList.add("is-focused");
-      };
-
-      for (const track of tracks) {
-        const items = Array.from(track.querySelectorAll("[data-carousel-item]"));
-        if (!items.length) continue;
-
-        let raf = 0;
-        const requestUpdate = () => {
-          cancelAnimationFrame(raf);
-          raf = requestAnimationFrame(() => setFocused(track));
+          return firstCard.getBoundingClientRect().width;
         };
 
-        const observer = new IntersectionObserver(
-          (entries) => {
-            let best = null;
-            let bestRatio = 0;
+        const update = () => {
+          const maxScroll = Math.max(viewport.scrollWidth - viewport.clientWidth, 0);
 
-            for (const entry of entries) {
-              if (entry.intersectionRatio > bestRatio) {
-                bestRatio = entry.intersectionRatio;
-                best = entry.target;
-              }
-            }
+          if (prevButton) {
+            prevButton.disabled = viewport.scrollLeft <= 8;
+          }
 
-            if (best) {
-              items.forEach((item) => item.classList.remove("is-focused"));
-              best.classList.add("is-focused");
-            } else {
-              requestUpdate();
-            }
-          },
-          {
-            root: track,
-            threshold: [0.35, 0.5, 0.65, 0.8, 0.95],
-          },
-        );
+          if (nextButton) {
+            nextButton.disabled = viewport.scrollLeft >= maxScroll - 8;
+          }
+        };
 
-        items.forEach((item) => observer.observe(item));
-        requestUpdate();
-        track.addEventListener("scroll", requestUpdate, { passive: true });
-        track.addEventListener("touchend", requestUpdate, { passive: true });
-        window.addEventListener("resize", requestUpdate);
-      }
+        const move = (direction) => {
+          viewport.scrollBy({
+            left: getStep() * direction,
+            behavior: "smooth",
+          });
+        };
+
+        prevButton?.addEventListener("click", () => move(-1));
+        nextButton?.addEventListener("click", () => move(1));
+        viewport.addEventListener("scroll", update, { passive: true });
+        window.addEventListener("resize", update);
+        viewport.scrollLeft = 0;
+        update();
+      });
     };
 
     if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", initCarousels, { once: true });
+      document.addEventListener("DOMContentLoaded", initContentCarousels, { once: true });
     } else {
-      initCarousels();
+      initContentCarousels();
     }
   </script>
 </BaseLayout>
