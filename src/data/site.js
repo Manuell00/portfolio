@@ -314,6 +314,7 @@ export const projects = [
     live: "https://rolecha.com",
     image: "/rolecha-card-cover.jpg",
     gallery: [
+      { src: "/rolecha-home-screen.png", label: { it: "Homepage", en: "Homepage" }, viewport: "desktop" },
       { src: "/rolecha-card-cover.jpg", label: { it: "Collezione", en: "Collection" }, viewport: "desktop" },
       { src: "/rolecha-card-detail.jpg", label: { it: "Dettagli tessili", en: "Textile details" }, viewport: "desktop" },
       { src: "/rolecha-card-genova.jpg", label: { it: "Genova", en: "Genoa" }, viewport: "desktop" },
