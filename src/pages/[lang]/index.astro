@@ -147,24 +147,6 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
         <div class="experience-group-heading">
           <span>{lang === "it" ? "Formazione e progetti attivi" : "Learning and active projects"}</span>
         </div>
-        <div class="carousel-controls">
-          <button
-            type="button"
-            class="carousel-button"
-            data-carousel-prev
-            aria-label={lang === "it" ? "Scorri indietro nella sezione formazione e progetti attivi" : "Scroll back through learning and active projects"}
-          >
-            <span aria-hidden="true">←</span>
-          </button>
-          <button
-            type="button"
-            class="carousel-button"
-            data-carousel-next
-            aria-label={lang === "it" ? "Scorri avanti nella sezione formazione e progetti attivi" : "Scroll forward through learning and active projects"}
-          >
-            <span aria-hidden="true">→</span>
-          </button>
-        </div>
       </div>
       <div class="carousel-frame">
         <div class="carousel-viewport" data-carousel-viewport>
@@ -187,30 +169,30 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
           </div>
         </div>
       </div>
+      <div class="carousel-controls experience-carousel-controls">
+        <button
+          type="button"
+          class="carousel-button"
+          data-carousel-prev
+          aria-label={lang === "it" ? "Scorri indietro nella sezione formazione e progetti attivi" : "Scroll back through learning and active projects"}
+        >
+          <span aria-hidden="true">←</span>
+        </button>
+        <button
+          type="button"
+          class="carousel-button"
+          data-carousel-next
+          aria-label={lang === "it" ? "Scorri avanti nella sezione formazione e progetti attivi" : "Scroll forward through learning and active projects"}
+        >
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
     </div>
 
     <div class="carousel-shell carousel-shell-timeline" data-content-carousel data-reveal>
       <div class="carousel-meta">
         <div class="experience-group-heading">
           <span>{lang === "it" ? "Percorso professionale" : "Work journey"}</span>
-        </div>
-        <div class="carousel-controls">
-          <button
-            type="button"
-            class="carousel-button"
-            data-carousel-prev
-            aria-label={lang === "it" ? "Scorri indietro nel percorso professionale" : "Scroll back through work journey"}
-          >
-            <span aria-hidden="true">←</span>
-          </button>
-          <button
-            type="button"
-            class="carousel-button"
-            data-carousel-next
-            aria-label={lang === "it" ? "Scorri avanti nel percorso professionale" : "Scroll forward through work journey"}
-          >
-            <span aria-hidden="true">→</span>
-          </button>
         </div>
       </div>
       <div class="carousel-frame">
@@ -233,6 +215,24 @@ const workExperience = profile.experience.filter((item) => !item.featuredTop);
             ))}
           </div>
         </div>
+      </div>
+      <div class="carousel-controls experience-carousel-controls">
+        <button
+          type="button"
+          class="carousel-button"
+          data-carousel-prev
+          aria-label={lang === "it" ? "Scorri indietro nel percorso professionale" : "Scroll back through work journey"}
+        >
+          <span aria-hidden="true">←</span>
+        </button>
+        <button
+          type="button"
+          class="carousel-button"
+          data-carousel-next
+          aria-label={lang === "it" ? "Scorri avanti nel percorso professionale" : "Scroll forward through work journey"}
+        >
+          <span aria-hidden="true">→</span>
+        </button>
       </div>
     </div>
   </section>
