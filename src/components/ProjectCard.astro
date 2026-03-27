@@ -25,12 +25,12 @@ const projectTitle = typeof project.name === "string" ? project.name : project.n
             </div>
           )}
           <div class="project-gallery" data-project-gallery>
-          {project.gallery.map((item) => (
+          {project.gallery.map((item, index) => (
             <figure class:list={["project-shot", item.fit === "contain" && "project-shot-contain"]}>
               <img
                 src={item.src}
                 alt={`${projectTitle} ${item.label?.[lang] || ""}`.trim()}
-                loading="lazy"
+                loading={index === 0 ? "eager" : "lazy"}
                 class:list={["project-shot-image", item.fit === "contain" && "project-shot-image-contain"]}
                 style={[
                   item.position ? `object-position:${item.position}` : null,
