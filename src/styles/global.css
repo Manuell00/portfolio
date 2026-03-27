@@ -1950,6 +1950,13 @@ h3 {
   opacity: 0.65;
 }
 
+@media (hover: none) {
+  .project-gallery-button:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
 .project-placeholder {
   display: flex;
   height: 100%;
@@ -2645,8 +2652,8 @@ h3 {
   }
 
   .hero-line {
-    font-size: 0.82em;
-    letter-spacing: 0.035em;
+    font-size: 1em;
+    letter-spacing: 0.025em;
     margin-inline: auto;
     text-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
   }
@@ -2656,8 +2663,8 @@ h3 {
   }
 
   .hero-line:nth-child(2) {
-    font-size: 0.9em;
-    letter-spacing: 0.025em;
+    font-size: 1.08em;
+    letter-spacing: 0.015em;
   }
 
   .hero-line::after {
@@ -3206,7 +3213,7 @@ h3 {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.05),
     0 22px 46px rgba(0, 0, 0, 0.26);
-  overflow: hidden;
+  overflow: clip;
 }
 
 .carousel-frame::before {
